@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>班级课程列表</title>
+
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <style type="text/css">
+            .newlist li a:hover{
+                color:blue;
+                font-size:130%;
+                text-decoration:none;
+            }
+            /**弹出层效果**/
+            .raceShow{background:url("__PUBLIC__/images/103923O21-2.gif");z-index:10000;border:solid 1px #ccc;position:absolute;display:none;width:300px;height:100px;padding:30px;font-size:16px;color:red;text-align:center;}
+        </style>
+        <script type="text/javascript" charset="utf-8">
+            $(function(){
+                //弹出层
+                var speed = 500;//动画速度
+                $("a.please").click(function(event){//绑定事件处理
+                    event.stopPropagation();
+                    //var offset = $(event.target).offset();//取消事件冒泡
+		            $("#racePop").css({ top:event.pageY + "px", left: event.pageX-"300" + "px" });//设置弹出层位置
+                    $("#racePop").slideDown(speed);//动画显示
+                    });
+                $("#racePop").click(function(event) { $("#racePop").fadeOut(speed) });//单击弹出层则自身隐藏
+                $(document).click(function(event) { $("#racePop").fadeOut(speed) });//单击空白区域隐藏
+            });
+        </script>
+    </head>
+    <body>
+    <div id="browser"></div>
+
+    <{include file="../Public/head.html"}>
+
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">课程</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li class="active"><a href="__URL__/index">课程列表</a></li>
+            </ul>
+        </div>
+        <div id="racePop" class="raceShow"><b>请先登录！点击此处取消...</b></div>
+    </div>
+</div>
+
+
+
+
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                <div class="col-md-8">
+
+                    <div class="m_r_list g_t_list mt5">
+                        <div class="tt"><h3><{$title|default:"课程总览"}></h3></div>
+                        <div class="m_n_item_info f12 c999">
+                            <span class="g_reply_n">课程名称</span>
+                            <span class="g_topic_t ml10">课程列表</span>
+                        </div>
+                        <ul class="list_pb20">
+                            <{if $list}>
+                            <{foreach $list as $vo}>
+                            <li>
+                                <div class="g_reply_n pull-left">
+                                    <span title="">
+                                        <em><img height='50' width='50' src="__PUBLIC__/Uploads/users/0/1.jpg"></em>
+                                    </span>
+
+                                </div>
+
+                                <div class="t_ml_120">
+                                    <h4><a href="__URL__/detail/id/<{$vo.id}>"><{$vo.class_name}></a></h4>
+
+                                    <p>
+
+                                        班级老师： <a href=""><{$vo.class_cre}></a> <i style="float:right;"> <{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></i>
+
+                                    </p>
+                                    <h4><a style="color: #9A0000;float: right;" href="__URL__/insert/id/<{$vo.id}>/navTabId/listlib">加入当前班级</a></h4>
+                                </div>
+                            </li>
+                            <{/foreach}>
+                            <{else}>
+                            <div class="null">资源列表暂空~</div>
+                            <{/if}>
+                        </ul>
+
+                        <div class="tc">
+                            <ul class="pagination">
+                                <{$showPage}>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <div class="col-md-4">
+
+                    <div class="biquu_d_placeholder mt50 mb40">
+                        <a href=""><img alt="E-Sch教学网" title="E-Sch教学网" src="__PUBLIC__/images/0000dh.jpg"></a>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/scroll.js"></script>
+<script type="text/javascript" charset="utf-8">
+//设置最新手记榜滚动
+$(document).ready(function(){
+$("#scrollDiv").Scroll({line:8,speed:1000,timer:2000});
+});
+</script>
+<!-- 多行滚动 -->
+    <{include file="../Public/foot.html"}>
+
+</body></html>

@@ -1,0 +1,88 @@
+        .ml10{
+            margin-left:11%;
+            font:bold 12px "宋体";
+            color:#222;
+        }
+        #main a{
+            text-decoration:none;
+        }
+        #main a:hover {
+            position:relative;
+            top:1px;
+            left:1px;
+        }
+        .menu a:hover {
+            color:#A76CAF;
+        }
+        .menu{
+            margin:10px 0px 0px 0px;
+            padding-top:3px;
+            text-align:center;
+            float:right;
+            width:90px;
+            height:25px;
+            font:bold 16px "宋体";
+            border:1px solid #A76CAF;
+        }
+        #ttitle{
+            font:normal 14px "宋体";
+            margin-top:5px;
+        }
+        .keyword{
+            float:left;
+            margin:3px 5px;
+            padding:5px 10px;
+            border:3px double #3689F2;
+            background:#3689F2;
+            text-align:center;
+        }
+        .hehe{
+            width:550px;
+        }
+        .hehe a{
+            color:#fff;
+            font:normal 14px '宋体'; 
+        }
+        .hehe a:hover {
+            font-weight:bold;
+        }
+        .ckw{
+            float:left;
+            text-align:center;
+            padding:0px 5px;
+            height:28px;
+            border:1px solid #aaa;
+            font-weight:bold;
+            color:#6712D6;
+        }
+        .messlist a{
+            color:#670A67;
+        }
+        .m_newlist a{
+            color:#670A67;
+        }
+        .m_newlist{
+            margin:5px 0px;
+            height:30px;
+            border-bottom:1px dotted #ddd;
+        }
+        .m_newlist a:hover {
+            color:#080358;
+            font-weight:bold;
+        }
+        /**弹出层效果**/
+        .raceShow{
+            background:url("__PUBLIC__/images/103923O21-2.gif");
+            z-index:10000;
+            border:solid 1px #ccc;
+            position:absolute;
+            display:none;
+            left:50%;
+            top:50%;
+            width:300px;
+            height:100px;
+            padding:30px;
+            font-size:16px;
+            color:red;
+            text-align:center;
+        }

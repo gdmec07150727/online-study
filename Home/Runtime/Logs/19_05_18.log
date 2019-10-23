@@ -1,0 +1,997 @@
+[ 2019-05-18T14:30:18+08:00 ] 127.0.0.1 /online-study/index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.017068s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.029064s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.094076s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.016844s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=890,`clicktime`=1558161016 WHERE ( `id` = 1 ) [ RunTime:0.014608s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.017970s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.030000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.028927s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.001173s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.041876s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000767s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000622s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.001346s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000829s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000750s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000779s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000652s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000834s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000762s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000704s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000636s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000632s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000630s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.045211s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.001274s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000767s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.037053s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.002191s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000782s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000633s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000594s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000607s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000639s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000644s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000664s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000623s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000762s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000657s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000621s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.001766s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.033852s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.009242s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000912s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000784s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.153789s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000987s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000865s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.070683s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.001252s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000901s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000781s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.001319s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000735s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000691s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000628s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000608s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '38' ) LIMIT 1   [ RunTime:0.000671s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '38' ) LIMIT 1  
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000640s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000606s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000941s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.001083s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.001082s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.060719s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.030788s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.001054s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.001019s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000922s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000913s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000995s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.001034s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.001624s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000906s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000753s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000718s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000727s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.062470s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.013221s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000832s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000753s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000634s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000684s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000733s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.001208s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.040837s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000748s ]
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `edu_flink` WHERE ( status=2 ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\IndexAction.class.php 第 132 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\a0df498f3fa8ed5d3704c11b76d93149f0b249f5.file.index.html.php 第 146 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\a0df498f3fa8ed5d3704c11b76d93149f0b249f5.file.index.html.php 第 205 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.215845s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.215991s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.008176s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.027811s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000603s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000828s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.037780s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001346s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001572s ]
+
+[ 2019-05-18T14:30:22+08:00 ] 127.0.0.1 /online-study/index.php/Users/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.031065s ]
+INFO: [ route_check ] --END-- [ RunTime:0.031226s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000459s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000563s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\5eb86b5f52faad6893408a91f10736e2d8252303.file.login.html.php 第 72 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\5eb86b5f52faad6893408a91f10736e2d8252303.file.login.html.php 第 81 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.021183s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.021306s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000595s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000439s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000386s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000907s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.002686s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001144s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001373s ]
+
+[ 2019-05-18T14:30:22+08:00 ] 127.0.0.1 /online-study/index.php/Users/online-study/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000679s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000825s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000560s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000723s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+ERR: 非法操作:online-study
+
+[ 2019-05-18T21:30:45+08:00 ] 127.0.0.1 /online-study/index
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.002228s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002704s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.004841s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.002008s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=891,`clicktime`=1558186244 WHERE ( `id` = 1 ) [ RunTime:0.002302s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.003271s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.010320s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.005249s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.003129s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.006108s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.004443s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.002651s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.003076s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.003558s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.003317s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.003188s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.005373s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.004967s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.002188s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.002726s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.002591s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.002606s ]
+NOTIC: [8] Undefined index: _type H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.003917s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.003388s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.004362s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.002544s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.003463s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.002023s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.003659s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.003918s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.002839s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.002295s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.004518s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.002943s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.003099s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.004137s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.005139s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.003651s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.004477s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.003811s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.003632s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.002283s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.002645s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.003708s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.003578s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.002871s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.002501s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.005661s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.004982s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.003332s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.006119s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.005941s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.003239s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.004094s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.002085s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.002039s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '38' ) LIMIT 1   [ RunTime:0.002102s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '38' ) LIMIT 1  
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.003214s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.003130s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.004341s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.002934s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.003294s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.004434s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '12') OR (`keyword` LIKE '%,12') OR (`keyword` LIKE '12,%') OR (`keyword` LIKE '%,12,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.002497s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '12') OR (`keyword` LIKE '%,12') OR (`keyword` LIKE '12,%') OR (`keyword` LIKE '%,12,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.003489s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.003273s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.003452s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.005211s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.005707s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.004216s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.003840s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.003790s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.004369s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.005034s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.004238s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.007601s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.003474s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.005551s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.002874s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.002366s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.002728s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.006962s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.003182s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.004342s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.005687s ]
+ERR: 1054:Unknown column 'status' in 'where clause'
+ [ SQL语句 ] : SELECT * FROM `edu_flink` WHERE ( status=2 ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\IndexAction.class.php 第 132 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\a0df498f3fa8ed5d3704c11b76d93149f0b249f5.file.index.html.php 第 146 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\a0df498f3fa8ed5d3704c11b76d93149f0b249f5.file.index.html.php 第 205 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.276179s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.276465s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.015111s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.005616s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001418s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.002152s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.025091s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001971s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002499s ]
+
+[ 2019-05-18T21:30:53+08:00 ] 127.0.0.1 /online-study/index.php/Users/myclass
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.002495s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002872s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000887s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001095s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8] Constant THEME_NAME already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: title H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 29 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 29 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 120 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 137 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 141 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 142 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 144 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 145 行.
+NOTIC: [8] Undefined index: note H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 105 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 105 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 146 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 146 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 147 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 155 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 157 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 163 行.
+NOTIC: [8] Undefined index: videonum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 164 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 164 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 168 行.
+NOTIC: [8] Undefined index: notenum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 169 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 169 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 173 行.
+NOTIC: [8] Undefined index: libnum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 174 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 174 行.
+NOTIC: [8] Undefined index: messnum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 178 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 178 行.
+NOTIC: [8] Undefined index: mymes1 H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 192 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 192 行.
+NOTIC: [8] Undefined index: myfrinum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 213 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 213 行.
+NOTIC: [8] Undefined index: myfrinum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 218 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 218 行.
+NOTIC: [8] Undefined index: myfsnum H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 243 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 243 行.
+NOTIC: [8] Undefined index: number1 H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 253 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 253 行.
+NOTIC: [8] Undefined index: number H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 285 行.
+NOTIC: [8] Trying to get property of non-object H:\study\wamp64\www\online-study\Home\Runtime\Cache\bf381cfd66ff7f81f12723b07f020423970d27b4.file.myclass.html.php 第 285 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.150145s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.150368s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001064s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000961s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000630s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001089s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004314s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001139s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001423s ]
+
+[ 2019-05-18T21:30:55+08:00 ] 127.0.0.1 /online-study/index.php/Users/myedu
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001640s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002234s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001833s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.002176s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\69b97ade90a25858ccad3747410006eb9957dae3.file.index.html.php 第 98 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\69b97ade90a25858ccad3747410006eb9957dae3.file.index.html.php 第 108 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.071154s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.071362s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001194s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000850s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000547s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001028s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004270s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001233s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001470s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `edu_uservisit` [ RunTime:0.071392s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 26 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_uservisit` WHERE ( vid='' and uid!='' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.011148s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_uservisit` WHERE ( uid='' and vid!='' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.005978s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.005119s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 39 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.002571s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.005803s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.004847s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 44 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_friend` WHERE ( uid='' ) LIMIT 5   [ RunTime:0.002021s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 46 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.002062s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 48 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( fid='' ) LIMIT 1   [ RunTime:0.004808s ]
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 49 行.
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.005022s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 63 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid= AND status=2 ) LIMIT 1   [ RunTime:0.002394s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid= AND status=2 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.005718s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 66 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( uid= ) LIMIT 5   [ RunTime:0.003861s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( uid= ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 67 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid= ) LIMIT 1   [ RunTime:0.003407s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid= ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.005545s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 70 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid= AND status=2 ) LIMIT 1   [ RunTime:0.002989s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid= AND status=2 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_collect` [ RunTime:0.047654s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 72 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `vid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.002042s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `vid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 73 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and vid<>0 ) LIMIT 1   [ RunTime:0.001972s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and vid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and vid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 75 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.004689s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 84 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `nid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.003051s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `nid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 85 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and nid<>0 ) LIMIT 1   [ RunTime:0.002691s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and nid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and nid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.003927s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 96 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `lid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.001715s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `lid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 97 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and lid<>0 ) LIMIT 1   [ RunTime:0.001827s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and lid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and lid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 99 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.002001s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5  
+SQL: SHOW COLUMNS FROM `edu_usermessage` [ RunTime:0.037220s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='' and vid!='' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.007538s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 110 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='' and vid='' ) ORDER BY addtime desc LIMIT 1   [ RunTime:0.003058s ]
+NOTIC: [8] Constant THEME_NAME already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 120 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 137 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 141 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 142 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 144 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 145 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 247 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 296 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 298 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 300 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 302 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 311 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 312 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 313 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 338 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 341 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 341 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 342 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 350 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 352 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 358 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 363 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 368 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.037961s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.375595s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000884s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000381s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000049s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000428s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.410326s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php:99) H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 95 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php:99) H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 96 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php:99) H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 97 行.
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000287s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.412870s ]
+
+[ 2019-05-18T21:30:56+08:00 ] 127.0.0.1 /online-study/index.php/Users/online-study/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000939s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001247s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000815s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001029s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+ERR: 非法操作:online-study
+
+[ 2019-05-18T21:31:01+08:00 ] 127.0.0.1 /online-study/index.php/Users/myheart
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001591s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001849s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001198s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001504s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `edu_usermessage` [ RunTime:0.003617s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1143 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='' and vid='' ) ORDER BY addtime  [ RunTime:0.002023s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='' and vid='' ) ORDER BY addtime desc LIMIT 1   [ RunTime:0.001431s ]
+SQL: SHOW COLUMNS FROM `edu_uservisit` [ RunTime:0.002480s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1151 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_uservisit` WHERE ( vid='' and uid!='' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.001039s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_uservisit` WHERE ( uid='' and vid!='' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.000927s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.002694s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1164 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.001197s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.003462s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.003516s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1169 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_friend` WHERE ( uid='' ) LIMIT 5   [ RunTime:0.000793s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1171 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.001019s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1173 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( fid='' ) LIMIT 1   [ RunTime:0.001026s ]
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1174 行.
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.001378s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1188 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid= AND status=2 ) LIMIT 1   [ RunTime:0.000513s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid= AND status=2 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000996s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1191 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( uid= ) LIMIT 5   [ RunTime:0.000475s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( uid= ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1192 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid= ) LIMIT 1   [ RunTime:0.000581s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid= ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.001281s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1195 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid= AND status=2 ) LIMIT 1   [ RunTime:0.000643s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid= AND status=2 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_collect` [ RunTime:0.001247s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1197 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `vid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.000618s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `vid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1198 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and vid<>0 ) LIMIT 1   [ RunTime:0.000920s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and vid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and vid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1200 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.000760s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1209 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `nid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.000837s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `nid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1210 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and nid<>0 ) LIMIT 1   [ RunTime:0.001811s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and nid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and nid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1212 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.000585s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1221 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `lid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.000482s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `lid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1222 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and lid<>0 ) LIMIT 1   [ RunTime:0.000426s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and lid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and lid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 1224 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.000467s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5  
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 120 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 137 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 141 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 142 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 144 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 145 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 70 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 125 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 127 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 129 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 131 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 140 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 141 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 142 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 166 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 169 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 170 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 178 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 180 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 186 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 191 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\40da8be7df3bc322f6b9ac64dd1e56d756b5a8c6.file.myheart.html.php 第 196 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.029657s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.029923s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.002134s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001055s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000612s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000967s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005497s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001047s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001256s ]
+
+[ 2019-05-18T21:31:03+08:00 ] 127.0.0.1 /online-study/index.php/Users/myedu
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000910s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001139s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000789s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000988s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 21 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\69b97ade90a25858ccad3747410006eb9957dae3.file.index.html.php 第 98 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\69b97ade90a25858ccad3747410006eb9957dae3.file.index.html.php 第 108 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.018087s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.018308s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001165s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001227s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001001s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001341s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.005782s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001983s ]
+INFO: [ view_end ] --END-- [ RunTime:0.002324s ]
+NOTIC: [8192] mysql_connect(): The mysql extension is deprecated and will be removed in the future: use mysqli or PDO instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Driver\Db\DbMysql.class.php 第 55 行.
+SQL: SHOW COLUMNS FROM `edu_uservisit` [ RunTime:0.005271s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 26 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_uservisit` WHERE ( vid='' and uid!='' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.004046s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_uservisit` WHERE ( uid='' and vid!='' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.002698s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.002740s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 39 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.004276s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.005275s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.005581s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 44 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_friend` WHERE ( uid='' ) LIMIT 5   [ RunTime:0.007068s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 46 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid='' ) LIMIT 1   [ RunTime:0.004287s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 48 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( fid='' ) LIMIT 1   [ RunTime:0.002778s ]
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 49 行.
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.006545s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 63 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid= AND status=2 ) LIMIT 1   [ RunTime:0.001783s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid= AND status=2 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.003271s ]
+ERR: 1146:Table 'edu002.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 66 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( uid= ) LIMIT 5   [ RunTime:0.002540s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( uid= ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 67 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid= ) LIMIT 1   [ RunTime:0.002949s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid= ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.004354s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 70 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid= AND status=2 ) LIMIT 1   [ RunTime:0.003305s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'AND status=2 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid= AND status=2 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_collect` [ RunTime:0.002765s ]
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 72 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `vid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.003325s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `vid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 73 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and vid<>0 ) LIMIT 1   [ RunTime:0.004861s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and vid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and vid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 75 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.002283s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 84 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `nid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.003330s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `nid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 85 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and nid<>0 ) LIMIT 1   [ RunTime:0.002201s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and nid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and nid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 87 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.002320s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5  
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 96 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT `lid` FROM `edu_collect` WHERE ( uid= )  [ RunTime:0.002406s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ')' at line 1
+ [ SQL语句 ] : SELECT `lid` FROM `edu_collect` WHERE ( uid= ) 
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 97 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and lid<>0 ) LIMIT 1   [ RunTime:0.003545s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'and lid<>0 ) LIMIT 1' at line 1
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid= and lid<>0 ) LIMIT 1  
+NOTIC: [2] Invalid argument supplied for foreach() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 99 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.002182s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5  
+SQL: SHOW COLUMNS FROM `edu_usermessage` [ RunTime:0.003020s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='' and vid!='' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.002767s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 110 行.
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Db.class.php 第 604 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='' and vid='' ) ORDER BY addtime desc LIMIT 1   [ RunTime:0.002437s ]
+NOTIC: [8] Constant THEME_NAME already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 223 行.
+NOTIC: [8] Constant THEME_PATH already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 174 行.
+NOTIC: [8] Constant APP_TMPL_PATH already defined H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 175 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 120 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 137 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 141 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 142 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 143 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 144 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\53c35cff55e11efff2116a8453e2a440811ddc45.file.head2.html.php 第 145 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 247 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 296 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 298 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 300 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 302 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 311 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 312 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 313 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 338 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 341 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 341 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 342 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 350 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 352 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 358 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 363 行.
+NOTIC: [8] Undefined index: user H:\study\wamp64\www\online-study\Home\Runtime\Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php 第 368 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015063s ]
+INFO: [ view_parse ] --END-- [ RunTime:-0.182803s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000446s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000261s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000047s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000352s ]
+INFO: [ view_filter ] --END-- [ RunTime:-0.192319s ]
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php:99) H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 95 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php:99) H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 96 行.
+NOTIC: [2] Cannot modify header information - headers already sent by (output started at H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php:99) H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\View.class.php 第 97 行.
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000146s ]
+INFO: [ view_end ] --END-- [ RunTime:-0.197408s ]
+
+[ 2019-05-18T21:31:03+08:00 ] 127.0.0.1 /online-study/index.php/Users/online-study/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001011s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001253s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead H:\study\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000911s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001156s ]
+NOTIC: [8] A session had already been started - ignoring session_start() H:\study\wamp64\www\online-study\Home\Lib\Action\UsersAction.class.php 第 2 行.
+ERR: 非法操作:online-study
+

@@ -1,0 +1,30 @@
+<{include file="Public/pagerForm.html"}>
+	<form method="post" action="__URL__/insertquest/navTabId/listquestion/callbackType/closeCurrent"  class="pageForm required-validate" 
+        onsubmit="return validateCallback(this,dialogAjaxDone);">
+	<div class="pageContent">
+	<div class="tabsContent" style="height: 300px;">
+		<div>
+		<input type="hidden" name="tid" value="<{$tid}>"/>
+			<table class="list nowrap itemDetail" addButton="添加新数据" width="100%">
+				<thead>
+					<tr>
+                        <th type="text" name="content[]" size="22" fieldClass="required" fieldAttrs="{remote:'validate_remote.html', maxlength:100}">试题内容</th>
+						<th type="text" name="aA[]" size="10" fieldClass="required" >答案A</th>
+						<th type="text" name="aB[]" size="10" fieldClass="required">答案B</th>
+						<th type="text" name="aC[]" size="10" fieldClass="required">答案C</th>
+						<th type="text" name="aD[]" size="10" fieldClass="required">答案D</th>
+						<th type="text" name="answer[]" size="10" fieldClass="required">正确答案</th>
+						<th type="del" width="60">删除</th>
+					</tr>
+				</thead>
+				<tbody></tbody>
+			</table>
+		</div>
+	</form>
+</div>
+<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>

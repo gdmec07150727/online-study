@@ -1,0 +1,66 @@
+[ 2019-10-23T14:44:16+08:00 ] 127.0.0.1 /online-study/admin.php/Public/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001897s ]
+INFO: [ route_check ] --END-- [ RunTime:0.002210s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001488s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001829s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime(): stat failed for ./Admin/Runtime/Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php D:\wamp64\www\online-study\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php): No such file or directory D:\wamp64\www\online-study\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: errorinfo D:\wamp64\www\online-study\Admin\Runtime\Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php 第 74 行.
+NOTIC: [8] Trying to get property of non-object D:\wamp64\www\online-study\Admin\Runtime\Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php 第 74 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.175569s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.175834s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.001306s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000911s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000622s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001059s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.004568s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001229s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001462s ]
+
+[ 2019-10-23T14:44:16+08:00 ] 127.0.0.1 /online-study/admin.php/Public/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001474s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001754s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001170s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001429s ]
+
+[ 2019-10-23T14:44:21+08:00 ] 127.0.0.1 /online-study/admin.php/Public/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001110s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001359s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001115s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001479s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: errorinfo D:\wamp64\www\online-study\Admin\Runtime\Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php 第 74 行.
+NOTIC: [8] Trying to get property of non-object D:\wamp64\www\online-study\Admin\Runtime\Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php 第 74 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.019069s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.019302s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000866s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.001610s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.001467s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.001897s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.007024s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.001560s ]
+INFO: [ view_end ] --END-- [ RunTime:0.001900s ]
+
+[ 2019-10-23T14:44:21+08:00 ] 127.0.0.1 /online-study/admin.php/Public/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.001500s ]
+INFO: [ route_check ] --END-- [ RunTime:0.001879s ]
+NOTIC: [8192] preg_replace(): The /e modifier is deprecated, use preg_replace_callback instead D:\wamp64\www\online-study\ThinkPHP\Lib\Core\Dispatcher.class.php 第 132 行.
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.001085s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.001336s ]
+

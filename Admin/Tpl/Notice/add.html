@@ -1,0 +1,33 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listnotice/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>标题：</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="title"/></dd>
+			</dl>
+			<dl>
+				<dt>内容：</dt>
+				<dd>
+					<textarea class="editor" cols="60" rows="6" tools="simple" name="content"></textarea>
+				</dd>
+			</dl>
+			<dl></dl><dl></dl>
+			<dl></dl><dl></dl>
+			<dl></dl><dl></dl>
+			<dl>
+				<dt>添加者：</dt>
+                <dd><input type="text" class="required" style="width:100%" name="author"/></dd>		
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

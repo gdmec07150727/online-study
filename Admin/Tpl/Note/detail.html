@@ -1,0 +1,16 @@
+
+<div class="pageContent">
+	<form method="post" action="" class="pageForm required-validate" 
+        onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>笔记内容：</dt>
+                <dd><textarea name="content" cols="60" rows="12" readonly><{$vo.content}></textarea></dd>
+            </dl>
+            
+		</div>
+		
+	</form>
+</div>
+

@@ -1,0 +1,25 @@
+				<meta http-equiv="Content-type" content="text/html;charset=utf-8">
+				<div class="col-md-4">
+                    <div class="mb30 m_cats">
+                        <div class="tt">
+                            <h3>帖子标签</h3>
+                            <a href="__APP__/Cat/index" class="more">所有标签 ?</a>
+                        </div>
+                        <ul class="list_ib" style='width:230px;'>
+                            <{foreach $cat as $ty }>
+                                <li><a href="__APP__/Message/index2/pid/<{$ty.id}>"><{$ty.name}></a></li>
+                            <{/foreach}>
+                        </ul>
+                    </div>
+                    <div class="m_pay_list">
+                        <div class="tt">
+                            <h3>活跃用户</h3>
+                        </div>
+                        <ol>
+                            <{foreach $person as $vo}>
+                            <li><span><{$vo@iteration}></span><a href="__APP__/Message/mine/uid/<{$vo.id}>"><img style='width:50px;height:50px;' src='__PUBLIC__/uploads/users/<{if $vo.picture!="" && $vo.picture!="1.jpg"}><{$vo.username}>/<{$vo.picture}><{else}>0/0.jpg<{/if}>'>　<{if $vo.name!=''}><{$vo.name}><{else}><{$vo.username}><{/if}></a></li>
+                            <{/foreach}>
+                        </ol>
+                    </div>
+                    
+                </div>

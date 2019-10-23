@@ -1,0 +1,23 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listcat/callbackType/closeCurrent" class="pageForm required-validate" onsubmit="return iframeCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>父类：</dt>
+                <dd><{html_options name='pid' options=$myOptions selected=$mySelect}></dd>
+            </dl>
+            <dl>
+				<dt>子类名：</dt>
+				<dd><input type="text" style="width:100%" name="name"/></dd>
+            </dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

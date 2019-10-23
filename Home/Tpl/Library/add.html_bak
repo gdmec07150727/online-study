@@ -1,0 +1,272 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>教学资源添加</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <!--
+        <meta name="keywords" content="微电影小组,微电影话题,微品牌,微剧本,微创意,微创作,微资讯,电影节">
+        <meta name="description" content="必趣最热闹的微电影圈子">
+        <meta name="msapplication-tooltip" content="小组话题_必趣网_最有影响力的微电影网">
+        <meta name="application-name" content="小组话题_必趣网_最有影响力的微电影网">
+        -->
+    
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <!--包含进uploadify上传的css和js文件-->
+        <link rel="stylesheet" type="text/css" href='__PUBLIC__/uploadify/css/uploadify.css' />
+        <script type="text/javascript" src="__PUBLIC__/uploadify/js/jquery-1.7.2.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/uploadify/js/jquery.uploadify-3.1.min.js"></script>
+
+        <script type="text/javascript" async="" charset="utf-8" src="__PUBLIC__/php/core.php"></script>
+        
+        <script type="text/javascript" src="__PUBLIC__/js/count_flow.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/application.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/retina.js"></script>
+        <!--
+        <script type="text/javascript">var cnzz_protocol = (("https:" == document.location.protocol) ? " https://" : " http://");document.write(unescape("%3Cspan id='cnzz_stat_icon_1000186651'%3E%3C/span%3E%3Cscript src='" + cnzz_protocol + "w.cnzz.com/q_stat.php%3Fid%3D1000186651' type='text/javascript'%3E%3C/script%3E"));</script><span id="cnzz_stat_icon_1000186651"></span><script src="./小组话题_必趣网_files/q_stat.php" type="text/javascript"></script>
+        -->
+        <script language="JavaScript">
+var img_id_upload=new Array();//初始化数组，存储已经上传的图片名
+var i=0;//初始化数组下标
+$(function() {
+    
+$("#upload").click(function(){
+    $("#reset").css("display","none");
+});
+//执行文件上传的方法
+$('#file_upload').uploadify({
+'auto'     : false,//关闭自动上传
+'removeTimeout' : 60,//文件队列上传完成1秒后删除
+'swf'      : '__PUBLIC__/uploadify/js/uploadify.swf',
+'uploader' : '__URL__/upload',//上传请求的方法
+'folder'    : '__PUBLIC__/Uploads/library/',//要上传到的服务器路径，默认‘/’
+'method'   : 'post',//方法，服务端可以用$_POST数组获取数据
+'buttonText' : '选择资源',//设置按钮文本
+'multi'    : false,//允许同时上传多张图片
+'uploadLimit' : 1,//一次最多只允许上传一个资源
+'fileTypeDesc' : 'PDF Files',//只允许上传PDF格式的文件
+'fileTypeExts' : '*.pdf',//限制允许上传的文件后缀
+'fileSizeLimit' : '200000KB',//限制上传的文件不得超过200000KB
+//每次成功上传后执行的回调函数，从服务端返回数据到前端\
+'onUploadSuccess' : function(file, data, response) {
+img_id_upload[i]=data;
+i++;
+var file = jQuery.parseJSON(data);
+alert(file.type);
+$("#filename").val(file.picname);
+$("#size").val(file.size);
+$("#type").val(file.type);
+
+},
+
+});
+});
+    </script>
+    </head>
+    <body>
+    <div id="browser"></div>
+ 
+        <div id="header">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="">E-Sch</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                        <ul class="nav navbar-nav g_nav">
+                            <li><a href="__APP__/Video/index">视频</a></li>
+                            <li><a href="__APP__/Note/index">手记</a></li>
+                            <li><a href="__APP__/Library/index">军火库</a></li>
+                            <li><a href="__APP__/Message/index">贴吧</a></li>
+                            <li><a href="__APP__/Test/index">考试</a></li>
+                        </ul>
+
+                        <form class="navbar-form navbar-right" role="search" action="" method="GET" autocompelte="off">
+                            <div class="form-group">
+                                <input type="text" name="q" class="form-control" placeholder="搜索">
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
+                        </form>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            
+                            <li><a href="">首页</a></li>
+                            <li><a href="">登录</a></li>
+                            <li><a href="">注册</a></li>
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">资源库</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li><a href="__URL__/index">资源浏览</a></li>
+                <li class="active"><a href="">添加资源</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="navbar-left">
+                <li><a href=""><i class="icon-list"></i> 我上传的</a></li>
+                <li><a href=""><i class="icon-list"></i> 我回应的</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module m_movie">
+            <div class="container">
+                <!-- 左侧 -->
+                <div class="col-md-8">
+
+                    <div class="ui three large steps col-md-offset-3 col-md-8 p0 mb20 row" style="float:none">
+                        <div class="ui  active step">填写信息</div>
+                        <div class="ui disabled step">等待审核</div>
+                        <div class="ui active step">...</div>
+                    </div>
+
+                    
+                    <form class="mt30 form-horizontal" autocomplete="off" action="__URL__/insert" method="POST" enctype="multipart/form-data">
+                        <input type="hidden" id="filename" name="name" value="">
+                        <input type="hidden" id="size" name="size" value="">
+                        <input type="hidden" id="type" name="type" value="">
+
+                        <div class="form-group">
+                            <label class="control-label col-md-3">资源名称</label>
+                            <div class="col-md-8">
+                                <input class="form-control col-md-3 input-lg" id="f_name" name="title" size="30" type="text" />
+                                <small>请填写合理资源名</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">选择文档类型</label>
+                            <div class="col-md-8">
+                                <input class="form-control col-md-3 input-lg" id="actor" name="tid" type="text"/>
+                                
+                            </div>
+                        </div>
+                        
+                        
+                        <div class="form-group">
+                            <label class="control-label col-md-3">选择上传资源</label>
+                            <div class="col-md-8">
+                                <input type="file" name="file_upload" id="file_upload" />
+                                <a id="upload" href="javascript:$('#file_upload').uploadify('upload','*');">上传</a>&nbsp;
+                                <a id="reset" href="javascript:$('#file_upload').uploadify('cancel','*')">重置</a>
+                                <small>文档只限pdf格式</small>
+                            </div>
+                        </div>
+                        
+                        <div class="form-group pt20">
+                            <div class="col-md-8  col-md-offset-3">
+                                <hr>
+                            </div>
+                        </div>
+                        <div class="form-group pt20">
+                            <div class="col-md-8  col-md-offset-3 tc">
+                                <button type="submit" style="width:150px;margin:0 auto" class="btn btn-primary btn-lg btn-block">提 交</button>
+                            </div>
+                        </div>
+                    </form>
+
+                </div>
+
+                <!-- 右侧 -->
+                <div class="col-md-4">
+                    <div class="bg_f5 p20 mt40 f12">
+                        上传资源，即表示您已同意<a data-toggle="modal" href="#myModal">E-Sch教学网上传服务条款</a>，请勿上传垃圾等不合理资源。
+                        <br/>
+                        <i>如资源上传失败,请与我们管理员联系 help@esch.com</i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+        <div class="modal-content">
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;</button>
+                <h4 class="modal-title">E-Sch教学网上传服务条款</h4>
+            </div>
+            <div class="modal-body">
+                E-Sch教学网郑重提醒您:<br><br>
+                为响应国家九部委联合开展深入整治互联网和在线教学的号召，营造一个健康便捷的网络教学环境，给大家一个和谐的家园。<br>
+                <ul class="list_pb5 f12 p10">
+                    <li>不得上传任何有违国家法律法规的资源。</li>
+                    <li>不得上传具有色情内容的资源。</li>
+                    <li>不得上传内容低俗，格调不高的资源。</li>
+                    <li>不得上传具有色情诱导性内容的资源。</li>
+                    <li>不得在标题、简介和标签中出现任何具有低俗色情含义的字眼。</li>
+                    <li>不含有涉及版权问题的资源。</li>
+                </ul>
+                如果您上传了这些内容，我们将一律予以删除，我们希望我们最珍贵的网友们，理解并监督我们。
+            </div>
+            
+        </div>
+    </div>
+</div>
+
+
+        <a id="goTop" href="javascript:void(0)" title="返回顶部" style="display: none;"><i class="icon-angle-up"></i></a>
+        <div id="footer">
+            <div class="container">
+                <div class="col-md-7">
+                    <a href="">关于我们</a>
+                    <a href="">联系我们</a>
+                    <a href="">免责声明</a>
+                    <a href="">作品授权</a>
+                    <a href="">意见反馈</a>
+                </div>
+
+                <div class="col-md-5">
+                    © 2014 Eschool.com. all rights reserved. 京公网安备11010802012355号
+                </div>
+            </div>
+        </div>
+
+        <div class="modal fade" id="sys-modal" tabindex="-1" role="dialog" aria-hidden="true">
+            <div class="modal-dialog">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                    </div>
+                    <div class="modal-body"></div>
+                </div>
+            </div>
+        </div>
+
+        
+    
+</body></html>

@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>贴吧浏览</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/message.css">
+        
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+      
+    </head>
+
+<body>
+    <{include file="../Public/head.html"}>
+
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="__APP__/Question/index">提问中心</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li class="active"><a href="__APP__/Question/index">所有问题</a></li>
+                <li class="btn-upload-w"><a href="__APP__/Question/add" class="btn btn-default btn-upload"><i class="icon-upload-alt"></i>提问去~</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Message/mine"><i class="icon-list"></i>个人中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8">
+
+                    <div class="tt">
+                        <h3>标签搜索——<{$kname.name}></h3>
+                    </div>
+                    <{if $list1!=''}>
+                    <div class="m_n_item_info f12 c999" style='background:url("__PUBLIC__/images/m_bt.jpg") repeat-x'>
+                        <span class="g_topic_t ml10">　　　　问题简介　　　　　</span>
+                        <span class="g_topic_t ml10">提问人</span>
+                        <span class="g_topic_t ml10">　时间　　</span>
+                        <span class="g_topic_t ml10">状态</span>
+                    </div>
+                    <ul class="list_pb20"> 
+                        <{foreach $list1 as $vo}>
+                        <li class='m_newlist'> 
+                            <div class="t_ml_120" style='margin-left:10px;float:left;width:48%;'>
+                                <a href="__URL__/show/id/<{$vo.id}>"><{$vo@iteration}>、<{$vo.content|strip_tags|truncate:16:'...':true}></a>
+                                <{if $vo.isbest=='1'}><img style='margin-top:-2px' src='__PUBLIC__/images/best.png'><{/if}>
+                            </div>
+                            <span style='margin-left:0px;float:left;width:80px;'>
+                                <a href='__APP__/Message/mine/uid/<{$vo.uid}>'><{$vo.username}></a>
+                            </span>
+                            <span style='margin:5px 0px 0px 0px;float:left;width:150px;font:normal 14px "宋体"'>
+                                <{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}>
+                            </span>
+                            <{if $vo.replay==''}>
+                                <span style='border:1px solid #ddd;background:red;color:#fff;margin:5px 0px 0px 0px;text-align:center;float:left;width:60px;font:bold 14px "楷体"'>未回复</span>
+                            <{else}>
+                                <span style='border:1px solid #ddd;background:blue;color:#fff;margin:5px 0px 0px 0px;text-align:center;float:left;width:60px;font:bold 14px "楷体"'>已回复</span>
+                            <{/if}>
+                        </li>
+                        <{/foreach}>
+                    </ul>
+                    <div class="tc">
+                        <ul class="pagination">
+                            <{$pageinfo}>
+                        </ul>
+                    </div>
+                    <{else}>
+                        暂无该标签问题哦~
+                        <p>你可以... <a href="__APP__/Question/add"><b>提问去</b>、</a></p>
+                        <p>也可以... <a href="__APP__/Message/index2/pid/<{$kname.id}>"><b>搜索该标签帖子</b>、</a></p>
+                        <p>还可以... <a href="__APP__/Cat/index"><b>浏览所有分类</b>、</a></p>
+                    <{/if}>
+                </div>
+                <!-- 右侧 -->
+                <div class="col-md-4">
+                    <div class="mb30 m_cats">
+                        <div class="tt">
+                            <h3>问题标签</h3>
+                            <a href="__APP__/Cat/index" class="more">所有标签 »</a>
+                        </div>
+                        <ul class="list_ib" style='width:230px;'>
+                            <{foreach $cat as $ty }>
+                                <li><a href="__APP__/Question/index2/pid/<{$ty.id}>"><{$ty.name}></a></li>
+
+                            <{/foreach}>
+                        </ul>
+                    </div>
+                    <div class="m_pay_list">
+                        <div class="tt">
+                            <h3>活跃用户</h3>
+                        </div>
+                        <ol>
+                            <{foreach $person as $vo}>
+                            <li><span><{$vo@iteration}></span><a href="__APP__/Message/mine/uid/<{$vo.id}>"><img style='width:50px;height:50px;' src='__PUBLIC__/uploads/users/<{if $vo.picture!="" && $vo.picture!="1.jpg"}><{$vo.username}>/<{$vo.picture}><{else}>0/0.jpg<{/if}>'>　<{if $vo.name!=''}><{$vo.name}><{else}><{$vo.username}><{/if}></a></li>
+                            <{/foreach}>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<{include file="../Public/foot.html"}>
+    </body>
+</html>
+<script type="text/javascript" charset='utf-8'>
+    $(function(){
+        //添加鼠标移入移除事件
+        $('.m_newlist').mouseover(function(){
+            //鼠标移入事件处理
+            $(this).css("borderColor",'blue');
+        }).mouseout(function(){
+            //鼠标移除事件处理
+            $(this).css("borderColor",'#ddd');
+        });
+    })
+</script>

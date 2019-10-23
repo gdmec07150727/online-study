@@ -1,0 +1,98 @@
+<{include file="Public/pagerForm.html"}>
+<div class="pageHeader">
+	<form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+	<input type="hidden" name="numPerPage" value="<{$numPerPage}>" /><!--每页显示多少条-->
+	<div class="searchBar">
+		<table class="searchContent">
+			<tr>
+				<td>
+                    <b>搜索</b> &nbsp; 
+                </td>
+                <td>
+                    用户名：
+                    <input type="text" name="username" size='7' value="<{$smarty.post.username}>" />
+                </td>
+                <td>
+                    教师名：
+                    <input type="text" name="tname" size='7' value="<{$smarty.post.tname}>" />
+                </td>
+                <td>
+                    问题：
+                    <input type="text" name="content" size='13' value="<{$smarty.post.content}>" />
+                </td>
+                <td>
+                    标签：<{html_options name='pid' options=$myOptions selected=$mySelect}>
+                </td>
+                <td>
+                    <select name='ss' class="combox">
+                        <option value='' <{if $smarty.post.ss eq ''}>selected<{/if}> >--全部--</option>
+                        <option value='1' <{if $smarty.post.ss eq '1'}>selected<{/if}> >已回复</option>
+                        <option value='2' <{if $smarty.post.ss eq '2'}>selected<{/if}> >未回复</option>
+                    </select>
+                </td>
+				<td>
+					<div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+				</td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="delete" href="__URL__/delete/id/{item_id}/navTabId/listquestion" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{item_id}"  width="620" height="450" target="dialog"><span>修改</span></a></li>
+			<li class="line">line</li>
+			<li><a class="icon"  href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+			<!--<li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>-->
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="112">
+		<thead>
+			<tr>
+				<th width="40" orderField="id" <{if $smarty.request._order=='id'}>class="<{$smarty.request._sort}>"<{/if}>>ID</th>
+				<th width="80">用户名</th>
+				<th width="80">教师名</th>
+                <th width="120">问题</th>
+				<th width="100">标签</th>
+                <th width="120">回复内容</th>
+                <th width="50">推荐</th>
+                <th width="50">状态</th>
+                <th width="80">操作</th>
+			</tr>
+		</thead>
+		<tbody>
+			<{foreach $list as $vo}>
+				<tr target="item_id" rel="<{$vo.id}>">
+					<td><{$vo.id}></td>
+					<td><{$vo.username}></td>
+                    <td><{$vo.tname}></td>
+					<td><{$vo.content|strip_tags}></td>
+					<td><{$vo.key}></td>
+                    <td><{$vo.replay|strip_tags}></td>
+                    <td><{if $vo.isbest=='1'}>是<{else}>否<{/if}></td>
+                    <td><{if $vo.status=='1'}>显示<{else}>隐藏<{/if}></td>
+                    <td>
+                        <a href='__ROOT__/index.php/Question/show/id/<{$vo.id}>' target='top'>查看</a> / 
+                        <a class="replay" href="__URL__/replay/id/<{$vo.id}>"  width="650" height="450" target="dialog">回复</a>
+                    </td>
+				</tr>
+			<{/foreach}>
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+				<option value="10" <{if $numPerPage==10}>selected<{/if}>>10</option>
+				<option value="15" <{if $numPerPage==15}>selected<{/if}>>15</option>
+				<option value="20" <{if $numPerPage==20}>selected<{/if}>>20</option>
+				<option value="25" <{if $numPerPage==25}>selected<{/if}>>25</option>
+				<option value="30" <{if $numPerPage==30}>selected<{/if}>>30</option>
+			</select>
+			<span>共<{$totalCount}>条</span>
+		</div>
+		<div class="pagination" targetType="navTab" totalCount="<{$totalCount}>" numPerPage="<{$numPerPage}>" pageNumShown="10" currentPage="<{$currentPage}>"></div>
+	</div>
+</div>

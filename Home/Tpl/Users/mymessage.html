@@ -1,0 +1,97 @@
+<{include file='../Public/head2.html'}>
+                       
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">E-Sch</a></h1>
+        </div>
+        <div class="col-md-6" style="width:80%;">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Users/myheart">心情</a></li>
+                <li class="active"><a href="__APP__/Users/myedu">我的E-Sch</a></li>
+                <li><a href="__APP__/Users/settings">修改资料</a></li>
+                <li><a href="__APP__/Users/photoalbum">我的相册</a></li>
+                <li><a href="__APP__/Users/stranger">查看陌生人</a></li>
+                <li><a href="__APP__/Test/myscore">我的考试</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+         
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-7">
+                    
+                    <div class="tt">
+                        <h3><{$smarty.session.user.username}>的留言板</h3>
+                    </div>
+                    
+                    
+                    <ul class="list_pb20 mt10 f12">
+                        
+                        
+                        
+                       <{foreach $mymes as $um}>
+								<li>
+                                    <div class="clearfix">
+                                        <div class="pull-left">
+											<a href="__APP__/Users/otheredu/uid/<{$um.vid}>"><img class="avatar_sm" src="__PUBLIC__/Uploads/users/<{if $um.upic=='1.jpg'}>0/0.jpg<{else}><{$um.visitor}>/<{$um.upic}><{/if}>"></a><br/>
+                                        </div>
+                                        <div class="t_ml_40">
+                                            <a href="__APP__/Users/otheredu/uid/<{$um.vid}>"><{$um.visitor}></a> : 
+                                            <{$um.content}>
+                                            <span class="c999 f12"><{$um.addtime|date_format:"%Y-%m-%d"}></span>
+                                        </div>
+                                    </div>
+                                </li>
+							<{/foreach}>
+                        
+                    </ul>
+
+                    <div class="tc">
+                        
+                    </div>
+                    
+                </div>
+
+                
+                <div class="col-md-4 col-sm-offset-1">
+
+                    <div class="g_info clearfix bg_f5 p20 mt50">
+                        <div class="g_l_l">
+                            <a href="__APP__/Users/myedu"><img alt="<{$smarty.session.user.username}>" title="<{$smarty.session.user.username}>" src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}>" class="avatar_md"></a>
+                        </div>
+
+                        <div class="g_board t_ml_60">
+                            <h3><a href="__APP__/Users/myedu" style="color:#3458b4;"><{$smarty.session.user.username}></a></h3>
+                            <p></p>
+                        </div>
+                    </div>
+					<div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10">今日心情</h4>
+                            
+                        </div>
+
+                        <{if $mymes1}>
+                        <{foreach $mymes1 as $vo}>
+							<div class="null" style="color:green;">
+                                <{$vo.content}>
+                            </div>
+                        <{/foreach}>
+                        <{else}>
+                            <div class="null">
+                                还没有今日心情，去 <a href="__APP__/Users/myheart">发布</a> 吧
+                            </div>
+						 <{/if}>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<{include file='../Public/foot2.html'}>

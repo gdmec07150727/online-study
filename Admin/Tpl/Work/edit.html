@@ -1,0 +1,37 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listflink/callbackType/closeCurrent" class="pageForm required-validate" 
+        onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <input type="hidden" name="id" value="<{$vo.id}>">
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>创建人</dt>
+				<dd><input type="text" class="required" style="width:100%" name="uname"  value="<{$vo.uname}>"/></dd>
+			</dl>
+			<dl>
+				<dt>创建者ID</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="uid" value="<{$vo.id}>"/></dd>
+			</dl>
+			<dl>
+				<dt>作业内容</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="title" value="<{$vo.title}>"></dd>
+			</dl>
+			<dl>
+				<dt>所属班级</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="class_name" value="<{$vo.class_name}>"/></dd>
+			</dl>
+			<dl>
+				<dt>班级ID</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="class_id" value="<{$vo.class_id}>"/></dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

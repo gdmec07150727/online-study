@@ -1,0 +1,36 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listmessage/callbackType/closeCurrent"  class="pageForm required-validate" onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>帖子标题：</dt>
+				<dd><input type="text" class="required" style="width:100%" name="title"/></dd>
+            </dl>
+            <dl>
+				<dt>标签（逗号分隔）：</dt>
+				<dd><{html_options name='keyword' options=$myOptions selected=$mySelect}></dd>
+			</dl>
+            <dl>
+                <dt> 　</dt>
+                <dd>
+                    <input type="checkbox" value='1' name="isbest"/>精品　
+                    <input type="checkbox" value='1' name="ishot"/>热门
+                </dd>
+			</dl>
+			<dl>
+				<dt>内容：</dt>
+				<dd>
+					<textarea class='editor' class="required" cols="50" rows="10" name="content" tools='simple' upImgUrl='__URL__/doupload' upImgExt='jpg,jpeg,gif,png'></textarea>
+				</dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">发布</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

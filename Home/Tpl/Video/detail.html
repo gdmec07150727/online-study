@@ -1,0 +1,311 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>教学资源浏览</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+    
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        
+        
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <style type="text/css">
+            /**弹出层效果**/
+            .raceShow{background:url("__PUBLIC__/images/103923O21-2.gif");z-index:10000;border:solid 1px #ccc;position:absolute;display:none;width:300px;height:100px;padding:30px;font-size:16px;color:red;text-align:center;}
+        </style>
+        <script type="text/javascript" charset="utf-8">
+            $(function(){
+                //弹出层
+                var speed = 500;//动画速度
+                $("a.please").click(function(event){//绑定事件处理
+                    event.stopPropagation();
+                    //var offset = $(event.target).offset();//取消事件冒泡
+		            $("#racePop").css({ top: "300px", left: "-200px"});//设置弹出层位置
+                    $("#racePop").slideDown(speed);//动画显示
+                    });
+                $("#racePop").click(function(event) { $("#racePop").hide(speed) });//单击弹出层则自身隐藏
+                $(document).click(function(event) { $("#racePop").hide(speed) });//单击空白区域隐藏    
+            });
+        </script>
+    </head>
+    <body>
+    <div id="browser"></div>
+        <{include file="../Public/head.html"}>
+        
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">视频库</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <ul class="navbar-left">
+                <li id="navbarli" class="active"><a href="__APP__/Video/index" class="videolist">视频精选</a></li>
+                <{if $smarty.session.user}>
+                <li class="btn-upload-w" style="margin-left:100px"><a href="javascript:void(0)" id="videoadd" class="btn btn-default btn-upload"><i class="icon-upload-alt"></i>上传我的视频</a></li>
+                <{else}>
+                <li class="btn-upload-w" style="margin-left:100px"><a href="javascript:;" class="btn btn-default btn-upload please"><i class="icon-upload-alt"></i>上传我的视频</a></li>
+                <{/if}>
+            </ul>
+                
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <div id="racePop" class="raceShow"><b>请先登录！点击此处取消...</b></div>
+            <ul class="navbar-left">
+                <{if $smarty.session.user}>
+                <li><a href="__URL__/index/uid/<{$smarty.session.user.id}>"><i class="icon-list"></i> 我上传的</a></li>
+                <{else}>
+                <li><a href="javascript:;" class="please"><i class="icon-list"></i> 我上传的</a></li>
+                <{/if}>
+                <li>
+                <{if $smarty.session.user}>
+                <a href="__URL__/index/collid/<{$smarty.session.user.id}>"><i class="icon-list"></i> 我收藏的</a>
+                <{else}>
+                <a href="javascript:;" class="please"><i class="icon-list"></i> 我收藏的</a>
+                <{/if}>
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module m_movie row">
+            <div class="container">
+                <!-- 左侧 -->
+                <div class="col-md-8">
+
+                    
+                    <div class="tt">
+                        <h3><{$vo.videoname}></h3>
+                    </div>
+
+                    <!-- 影片信息 -->
+                    <div class="m_detail_top mt5 row mb10">
+                        <div class="col-md-8" style="width:300px;">
+                            <div class="m_detail_cover col-md-4 tc" style="width:200px">
+                                <img style="width:200px" alt="<{$vo.videoname}>" title="<{$vo.videoname}>" src="__PUBLIC__/Uploads/videopic/<{$vo.picname}>">
+                                <div class="mt20" style="width:200px">
+                                    <i class="btn btn-sm btn-default"><i class="icon-heart"></i> <em><{$vo.favonum}></em>人赞</i> 
+                                    <i class="btn btn-sm btn-default"><i class="icon-heart"></i> <em><{$collnum}></em>人收藏</i>
+                                </div>
+                            </div>
+                            
+                            <div class="m_detail_info col-md-8" style="width:300px">
+                                <span>类别：<{$typename}></span>
+                                <span>播放量：<{$vo.clicknum}></span>
+                                <span>上传时间： <{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></span>
+
+                                
+                                    <span class="mt10">
+                                        <a href="__APP__/Video/play/id/<{$vo.id}>" class="btn btn-success btn-sm"><i class="icon-play"></i> 在线观看正片</a>               
+                                        <{if $smarty.session.user}>
+                                        <a data-toggle="modal-review" href="javascript:void(0)" class="btn btn-sm btn-info">写短评</a>
+                                        <{else}>
+                                        <a href="javascript:void(0)" class="btn btn-sm btn-info please">写短评</a>
+                                        <{/if}>
+                                    </span>
+                                
+
+                                
+                            </div>
+                        </div>
+
+<!--添加视频短评的弹框-->
+<div id="short-review-modal" tabindex="2" style="display: none;">
+    <div class="modal-dialog">
+        <div class="modal-content">
+
+            <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h4 class="modal-title">发表短评 </h4>
+            </div>
+            <div class="modal-body">
+                <form id="short-review-form" action="" method="post" class="form-horizontal" autocomplete="off">
+                    
+                    <input type="hidden" name="uid" value="<{$smarty.session.user.id}>">
+                    <input type="hidden" name="vid" value="<{$vo.id}>">
+                    <div class="form-group">
+                        <label class="col-lg-2 control-label">短评内容</label>
+                        <div class="col-lg-9">
+                            <textarea name="content" class="form-control charsFrom" rows="3" id="short_content"></textarea>
+                            <p class="pull-left f12 c999"><span class="charsText">还可以输入</span><span class="charsLeft go_green">140</span>字</p>
+                        </div>
+                    </div>
+                </form>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-default" data-dismiss="modal">取消</button>
+                <button type="button" id="button" class="btn btn-default btn-review-push disabled" disabled="disabled" data-film-id="1106">提交</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" charset="utf-8">
+    $(function(){
+        //添加评论的Ajax方法
+        $("#button").click(function(){
+            var uid = $("input[name='uid']").val();
+            var vid = $("input[name='vid']").val();
+            var content = $("textarea[name='content']").val();
+            //alert(content);
+            if (!content.trim()) {
+                $("textarea[name='content']").next("span").empty();
+                $("textarea[name='content']").after("<span><font color='red' style='float:right'>内容为空哟、</font></span>");
+                $("textarea[name='content']").val("");//清空文本框中的内容
+                $("span[class='charsLeft go_green']").html(140);
+                $("button").css("disabled","disabled");
+                return;
+            }else{
+                $("textarea[name='content']").next("span").empty();
+                $.ajax({
+                    url:"__APP__/Videocom/addvideocom",
+                    type:"post",
+                    async:true,
+                    data:{"uid":uid,"vid":vid,"content":content},
+                    dataType:"json",
+                    success:function(data){
+                        //alert(data.content);
+                        var str = "<li>";
+                        str += "<div class=\"reviews_b\">";
+                        str += "<div class=\"c999 m_n_item_info f12 bg_fff\">";
+                        str += "<a href='__APP__/Users/otheredu/uid/"+data.uid+">'><img alt='"+data.username+"' title='"+data.username+"' src='__PUBLIC__/Uploads/users/"+data.username+"/s_"+data.picture+"' class='avatar_md'></a>";
+                        str += "<a href='__APP__/Users/otheredu/uid/'"+data.uid+" target=\"_blank\">"+data.username+"</a> "+data.addtime+"</div>";
+                        str += "<p><i class=\"icon-quote-left cccc\"></i>"+data.content+"<i class=\"icon-quote-right cccc\"></i></p></div>";
+                        str += "</li>";
+                        $("#comment").prepend(str);//把评论内容追加到ul的第一个节点
+                        $("textarea[name='content']").val("");//清空文本框中的内容
+                        $("span[class='charsLeft go_green']").html(140);
+                        $("button").css("disabled","disabled");
+                        $("#short-review-modal").hide();
+                        window.location.reload();
+                        
+                    },
+                    error:function(){
+                        alert("ajax请求失败！");
+                    }
+                });
+            } 
+        });   
+    });
+</script>
+<!--添加视频短评的弹框-->                
+
+                        <div class="col-md-4 m_detail_ping_wrap clearfix" style="width:300px">
+                            <h3>相关的文档资源：</h3>
+                            <ul>
+                                <{if $lib}>
+                                <{foreach $lib as $v}>
+                                <li><a href="__APP__/Library/detail/id/<{$v.id}>"><{$v.title}></a></li>
+                                <{/foreach}>
+                                <{else}>
+                                <li>暂无相关文档,<a href="__APP__/Library/add">欢迎上传</a>...</li>
+                                <{/if}>
+                            </ul>
+                           
+                        </div>
+                    </div>
+
+                    <!-- 剧情简介 -->
+                    <div class="m_detail_related_info mb30">
+                        <h3>视频简介</h3>
+                        <p><{$vo.descr}></p>
+                    </div>
+
+                    
+                    <!-- 视频手记 -->
+                    <div class="m_detail_reviews">
+                        <div class="tt">
+                            <h3>我最近的手记</h3>
+                            <{if $smarty.session.user}>
+                            <a href="__APP__/Note/add/vid/<{$vo.id}>" class="btn btn-sm pull-right btn-primary btn-note-new"><i class="icon-pencil"></i> 写手记</a>
+                            <{else}>
+                            <a href="javascript:;" class="btn btn-sm pull-right btn-primary btn-note-new please"><i class="icon-pencil"></i> 写手记</a>
+                            <{/if}>
+                        </div>
+                        <{if $note}>
+                        <ul>
+                        <{foreach $note as $n}>
+                        <li><{$n@iteration}>、<a href="__APP__/Note/detail/id/<{$n.id}>"><{$n.title}></a> <i style="float:right">createtime：<{$n.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></i></li>
+                        <{/foreach}>
+                        <{if $notenum>5}>
+                        <li><a href="__APP__/Note/index/uid/<{$smarty.session.user.id}>/vid/<{$vo.id}>" style="float:right" target="_blank" class="more pt5">全部(<{$notenum}>) »</a></li>
+                        <{/if}>
+                        </ul>
+                        <{else}>
+                        <div class="null">
+                            暂时还没有手记
+                        </div>
+                        <{/if}>
+                    </div>
+                    
+                </div>
+
+                <!-- 右侧 -->
+                <div class="col-md-4">
+                    <!-- 广告位 -->
+                    <div class="biquu_d_placeholder mt60 mb40">
+                        <a href=""><span class="biquu_d_placeholder"><img alt="E-Sch教学网" title="E-Sch教学网" src="__PUBLIC__/images/ads-lg.jpg"></span></a>
+                    </div>
+
+                    <!-- 短评 -->
+                    <div class="m_detail_reviews s_reviews mb30">
+                        <div class="tt pb10">
+                            <h3 class="pt5">视频的短评</h3>
+                            
+                            <!--<a href="" target="_blank" class="more pt5">全部(32) »</a>-->
+                            <{if $smarty.session.user}>
+                            <a data-film-id="1238" data-toggle="modal-review" href="javascript:void(0)" class="btn btn-sm pull-right btn-info"><i class="icon-pencil"></i> 写短评</a>
+                            <{else}>
+                            <a data-film-id="1238" href="javascript:void(0)" class="btn btn-sm pull-right btn-info please"><i class="icon-pencil"></i> 写短评</a>
+                            <{/if}>
+                        </div>
+                        
+                        <ul class="list_pb10" id="comment">
+                            <{if $comment}>
+                            <{foreach $comment as $com}>
+                            <li>
+                                <div class="reviews_b">
+                                    <div class="c999 m_n_item_info f12 bg_fff">
+                                        <a href="__APP__/Users/otheredu/uid/<{$com.uid}>"><img alt="<{$com.username}>" title="<{$com.username}>" src="__PUBLIC__/Uploads/users/<{$com.username}>/s_<{$com.picture}>" class="avatar_md"></a>
+                                        <a href="__APP__/Users/otheredu/uid/<{$com.uid}>"><{$com.username}></a> <{$com.addtime|date_format:"%Y-%m-%d %H:%M:%S"}>
+                                    </div>
+                                    <p>
+                                        <i class="icon-quote-left cccc"></i>
+                                        <{$com.content}>
+                                        <i class="icon-quote-right cccc"></i>
+                                    </p>
+                                </div>
+                            </li>
+                            <{/foreach}>
+                            <{else if}>
+                            <li>快来坐第一个沙发~</li>
+                            <{/if}>
+                        </ul>
+                        <{if $comTotal > 5}>
+                            <i style="float:right"><{$comPage}></i>
+                        <{/if}>                        
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+        <{include file="../Public/foot.html"}>
+    
+</body></html>

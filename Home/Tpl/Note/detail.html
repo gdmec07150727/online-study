@@ -1,0 +1,317 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title> 手记详情页</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <style type="text/css">
+            .newlist li a:hover{
+                color:blue;
+                font-size:130%;
+                text-decoration:none;
+            }
+            /**弹出层效果**/
+            .raceShow{background:url("__PUBLIC__/images/103923O21-2.gif");z-index:10000;border:solid 1px #ccc;position:absolute;display:none;width:300px;height:100px;padding:30px;font-size:16px;color:red;text-align:center;}
+        </style>
+ 
+        <script type="text/javascript" charset="utf-8">
+            $(function(){
+                
+                //弹出层
+                var speed = 500;//动画速度
+                $(".please").click(function(event){//绑定事件处理
+                    event.stopPropagation();
+                    //var offset = $(event.target).offset();//取消事件冒泡
+		            $("#racePop").css({ top:event.pageY + "px", left: event.pageX-"300" + "px" });//设置弹出层位置
+                    $("#racePop").slideDown(speed);//动画显示
+                    });
+                $("#racePop").click(function(event) { $("#racePop").fadeOut(speed) });//单击弹出层则自身隐藏
+                $(document).click(function(event) { $("#racePop").fadeOut(speed) });//单击空白区域隐藏
+
+                //手记被赞的方法
+                $("#favo").click(function(){
+                    var nidnum = $(this).attr("nidnum");
+                    //alert(idnum);
+                    $.ajax({
+                        url:"__URL__/favo",
+                        type:"post",
+                        async:true,
+                        data:"id="+nidnum,
+                        dataType:"text",
+                        success:function(data){
+                            //alert(data);
+                            if (data == "yes") {
+                                $("#favo").html("已赞").css("color","red");
+                                $("#favonum").html(parseInt($("#favonum").html())+1);
+                            }else{
+                                $("#favo").html("赞").css("color","#777777");
+                                $("#favonum").html($("#favonum").html()-1);
+                            }
+                        },
+                        error:function(){
+                            alert("ajax请求失败！");
+                        }
+                    });
+                });
+                //手记的收藏Ajax请求
+                $("#collect").click(function(){
+                    var nidnum = $(this).attr("nidnum");//获取被收藏的资源id
+                    $.ajax({
+                        url:"__URL__/collect",
+                        type:"post",
+                        async:true,
+                        data:"id="+nidnum,
+                        dataType:"text",
+                        success:function(data){
+                            if (data == "yes") {
+                                $("#collect").html("已收藏").css("color","red");
+                                $("#collnum").html(parseInt($("#collnum").html())+1);
+                            }else{
+                                $("#collect").html("收藏").css("color","#777777");
+                                $("#collnum").html($("#collnum").html()-1);
+                            }
+                        },
+                        error:function(){
+                            alert("ajax请求失败！");
+                        }
+                    });
+                });
+                
+                //添加评论的Ajax方法
+                $("button").click(function(){
+                    var uid = $("input[name='uid']").val();
+                    var nid = $("input[name='nid']").val();
+                    var content = $("textarea[name='content']").val();
+                    //alert(content);
+                    if (!content.trim()) {
+                        $("textarea[name='content']").next("span").empty();
+                        $("textarea[name='content']").after("<span><font color='red'>内容为空哟、</font></span>");
+                        return;
+                    }else{
+                        $("textarea[name='content']").next("span").empty();
+                        $.ajax({
+                            url:"__APP__/Notecom/addComment",
+                            type:"post",
+                            async:true,
+                            data:{"uid":uid,"nid":nid,"content":content},
+                            dataType:"json",
+                            success:function(data){
+                                //alert(data.content);
+                                var str = "<li>";
+                                str += "<div class='c999 m_n_item_info f12'>";
+                                str += "<a href='__APP__/Users/otheredu/uid/"+data.uid+"'><img alt='"+data.username+"' title='"+data.username+"' src='__PUBLIC__/Uploads/users/"+data.username+"/s_"+data.picture+"' class='avatar_md'></a>";
+                                str += "<a href='__APP__/Users/otheredu/uid/"+data.uid+"'>"+data.username+"</a> <i style=\"float:right;margin-right:20px;\">"+data.addtime+"</i></div>";
+                                str += "<div class=\"ml10 mr10 pb10\">"+data.content+"</div>";
+                                str += "</li>";
+                                $("textarea[name='content']").val("");//清空文本框中的内容
+                                $(".null").css("display","none");//让之前的空评论框隐藏
+                                $("#comment").prepend(str);//把评论内容追加到ul的第一个节点
+                                window.location.reload();
+                                
+                            },
+                            error:function(){
+                                alert("ajax请求失败！");
+                            }
+                        });
+                    } 
+                });
+                
+            });
+        </script>
+                                       
+    </head>
+    <body>
+    <div id="browser"></div>
+ 
+    <{include file="../Public/head.html"}>
+        
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">手记</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li><a href="__URL__/index">手记列表</a></li>
+                <li class="active"><a>手记详情</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="navbar-left">
+                <li><{if $smarty.session.user}>
+                <a href="__URL__/index/uid/<{$smarty.session.user.id}>"><i class="icon-list"></i> 我的手记</a>
+                <{else}>
+                <a href="javascript:;" class="please"><i class="icon-list"></i> 我的手记</a>
+                <{/if}></li>
+                <li><{if $smarty.session.user}>
+                <a href="__URL__/index/collid/<{$smarty.session.user.id}>"><i class="icon-list"></i> 我收藏的</a>
+                <{else}>
+                <a href="javascript:;" class="please"><i class="icon-list"></i> 我收藏的</a>
+                <{/if}></li>
+            </ul>
+        </div>
+        <div id="racePop" class="raceShow"><b>请先登录！点击此处取消...</b></div>
+    </div>
+</div>
+
+
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8">
+
+                    
+                    
+                    <!-- 手记内容 -->
+                    <div class="tt" style="padding-left:28px">
+                        <h3><{$vo.title}></h3>
+                    </div>
+                    
+                    <div class="review_content">
+                        <div class="c999 m_n_item_info">
+                            <a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><img alt="<{$username}>" title="<{$username}>" src="__PUBLIC__/Uploads/users/<{$username}>/s_<{$picture}>" class="avatar_md"></a>
+                            创建者 <a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><{$username}></a> 评论 <a href="__APP__/Video/detail/id/<{$vo.vid}>/tid/<{$tid}>"><{$videoname}></a>
+
+                            <{if $smarty.session.user}>
+                            <a style="float:right;margin-right:8px;margin-top:10px" class="btn-like" id="collect" nidnum="<{$vo.id}>" href="javascript:void(0)" title="收藏"><{if $collect}><font color="red">已收藏</font><{else}>收藏<{/if}></a><i class="icon-heart" style="margin-top:10px;float:right;margin-right:8px"></i>
+                            <a style="float:right;margin-top:4px;margin-right:20px;color:#777777" href="javascript:void(0)" id="favo" nidnum="<{$vo.id}>" title="赞"><{if $iszan}><font color="red">已赞</font><{else}>赞<{/if}></a><i class="icon-thumbs-up" style="margin-top:10px;float:right;margin-right:8px"></i>
+                            <{else}>
+                            <a style="float:right;margin-right:8px;margin-top:15px" class="btn-like please" href="javascript:void(0)" title="收藏">收藏</a><i class="icon-heart" style="margin-top:15px;float:right;margin-right:8px"></i>
+                            <a style="float:right;margin-top:10px;margin-right:20px;color:#777777" href="javascript:void(0)" title="赞" class="please">赞</a><i class="icon-thumbs-up" style="margin-top:15px;float:right;margin-right:8px"></i>
+                            <{/if}>
+                        </div>
+                        <div class="review_content_p" style="padding-left:28px">
+                            <p><{$vo.content}></p>
+                        </div>
+                        <div class="f12 c999 pt30 review_act tr">于 <{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}> 创建</div>
+                        <div class="f12 c999 pt30 review_act tr">
+                            
+                            <i class="icon-heart"></i> <em id="favonum"><{$zannum}></em>人赞　 |　 <i class="icon-heart"></i> <em id="collnum"><{$collnum}></em>人收藏
+                        </div>
+
+                        <!-- 回复 -->
+                        <div id="r_comment" class="review_reply">
+                            <i>评论列表</i>
+                            <!--查询评论表中相应手记的评论信息 展示评论 得做判断-->
+                            <ul class="list_p120" id="comment">
+                                <{if $comment}>
+                                    <{foreach $comment as $com}>
+                                        
+                                        <li>
+                                            <div class="c999 m_n_item_info f12">
+                                                <a href="__APP__/Users/otheredu/uid/<{$com.uid}>"><img alt="<{$com.username}>" title="<{$com.username}>" src="__PUBLIC__/Uploads/users/<{$com.username}>/s_<{$com.picture}>" class="avatar_md"></a>
+                                                <a href="__APP__/Users/otheredu/uid/<{$com.uid}>"><{$com.username}></a> <i style="float:right;margin-right:20px;"><{$com.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></i>
+                                            </div>
+                                            <div class="ml10 mr10 pb10">
+                                                <{$com.content}>
+                                            </div> 
+                                            
+                                        </li>
+                                        
+                                    <{/foreach}> 
+                                <{else}>
+                                
+                                <li class="null">
+                                    还没人回应
+                                </li>   
+                            <{/if}>
+                            </ul>
+                            <{if $comTotal>5}>
+                                <i style="float:right"><{$comPage}></i>
+                            <{/if}>
+                            <form id="reply_form" class="form-horizontal mt40 mb30" action="" onsubmit="return doCheck()" method="POST">
+                                <div class="form-item mt10">
+                                    <input type="hidden" name="uid" value="<{$smarty.session.user.id}>">
+                                    <input type="hidden" name="nid" value="<{$vo.id}>">
+                                    <textarea class="form-control" rows="5" name="content"></textarea>
+                                </div>
+                            </form>
+                                <div class="tr">
+                                    <{if $smarty.session.user}>
+                                    <button type="submit" class="btn btn-primary">提交</button>
+                                    <{else}>
+                                    <font size='2'>登陆后即可回应</font> <button type="submit" disabled class="btn btn-primary please">提交</button>
+                                    <{/if}>
+                                </div>
+                            
+                            
+                        </div>
+                    </div>
+                </div>
+
+                <!-- 右侧 -->
+                <div class="col-md-4">
+                    <!-- 版权声明 -->
+                    <div class="copyright alert">
+                        本评论版权属于作者<{$username}>，并受法律保护。除非评论正文中另有声明，未经合法书面许可任何人不得转载或使用整体或任何部分的内容。
+                    </div>
+
+                    <!-- 视频信息 -->
+                    <div class="m_d_info">
+                        <h4 class="mb20"><a href="__APP__/Video/detail/id/<{$vo.vid}>/tid/<{$tid}>"><{$videoname}></a></h4>
+                        <a href="__APP__/Video/detail/id/<{$vo.vid}>/tid/<{$tid}>">
+                            <img alt="<{$videoname}>" title="<{$videoname}>" src="__PUBLIC__/Uploads/videopic/<{$picname}>">
+                        </a>
+                        <div class="m_detail_info m0 pt10 mt10 f12">
+                            <span>上传者：<{$username}> </span>
+                            <span>类别：<{$typename}></span>
+                            <span>点击率： <{$clicknum}></span>
+
+                            
+                            <span class="mt10">
+                                <a href="__APP__/Video/play/id/<{$vo.vid}>" class="btn btn-success btn-sm"><i class="icon-play"></i> 在线观看正片</a>
+                            </span>
+                            
+
+                        </div>
+                    </div>
+
+                    <!-- 更多手记 -->
+                    <div class="m_detail_reviews s_reviews mt30 pl20 pr20">
+                        <div class="tt line16 mb10">
+                            <h4 class="f14 p0">相关视频的手记</h4>
+                            <a href="__URL__/index/vid/<{$vo.vid}>" class="more">全部</a>
+                        </div>
+                        <ul class="list_mb10">
+                            <{if $list}>
+                            <{foreach $list as $vo}>
+                            <li>
+                                <div class="c999 m_n_item_info m0 f12 bg_fff">
+                                    <a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><img alt="<{$vo.username}>" title="<{$vo.username}>" src="__PUBLIC__/Uploads/users/<{$vo.username}>/s_<{$vo.picture}>" class="avatar_md"></a>
+                                    创作者 <a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><{$vo.username}></a> 
+                                    <span class="allstar50"></span>
+                                    <p class="m0"><a href="__APP__/Note/detail/id/<{$vo.id}>" class="f14"><{$vo.title}></a></p>
+                                </div>
+                            </li>
+                            <{/foreach}>
+                            <{else}>
+                            <li>暂无~</li>
+                            <{/if}>
+                        </ul>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <{include file="../Public/foot.html"}>
+       
+    
+</body></html>
+

@@ -1,0 +1,242 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>个人中心___浏览陌生人</title>
+
+<style type="text/css">
+*{padding:0; margin:0;}
+ul,li{list-style:none;}
+body{font:12px/20px "Microsoft Yahei","SimSun",Arial,sans-serif; background:#CCC;}
+
+/* heartPic */
+.heartPic{width:749px;height:630px;margin:60px auto 0 auto;}
+.heartPic ul{float:left;width:749px;}
+.heartPic ul li{float:left;width:100px;height:100px;padding:2px;cursor:pointer;}
+.heartPic ul li.on{z-index:99;}
+.heartPic ul li.on .in{position:relative;left:-50px;top:-50px;padding:5px 5px 20px 5px;background:#666;}
+.heartPic ul li .pTxt{display:none;width:100px;height:15px;text-align:center;color:#fff;overflow:hidden;}
+.heartPic .showDiv{display:block;}
+</style>
+ 
+</head>
+
+<body>
+
+<div>
+	<a href="" style="color:green;font-size:20px;margin-top:20px;margin-left:20px;">换一批</a>
+	<a href="javascript:window.history.back()" style="color:green;font-size:20px;margin-top:20px;margin-left:20px;">返回</a>
+</div>
+<div class="heartPic">
+	<ul>
+		<li></li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[0][0]["id"]}>'><img width="100" height="100" <{if $list[0][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[0][0]['username']}>/<{$list[0][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[0][0]["id"]}>'><p class="pTxt"><{$list[0][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[1][0]["id"]}>'><img width="100" height="100" <{if $list[1][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[1][0]['username']}>/<{$list[1][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[1][0]["id"]}>'><p class="pTxt"><{$list[1][0]['username']}></p></a>
+            </div>
+        </li>
+		<li></li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[2][0]["id"]}>'><img width="100" height="100" <{if $list[2][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[2][0]['username']}>/<{$list[2][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[2][0]["id"]}>'><p class="pTxt"><{$list[2][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[3][0]["id"]}>'><img width="100" height="100" <{if $list[3][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[3][0]['username']}>/<{$list[3][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[3][0]["id"]}>'><p class="pTxt"><{$list[3][0]['username']}></p></a>
+            </div>
+        </li>
+		<li></li>
+	</ul>
+	<ul>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[4][0]["id"]}>'><img width="100" height="100" <{if $list[4][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[4][0]['username']}>/<{$list[4][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[4][0]["id"]}>'><p class="pTxt"><{$list[4][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+			<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[5][0]["id"]}>'><img width="100" height="100" <{if $list[5][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[5][0]['username']}>/<{$list[5][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[5][0]["id"]}>'><p class="pTxt"><{$list[5][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[6][0]["id"]}>'><img width="100" height="100" <{if $list[6][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[6][0]['username']}>/<{$list[6][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[6][0]["id"]}>'><p class="pTxt"><{$list[6][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[7][0]["id"]}>'><img width="100" height="100" <{if $list[7][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[7][0]['username']}>/<{$list[7][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[7][0]["id"]}>'><p class="pTxt"><{$list[7][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[8][0]["id"]}>'><img width="100" height="100" <{if $list[8][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[8][0]['username']}>/<{$list[8][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[8][0]["id"]}>'><p class="pTxt"><{$list[8][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[9][0]["id"]}>'><img width="100" height="100" <{if $list[9][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[9][0]['username']}>/<{$list[9][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[9][0]["id"]}>'><p class="pTxt"><{$list[9][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[10][0]["id"]}>'><img width="100" height="100" <{if $list[10][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[10][0]['username']}>/<{$list[10][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[10][0]["id"]}>'><p class="pTxt"><{$list[10][0]['username']}></p></a>
+            </div>
+        </li>
+	</ul>
+	<ul>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[11][0]["id"]}>'><img width="100" height="100" <{if $list[11][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[11][0]['username']}>/<{$list[11][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[11][0]["id"]}>'><p class="pTxt"><{$list[11][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[12][0]["id"]}>'><img width="100" height="100" <{if $list[12][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[12][0]['username']}>/<{$list[12][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[12][0]["id"]}>'><p class="pTxt"><{$list[12][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[13][0]["id"]}>'><img width="100" height="100" <{if $list[13][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[13][0]['username']}>/<{$list[13][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[13][0]["id"]}>'><p class="pTxt"><{$list[13][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[14][0]["id"]}>'><img width="100" height="100" <{if $list[14][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[14][0]['username']}>/<{$list[14][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[14][0]["id"]}>'><p class="pTxt"><{$list[14][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[15][0]["id"]}>'><img width="100" height="100" <{if $list[15][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[15][0]['username']}>/<{$list[15][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[15][0]["id"]}>'><p class="pTxt"><{$list[15][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[16][0]["id"]}>'><img width="100" height="100" <{if $list[16][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[16][0]['username']}>/<{$list[16][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[16][0]["id"]}>'><p class="pTxt"><{$list[16][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[17][0]["id"]}>'><img width="100" height="100" <{if $list[17][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[17][0]['username']}>/<{$list[17][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[17][0]["id"]}>'><p class="pTxt"><{$list[17][0]['username']}></p></a>
+            </div>
+        </li>
+	</ul>
+	<ul>
+		<li></li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[18][0]["id"]}>'><img width="100" height="100" <{if $list[18][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[18][0]['username']}>/<{$list[18][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[18][0]["id"]}>'><p class="pTxt"><{$list[18][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[19][0]["id"]}>'><img width="100" height="100" <{if $list[19][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[19][0]['username']}>/<{$list[19][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[19][0]["id"]}>'><p class="pTxt"><{$list[19][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[20][0]["id"]}>'><img width="100" height="100" <{if $list[20][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[20][0]['username']}>/<{$list[20][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[20][0]["id"]}>'><p class="pTxt"><{$list[20][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[21][0]["id"]}>'><img width="100" height="100" <{if $list[21][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[21][0]['username']}>/<{$list[21][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[21][0]["id"]}>'><p class="pTxt"><{$list[21][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[22][0]["id"]}>'><img width="100" height="100" <{if $list[22][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[22][0]['username']}>/<{$list[22][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[22][0]["id"]}>'><p class="pTxt"><{$list[22][0]['username']}></p></a>
+            </div>
+        </li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[23][0]["id"]}>'><img width="100" height="100" <{if $list[23][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[23][0]['username']}>/<{$list[23][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[23][0]["id"]}>'><p class="pTxt"><{$list[23][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[24][0]["id"]}>'><img width="100" height="100" <{if $list[24][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[24][0]['username']}>/<{$list[24][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[24][0]["id"]}>'><p class="pTxt"><{$list[24][0]['username']}></p></a>
+            </div>
+        </li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[25][0]["id"]}>'><img width="100" height="100" <{if $list[25][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[25][0]['username']}>/<{$list[25][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[25][0]["id"]}>'><p class="pTxt"><{$list[25][0]['username']}></p></a>
+            </div>
+        </li>
+		<li></li>
+		<li></li>
+	</ul>
+	<ul>
+		<li></li>
+		<li></li>
+		<li></li>
+		<li>
+        	<div class="in">
+            	<a href='__APP__/Users/otheredu/uid/<{$list[26][0]["id"]}>'><img width="100" height="100" <{if $list[26][0]['picture']=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/1.jpg"<{else}>src="__PUBLIC__/uploads/users/<{$list[26][0]['username']}>/<{$list[26][0]['picture']}>"<{/if}> /></a>
+                <a href='__APP__/Users/otheredu/uid/<{$list[26][0]["id"]}>'><p class="pTxt"><{$list[26][0]['username']}></p></a>
+            </div>
+        </li>
+		<li></li>
+		<li></li>
+		<li></li>
+	</ul>
+</div>
+
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.4.2.min.js"></script>
+<script type="text/javascript">
+$(function(){
+	$(".heartPic li").hover(function(){
+		$(this).addClass("on");
+		$(this).find("img").animate({"width":"200px","height":"200px"});
+		$(this).find("div").animate({"width":"200px","height":"200px"});
+		$(this).find(".pTxt").animate({"width":"200px","height":"20px"});
+		$(this).find("p").addClass("showDiv");
+	},function(){
+		$(this).animate({height:"100px"},100).removeClass("on");
+		$(this).find("img").stop(true,true).animate({"width":"100px","height":"100px"});
+		$(this).find("div").stop(true,true).animate({"width":"100px","height":"100px"});
+		$(this).find(".pTxt").stop(true,true).animate({"width":"0px","height":"0px"});
+	});
+})
+</script>
+<div style="text-align:center;clear:both">
+</div>
+</body>
+</html>

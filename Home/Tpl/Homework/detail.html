@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>作业浏览</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        
+        <!--引入FlexPaper相关的js-->
+        <script type="text/javascript" src="__PUBLIC__/FlexPaper/js/flexpaper_flash.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/FlexPaper/js/flexpaper_flash_debug.js"></script>
+       
+        <style>
+            /**弹出层效果**/
+            .raceShow{background:url("__PUBLIC__/images/103923O21-2.gif");z-index:10000;border:solid 1px #ccc;position:absolute;display:none;width:300px;height:100px;padding:30px;font-size:16px;color:red;text-align:center;}
+        </style>
+        <script type="text/javascript" charset="utf-8">
+            $(function(){
+                    
+                //资源被赞的方法
+                $("#favo").click(function(){
+                    var idnum = $(this).attr("idnum");
+                    //alert(idnum);
+                    $.ajax({
+                        url:"__URL__/favo",
+                        type:"post",
+                        async:true,
+                        data:"id="+idnum,
+                        dataType:"text",
+                        success:function(data){
+                            //alert(data);
+                            if (data == "yes") {
+                                $("#favo").html("已赞").css("color","red");
+                                $("#favonum").html(parseInt($("#favonum").html())+1);
+                            }else{
+                                $("#favo").html("赞").css("color","#777777");
+                                $("#favonum").html($("#favonum").html()-1);
+                            }
+                        },
+                        error:function(){<{$com.addtime|date_format:"%Y-%m-%d %H:%M:%S"}>
+                            alert("ajax请求失败！");
+                        }
+                    });
+                });
+                //资源的收藏Ajax请求
+                $("#collect").click(function(){
+                    var lidnum = $(this).attr("lidnum");//获取被收藏的资源id
+                    $.ajax({
+                        url:"__URL__/collect",
+                        type:"post",
+                        async:true,
+                        data:"id="+lidnum,
+                        dataType:"text",
+                        success:function(data){
+                            if (data == "yes") {
+                                $("#collect").html("已收藏").css("color","red");
+                                $("#collnum").html(parseInt($("#collnum").html())+1);
+                            }else{
+                                $("#collect").html("收藏").css("color","#777777");
+                                $("#collnum").html($("#collnum").html()-1);
+                            }
+                        },
+                        error:function(){
+                            alert("ajax请求失败！");
+                        }
+                    });
+                });
+                //添加评论的Ajax方法
+                $("button").click(function(){
+                    var uid = $("input[name='uid']").val();
+                    var lid = $("input[name='lid']").val();
+                    var content = $("textarea[name='content']").val();
+                    //alert(content);
+                    if (!content.trim()) {
+                        $("textarea[name='content']").next("span").empty();
+                        $("textarea[name='content']").after("<span><font color='red'>内容为空哟、</font></span>");
+                        return;
+                    }else{
+                        $("textarea[name='content']").next("span").empty();
+                        $.ajax({
+                            url:"__APP__/Libcom/addComment",
+                            type:"post",
+                            async:true,
+                            data:{"uid":uid,"lid":lid,"content":content},
+                            dataType:"json",
+                            success:function(data){
+                                //alert(data.content);
+                                var str = "<li>";
+                                str += "<div class='c999 m_n_item_info f12'>";
+                                str += "<a href='__APP__/Users/otheredu/uid/"+data.uid+"'><img alt='"+data.username+"' title='"+data.username+"' src='__PUBLIC__/Uploads/users/"+data.username+"/s_"+data.picture+"' class='avatar_md'></a>";
+                                str += "<a href='__APP__/Users/otheredu/uid/"+data.uid+"'>"+data.username+"</a> <i style=\"float:right;margin-right:20px;margin-top:6px\">"+data.addtime+"</i></div>";
+                                str += "<div class=\"ml10 mr10 pb10\">"+data.content+"</div>";
+                                str += "</li>";
+                                $("textarea[name='content']").val("");//清空文本框中的内容
+                                $(".null").css("display","none");//让之前的空评论框隐藏
+                                $("#comment").prepend(str);//把评论内容追加到ul的第一个节点
+                                //window.location.reload();
+                                
+                            },
+                            error:function(){
+                                alert("ajax请求失败！");
+                            }
+                        });
+                    } 
+                });
+                //弹出层
+                var speed = 500;//动画速度
+                $("a.please").click(function(event){//绑定事件处理
+                    event.stopPropagation();
+                    //var offset = $(event.target).offset();//取消事件冒泡
+		            $("#racePop").css({ top:event.pageY-80 + "px", left: "500px" });//设置弹出层位置
+                    $("#racePop").slideDown(speed);//动画显示
+                    });
+                $("#racePop").click(function(event) { $("#racePop").fadeOut(speed) });//单击弹出层则自身隐藏
+                $(document).click(function(event) { $("#racePop").fadeOut(speed) });//单击空白区域隐藏    
+            });
+        </script>
+        
+    </head>
+    <body>
+    <div id="browser"></div>
+ 
+
+    
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">作业</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li class="active"><a href="__URL__/index">作业查看</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module m_movie row">
+            <div class="container">
+                <!-- 左侧 -->
+                <div class="col-md-8">
+
+                    
+                    <div class="review_content">
+                        <div class="c999 m_n_item_info">
+                            <a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><img alt="<{$vo.username}>" title="<{$vo.username}>" src="__PUBLIC__/Uploads/users/<{$vo.username}>/s_<{$vo.picture}>" class="avatar_md"></a>
+                            <a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><{$vo.username}></a>提交的作业
+                            <{if $smarty.session.user}>
+                            <a style="float:right;margin-right:8px;margin-top:15px" class="btn-like" id="collect" lidnum="<{$vo.id}>" href="javascript:void(0)" title="收藏"><{if $collect}><font color="red">已收藏</font><{else}>收藏<{/if}></a><i class="icon-heart" style="margin-top:15px;float:right;margin-right:8px"></i>
+                            <a style="float:right;margin-top:9px;margin-right:20px;color:#777777" href="javascript:void(0)" id="favo" idnum="<{$vo.id}>" title="赞"><{if $iszan}><font color="red">已赞</font><{else}>赞<{/if}></a><i class="icon-thumbs-up" style="margin-top:15px;float:right;margin-right:8px"></i>
+                            <{else}>
+                            <a style="float:right;margin-right:8px;margin-top:6px" class="btn-like please" href="javascript:void(0)" title="收藏">收藏</a><i class="icon-heart" style="margin-top:7px;float:right;margin-right:8px"></i>
+                            <a style="float:right;margin-right:20px;color:#777777" href="javascript:void(0)" title="赞" class="please">赞</a><i class="icon-thumbs-up" style="margin-top:7px;float:right;margin-right:8px"></i>
+                            <{/if}>
+                        </div>
+                        <div class="review_content_p">
+                            作业名：<b><{$vo.title}></b>&nbsp;&nbsp;&nbsp;&nbsp;作业类型：<b><{$type}></b>&nbsp;&nbsp;&nbsp;&nbsp;作业大小：<b><{($vo.size/1024)|string_format:"%.2f"}>kb</b>&nbsp;&nbsp;&nbsp;&nbsp;
+                            <{if $smarty.session.user}>
+                            <a href="__URL__/dwload/id/<{$vo.id}>">点击下载</a>
+                            <{else}>
+                            <a href="javascript:;" class="please">点击下载</a>
+                            <{/if}>
+                        </div>
+                        <div class="review_content_p" style="margin-top:10px;">
+                            <a id="viewerPlaceHolder" swfname="<{$vo.swfname}>" style="width:560px;height:580px;display:block;"></a> 
+                            <script type="text/javascript">
+                                //===================================================
+                                //在线预览文档的js代码
+                                var swfname = $("#viewerPlaceHolder").attr("swfname");
+                                var fp = new FlexPaperViewer(
+                                     '__PUBLIC__/FlexPaper/swf/FlexPaperViewer', 
+                                     'viewerPlaceHolder',     //对应于a 标签的id
+                                     { config : {
+                                     SwfFile : escape('__PUBLIC__/Uploads/library_swf/'+swfname), //这句是关键: SwfFile: 指示导入的.swf的路径
+                                     Scale : 0.6, 
+                                     ZoomTransition : 'easeOut',
+                                     ZoomTime : 0.5,
+                                     ZoomInterval : 0.4,
+                                     FitPageOnLoad : true,
+                                     FitWidthOnLoad : true,
+                                     PrintEnabled : true,
+                                     FullScreenAsMaxWindow : false,
+                                     ProgressiveLoading : false,
+                                     MinZoomSize : 0.5,
+                                     MaxZoomSize : 2,
+                                     SearchMatchAll : true,
+                                     InitViewMode : 'Portrait',
+                                     
+                                     ViewModeToolsVisible : true,
+                                     ZoomToolsVisible : true,
+                                     NavToolsVisible : true,
+                                     CursorToolsVisible : true,
+                                     SearchToolsVisible : true,
+                                     localeChain: 'en_US'
+                                }});
+                                //===================================================
+                            </script>
+                            
+                        </div>
+
+                        <!-- 回复 -->
+                    </div>
+                </div>
+
+                <div class="col-md-4">
+
+                    
+                    <div class="biquu_d_placeholder mt50 mb40">
+                        <a href=""><img alt="教学网" title="教学网" src="__PUBLIC__/images/0000dh.jpg"></a>
+                    </div>
+                    
+                    <div class="m_pay_list">
+                        <div class="tt">
+                            <h3>您可能还喜欢</h3>
+                        </div>
+                        <ol>
+                            <{foreach $tuilist as $tui}>
+                            <li><span>荐</span><a href="__URL__/detail/id/<{$tui.id}>"><{$tui.title}></a></li>
+                            <{/foreach}>
+                        </ol>
+                    </div>
+                </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+       <{include file="../Public/foot.html"}>
+    
+</body></html>

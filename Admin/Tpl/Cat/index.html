@@ -1,0 +1,70 @@
+<{include file="Public/pagerForm.html"}>
+
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+    
+	<div class="searchBar">
+		<table class="searchContent">
+            <tr>
+                <td style='font:bold 14px "宋体";'>资源分类</td>
+                <td style='font:bold 14px "宋体";'>>　<a href="__APP__/Cat/index" target="navTab" rel="listcat" title="一级分类">一级分类</a></td>
+                <{foreach $menu as $vo}>
+                    <td style='font:bold 14px "宋体";'>>　<a href="__APP__/Cat/index/cid/<{$vo.id}>" target="navTab" rel="listcat" title="<{$vo.name}>"><{$vo.name}></a></td>
+                <{/foreach}>
+            </tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="add" href="__URL__/add/navTabId/listcat/id/{sid_user}" target="dialog"><span>添加</span></a></li>
+            <li><a class="edit" href="__URL__/edit/id/{sid_user}/navTabId/listcat" target="dialog"><span>修改</span></a></li>
+            <li class="line">line</li>
+            <li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+            <!--<li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>-->
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+			<tr>
+				<th align="center" width="40" orderField="id" <{if $smarty.request._order='id'}>class=<{$smarty.request._sort}><{/if}>>ID号</th>
+                <th align="center" width="60">分类名称</th>
+                <th align="center" width="60">上级分类</th>
+                <th align="center" width="40">路径</th>
+                <th align="center" width="40">状态</th>
+                <th align="center" width="50">操作</th>
+			</tr>
+		</thead>
+        <tbody>
+            <{foreach $list as $vo}>
+            <tr target="sid_user" rel="<{$vo.id}>">
+                <td><{$vo.id}></td>
+                <td><a href="__APP__/Cat/index/cid/<{$vo.id}>" target="navTab" rel="listcat" title="<{$vo.name}>"><{$vo.name}></a></td>
+                <td><{$vo.pid}></td>
+                <td><{$vo.path}></td>
+                <td><{$vo.status}></td>
+                <td><a class="add" href="__URL__/add/navTabId/listcat/id/<{$vo.id}>" target="dialog">添加子分类</a></td>
+            </tr>
+            <{/foreach}>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                <option value="10" <{if $numPerPage == 10}>selected<{/if}>>10</option>
+                <option value="15" <{if $numPerPage == 15}>selected<{/if}>>15</option>
+                <option value="20" <{if $numPerPage == 20}>selected<{/if}>>20</option>
+                <option value="25" <{if $numPerPage == 25}>selected<{/if}>>25</option>
+                <option value="30" <{if $numPerPage == 30}>selected<{/if}>>30</option>
+			</select>
+            <span>条，共<{$totalCount}>条</span>
+		</div>
+		
+        <div class="pagination" targetType="navTab" totalCount="<{$totalCount}>" numPerPage="<{$numPerPage}>" pageNumShown="10" currentPage="<{$currentPage}>"></div>
+
+	</div>
+</div>

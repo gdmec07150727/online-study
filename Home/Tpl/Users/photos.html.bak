@@ -1,0 +1,248 @@
+<{include file='../Public/head2.html'}>
+                       
+        
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">E-Sch</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Index/index">新鲜事</a></li>
+                <li class="active"><a href="__APP__/Users/myedu">我的E-Sch</a></li>
+                <li><a href="__APP__/Users/explore">浏览发现</a></li>
+                <li><a href="__APP__/Users/settings">修改资料</a></li>
+                <li><a href="__APP__/Users/photoalbum">我的相册</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8">
+					
+					
+					
+					<div class="h2" style="font-size:20px;">&nbsp;&nbsp;上传照片</div>
+		   <div class="mid_text_Deng">
+		     
+			      <form  action="__URL__/uploadphoto/uid/<{$smarty.session.user.id}>/pid/<{$smarty.get.pid}>/desc/<{$smarty.get.desc}>" method="post" enctype="multipart/form-data">
+					  <div id="picnames">
+						 <div><td>选择照片：</td><td><input style="float:right;margin-right:280px;" type='file' name='name[]' size='29'></td></div>
+
+						 <div style="float:right;margin-right:390px;margin-top:12px;"><input class="btn btn-default" type="submit" value="提交"></div>
+					    
+					  </div>
+			     </form>
+		       <button class="btn btn-default" style="margin-top:10px;">再上传一张</button>
+		   </div><br/>
+		<div class="h2" style="font-size:20px;">&nbsp;&nbsp;相册描述</div>
+         <div class="mid_text_Deng">
+              &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<{$smarty.get.desc}>
+         </div> 
+		
+		<div class="h2" style="font-size:20px;">&nbsp;&nbsp;浏览照片</div>
+        
+		<div class="mid_text_Deng">
+			<{if $countphoto!=0}>
+			<center>
+				<{foreach $list as $vo}>
+					<div style="display:block;border:3px solid #fff;width:100px;height:150px;float:left">
+						<a href="__URL__/showpic/uid/<{$vo.uid}>/pid/<{$vo.pid}>/id/<{$vo.id}>">
+							<img src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$vo.pid}>/s_<{$vo.picname}>" border="none" style="width:100px;height:100px;">
+						</a>
+						<a href='__URL__/delpic/id/<{$vo.id}>/pid/<{$vo.pid}>/picname/<{$vo.picname}>/uid/<{$vo.uid}>' style="font-size:13px;color:#444;"><span id=<{$vo.id}>>删除</span></a><br>
+						<div class="covers" pid="<{$vo.pid}>" picname="<{$vo.picname}>" style="font-size:13px;color:#444;">
+							<a href='javascript:void(0)'>设置为封面</a>
+						</div>
+					</div>&nbsp;&nbsp;&nbsp;&nbsp;
+				<{/foreach}>
+			</center>
+			<{else}>您还没有上传照片！
+			<{/if}>
+        </div>
+					
+					
+					
+					
+					
+                </div>
+
+                
+                <div class="col-md-4">
+                    
+                    
+                    <div class="u_card">
+                        <div class="u_card_name"><{$smarty.session.user.username}></div>
+                        <div class="u_card_info">
+                            <img src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}>" class="avatar_bg">
+
+                            
+
+                        </div>
+                        <div class="u_card_intro">
+                            
+                            <p class="c666">一位php程序小菜鸟~</p>
+                            <p><span>2014-02-06加入</span></p>
+                        </div>
+                        <div class="u_card_data">
+                            <ul class="list_ib">
+                                 <li>
+                                    <a href="http://www.biquu.com/user/1473/shorts">短评<span>0</span></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.biquu.com/user/1473/reviews">影评<span>0</span></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.biquu.com/user/1473/films">作品<span>0</span></a>
+                                </li>
+                                <li>
+                                    <a href="http://www.biquu.com/user/1473/notes">手记<span>0</span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10"><{$smarty.session.user.username}>的新鲜事</h4>
+                            
+                        </div>
+
+                        
+                            <div class="null">
+                                还没有新鲜事，去 <a href="http://www.biquu.com/explore">浏览发现</a> 看看
+                            </div>
+                        
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4><{$smarty.session.user.username}>关注的人(0)</h4>
+                            
+                        </div>
+                        
+                            <div class="null mb10">
+                                还没有关注任何人，去 <a href="http://www.biquu.com/explore">浏览发现</a> 看看
+                            </div>
+                        
+
+                        <a class="f14" href="http://www.biquu.com/user/1473/follower">» 0人正在关注Lamp妖男</a>
+                    </div>
+
+                    
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> <{$smarty.session.user.username}>的短评</h4>
+                            
+                        </div>
+                        
+                            <div class="null f12 mb10">
+                                还没有写过短评，看看大家写的 <a href="http://www.biquu.com/short">短评</a>
+                            </div>
+                        
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="p0"><{$smarty.session.user.username}>的收藏</h4>
+                            
+                            <a href="http://www.biquu.com/user/1473/like" class="more">全部(1) »</a>
+                            
+                        </div>
+                        
+                        <ul class="list_pb10 list_pt10 f12 list_b_s_eee">
+                           
+                            <li>
+                                
+
+                                
+                                    <span class="c999">[手记]</span> <a href="http://www.biquu.com/note/35">《爱在指间》导演手记</a>
+                                
+
+                                
+
+                                
+
+                                
+                            </li>
+                            
+                        </ul>
+                        
+                    </div>
+
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="p0"><{$smarty.session.user.username}>上传的微电影</h4>
+                            
+                        </div>
+                        
+                            <div class="null f12">
+                                还没有上传过微电影
+                            </div>
+                        
+                    </div>
+
+                    
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="p0">我购买的微电影</h4>
+                            
+                        </div>
+                        
+                            <div class="null f12">
+                                还没有购买过微电影
+                            </div>
+                        
+                    </div>
+                    
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<{include file='../Public/foot2.html'}>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					$("#picnames").prepend("<div><td>选择照片:</td><td><input style='float:right;margin-right:280px;' type='file' name='name[]' size='29'></td></div>");
+				});
+			});
+		
+		$(function(){
+			$(".covers").click(function(){
+				var pid=$(this).attr('pid');
+				var picname=$(this).attr('picname');
+				$.ajax({
+					url:"__URL__/updatecover",
+					type:"post",
+					dataType:'text',
+					data:{'cover':picname,'id':pid},
+					async:true,
+					success:function(res){
+						if(res=='ok'){
+							alert("封面设置成功");
+						}
+					},
+				});
+				
+			});
+		});
+</script>

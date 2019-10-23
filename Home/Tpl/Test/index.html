@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>试题列表</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <style type="text/css">
+            a:hover{text-decoration:none}
+            #alist{
+                color:#2C2C2C;
+                font-size:20px;
+            }
+            li.testlist{
+                height:20px;
+                line-height:5px;
+            }
+            a.title{
+                color:#67246F;
+                font-size:15px;
+                font-family:微软雅黑;
+            }
+        </style>
+        
+       
+    </head>
+    <body>
+    <div id="browser"></div>
+
+    <{include file="../Public/head.html"}>
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">试题库</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li class="active"><a href="__URL__/index">所有试题浏览</a></li>
+                <li><a href="__URL__/myscore">我的历史成绩</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+     
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+               <!--试题列表块开始-->  
+                <div class="col-md-8">    
+                    <div class="m_r_list g_t_list mt5"> 
+                        <div class="c999 m_n_item_info">
+                            <span id="alist"><{$title|default:"全部"}>试题列表</span>
+                        </div>
+                        <ul class="list_pb20">
+                            <{if $list}>
+                            <{foreach $list as $vo}>
+                            <li class="testlist">
+                            <em><a class="title" href="__APP__/Test/detail/id/<{$vo.id}>"><{$vo.title}></a></em>
+                            <small style="float:right">添加时间:<{$vo.addtime|date_format:"%Y-%m-%d %H:%M"}></small>
+                            </li>
+                            <{/foreach}>
+                            <{else}>
+                            <li style="font-size:15px; color:red">试题列表暂为空~</li>
+                            <{/if}>
+                        </ul>
+                    </div>
+                    <div class="tc">
+                            <ul class="pagination">
+                                <{$showPage}>
+                            </ul>
+                    </div>
+                </div>
+                <!--试题列表块结束--> 
+
+<!-- 右侧 -->
+                <div class="col-md-4">
+                    <div class="mb30 m_cats" style="width:200px">
+                        <div class="tt">
+                            <h3>资源分类</h3>
+                            <a href="__APP__/Cat/index" class="more"><font size="2">所有分类 »</font></a>
+                        </div>
+                        <ul class="list_ib">
+                            <{foreach $typelist as $ty }>
+                            <li><a href="__APP__/Test/index/pid/<{$ty.id}>"><{$ty.name}></a></li>
+                            <{/foreach}> 
+                        </ul>
+                    </div>
+                    <div class="m_pay_list">
+                        <div class="tt">
+                            <h3>最新试题榜</h3>
+                        </div>
+                        
+                        <div style="height:300px; width:230px">
+                            <ul id="did">
+                                <{foreach $newlist as $vo}>
+                                <li class="cc"><span>新</span><a href="__APP__/Test/detail/id/<{$vo.id}>"><{$vo.title}></a>
+                                </li>
+                                <{/foreach}>
+                             </ul>
+                         </div>
+                         
+                    </div>
+                </div>
+                <!--右侧结束-->  
+            </div>
+        </div>
+    </div>
+</div>
+    <{include file="../Public/foot.html"}>
+</body></html>
+ <script type="text/javascript" charset="utf-8">
+            $(function(){
+                var mytime=setInterval(function(){
+                    $("#did li:last").hide().prependTo("#did").slideDown(1000);   
+                    },800);
+                $(".m_pay_list").mouseover(function(){
+                    clearInterval(mytime);
+                    mytime=null;
+                    });
+                 $(".m_pay_list").mouseleave(function(){
+                    mytime=setInterval(function(){
+                    $("#did li:last").hide().prependTo("#did").slideDown(1000);   
+                    },800);
+                  
+                });
+
+                //添加鼠标移入移除事件
+                    var cc=null;
+                    $(".testlist").mouseover(function(){
+                        //鼠标移入事件处理
+                    cc=$(this).css("background");
+                    var rr=Math.floor(Math.random()*255);
+                    var gg=Math.floor(Math.random()*255);
+                    var bb=Math.floor(Math.random()*255);
+                    if(rr<=150){
+                        rr+=150;
+                    }
+                    if(gg<=150){
+                        gg+=150;
+                    }
+                    if(bb<=150){
+                        bb+=150;
+                    }
+                    var rgb="rgb("+rr+","+gg+","+bb+")";
+                    $(this).css("background",rgb);
+                      }).mouseout(function(){
+                //鼠标移除事件处理
+                $(this).css("background",cc);
+                });
+                $('.testlist').mouseover(function(){
+                //鼠标移入事件处理
+                 $(this).css("borderColor",'blue');
+                }).mouseout(function(){
+                //鼠标移除事件处理
+                $(this).css("borderColor",'#ddd');
+        });
+    })
+         </script> 
+         

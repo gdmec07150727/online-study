@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>正确答案页面</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=10">
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <style type="text/css">
+            #content{
+                font-size:20px;
+                font-family:微软雅黑;
+                color:#5D5D5D;
+            }
+            #radio{
+                color:#838383;
+                font-size:15px; 
+                font-family:微软雅黑";
+            }
+            
+        </style>
+    </head>
+    <body>
+    <div id="browser"></div>
+        <{include file="../Public/head.html"}>
+        
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">正确答案</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                
+                <li class="active"><a href="">查看正确答案</a></li>
+                <li><a href="__URL__/index">返回试题列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+      
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">  
+                <div class="col-md-8">    
+                    <div class="m_r_list g_t_list mt5"> 
+                        <div class="mb30 m_cats">
+                            <ul>  
+                                <li><b type="submit" class="btn btn-primary btn-lg btn-block">以下就是本次测试的正确答案啦!!!</b></li>
+                            </ul>
+                            <ul class="quest">
+                            <{foreach $list as $vo}>
+                                <li id="content"><{$vo@iteration}>.<{$vo.content}></br></br>
+                                <p id="radio">
+                                    <input type="radio" name="test[<{$vo.id}>]" value="A" <{if $vo.answer=="A"}>checked<{/if}>> A.<{$vo.aA}>&nbsp;&nbsp;
+                                    <input type="radio" name="test[<{$vo.id}>]" value="B" <{if $vo.answer=="B"}>checked<{/if}>> B.<{$vo.aB}>&nbsp;&nbsp;
+                                    <input type="radio" name="test[<{$vo.id}>]" value="C" <{if $vo.answer=="C"}>checked<{/if}>> C.<{$vo.aC}>&nbsp;&nbsp;
+                                    <input type="radio" name="test[<{$vo.id}>]" value="D" <{if $vo.answer=="D"}>checked<{/if}>> D.<{$vo.aD}>
+                                </p>
+                                </li>
+                            <{/foreach}>
+                        </ul>
+                        </div>
+                    </div>
+                </div> 
+			<div class="col-md-4"> 
+				<div class="biquu_d_placeholder mt50 mb40">
+					<a href=""><img alt="E-Sch教学网" title="E-Sch教学网" src="__PUBLIC__/images/0000dh.jpg"></a>
+				</div>
+            </div>
+            </div>
+        </div>
+    </div>
+</div>
+        
+    <{include file="../Public/foot.html"}>
+</body></html>

@@ -1,0 +1,168 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+    <head>
+        <title><{$title}></title>
+		<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/message.css">
+        <style type="text/css">
+        .ml10{
+            margin-left:50px;
+            width:600px;
+            font:bold 22px "楷体";
+            text-align:center;
+            color:#000;
+        }
+        </style>
+        
+		<script type="text/javascript" src="__PUBLIC__/jquery/jquery-1.4.4.min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/xheditor/xheditor-1.2.1.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/xheditor/xheditor_lang/zh-cn.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+      
+	</head>
+    <body>
+        <{include file="../Public/head.html"}>
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="__APP__/Question/index">提问中心</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Question/index">所有问题</a></li>
+                <li class="btn-upload-w"><a href="__APP__/Question/add" class="btn btn-default btn-upload"><i class="icon-upload-alt"></i>提问去~</a></li>
+            </ul>
+        </div>
+        <div class="col-md-4">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Message/mine"><i class="icon-list"></i>个人中心</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                <div class="col-md-8">
+                    <div class="tt">
+                        <h3>查看问题详情</h3>
+                    </div>
+                    <{if $smarty.session.user.id==$list.uid}>
+                        <h4><a href='__APP__/Question/edit/id/<{$list.id}>/uid/<{$list.uid}>'>修改一下下</a></h4>
+                    <{/if}>
+                    <a href='javascript:void(0)'><div class='nolike' vv='y' style='display:<{if $list.like=="y"}>block<{else}>none<{/if}>;margin:5px;float:left;width:60px;padding:5px 3px;text-align:center;color:#fff;background:#1A7ED3;font:bold 12px "宋体";'>已收藏</div></a>
+                    <a href='javascript:void(0)'><div class='like' vv='n' style='display:<{if $list.like=="n"}>block<{else}>none<{/if}>;margin:5px;float:left;width:60px;padding:5px 3px;text-align:center;color:#fff;background:#83ADCE;font:bold 12px "宋体";'>收藏</div></a>
+                        <br>
+                        <div style='font:normal 14px "宋体";margin:10px 50px'>
+                            <div style='float:left;width:180px;'>用 户 名：<{$list.username}></div>
+                            提问时间：<{$list.addtime|date_format:"%Y-%m-%d %H:%M:%S"}>
+                        </div>
+                        <div style='font:normal 14px "宋体";margin-left:50px'>
+                            标　　签：<{$list.cname}>
+                        </div>
+                        <div style='font:normal 14px "宋体";margin:10px 50px'>
+                            问　　题：<div style='overflow:hidden;margin-left:70px;font:bold 18px "宋体"'><{$list.content}></div>
+                        </div>
+                        <hr><hr>
+                        <{if $list.replay==''}>
+                            <div style='font:bold 16px "宋体";color:red;margin:10px 220px'>未回复！</div>
+                        <{else}>
+                        <div style='font:normal 14px "宋体";margin:10px 50px'>
+                            <div style='float:left;width:180px;'>回 复 人：<{$list.tname}></div>
+                            回复时间：<{$list.rtime|date_format:"%Y-%m-%d %H:%M:%S"}>
+                        </div>
+                        <div style='font:normal 14px "宋体";margin:10px 50px'>
+                            回　　复：<div style='margin-left:70px;font:bold 18px "宋体"'><{$list.replay}></div>
+                        </div>
+                        <{if $smarty.session.user.id==$list.uid}>
+                            <div style='float:left;margin:20px 0px 0px 50px;font:normal 16px "宋体";color:blue'>问题解决了？</div>
+                            <div style='float:left;margin:22px 10px;font:bold 14px "宋体";color:blue'><a href='__APP__/Message/add/qid/<{$list.id}>'>转为帖子分享吧!!!</a></div>
+                        <{/if}>
+                        <{/if}>
+                   
+                </div>
+
+
+                <!-- 右侧 -->
+                <div class="col-md-4">
+                    <div class="mb30 m_cats">
+                        <div class="tt">
+                            <h3>问题标签</h3>
+                            <a href="__APP__/Cat/index" class="more">所有标签 »</a>
+                        </div>
+                        <ul class="list_ib" style='width:230px;'>
+                            <{foreach $cat as $ty }>
+                                <li><a href="__APP__/Question/index2/pid/<{$ty.id}>"><{$ty.name}></a></li>
+
+                            <{/foreach}>
+                        </ul>
+                    </div>
+                    <div class="m_pay_list">
+                        <div class="tt">
+                            <h3>活跃用户</h3>
+                        </div>
+                        <ol>
+                            <{foreach $person as $vo}>
+                            <li><span><{$vo@iteration}></span><a href="__APP__/Message/mine/uid/<{$vo.id}>"><img style='width:50px;height:50px;' src='__PUBLIC__/uploads/users/<{if $vo.picture!="" && $vo.picture!="1.jpg"}><{$vo.username}>/<{$vo.picture}><{else}>0/0.jpg<{/if}>'>　<{if $vo.name!=''}><{$vo.name}><{else}><{$vo.username}><{/if}></a></li>
+                            <{/foreach}>
+                        </ol>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+        <{include file="../Public/foot.html"}>
+    </body>
+</html>
+<script type="text/javascript" charset="utf-8">
+    $(function(){
+        //添加收藏
+        $(".like").click(function(){
+            var vv=$(this).attr('vv');
+            var div=$(this);
+            $.ajax({
+                url:"__APP__/Question/like",     //请求地址
+                type:"post",                    //发送方式
+                data:{vv:vv,qid:'<{$list.id}>'},        //发送的数据
+                dataType:"json",                //响应数据的方式
+                async:true,
+                success:function(data){
+                    $(".like").hide();
+                    $(".nolike").show();
+                },
+                error:function(){
+                    alert("亲，请登录！");
+                }
+            })
+        });
+        //取消收藏
+        $(".nolike").click(function(){
+            var vv=$(this).attr('vv');
+            var div=$(this);
+            $.ajax({
+                url:"__APP__/Question/like",     //请求地址
+                type:"post",                    //发送方式
+                data:{vv:vv,qid:'<{$list.id}>'},        //发送的数据
+                dataType:"json",                //响应数据的方式
+                async:true,
+                success:function(data){
+                    $(".nolike").hide();
+                    $(".like").show();
+                },
+                error:function(){
+                    alert("亲，请登录！");
+                }
+            })
+        });
+    });
+</script>

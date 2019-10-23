@@ -1,0 +1,1635 @@
+[ 2016-01-21T01:18:36+08:00 ] 127.0.0.1 /Public/Uploads/users/52jscn/1.jpg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.109375s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=763,`clicktime`=1453310315 WHERE ( `id` = 1 ) [ RunTime:0.078125s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.234375s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.015625s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.015625s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.125000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.015625s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.062500s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '11') OR (`keyword` LIKE '%,11') OR (`keyword` LIKE '11,%') OR (`keyword` LIKE '%,11,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '11') OR (`keyword` LIKE '%,11') OR (`keyword` LIKE '11,%') OR (`keyword` LIKE '%,11,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.062500s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.156250s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.140625s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( uid=97 and status='1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( uid=97 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`tid`,`content`,`replay` FROM `bbs_question` WHERE ( uid='97' and remind='1' and status='1' ) ORDER BY rtime desc  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1032 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.078125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.078125s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:36+08:00 ] 127.0.0.1 /Public/Uploads/users/dong21/1.jpg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.046875s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.046875s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=764,`clicktime`=1453310316 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.015625s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.015625s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '11') OR (`keyword` LIKE '%,11') OR (`keyword` LIKE '11,%') OR (`keyword` LIKE '%,11,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '11') OR (`keyword` LIKE '%,11') OR (`keyword` LIKE '11,%') OR (`keyword` LIKE '%,11,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '9') OR (`keyword` LIKE '%,9') OR (`keyword` LIKE '9,%') OR (`keyword` LIKE '%,9,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '9') OR (`keyword` LIKE '%,9') OR (`keyword` LIKE '9,%') OR (`keyword` LIKE '%,9,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( uid=97 and status='1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( uid=97 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`tid`,`content`,`replay` FROM `bbs_question` WHERE ( uid='97' and remind='1' and status='1' ) ORDER BY rtime desc  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1032 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-01-21T01:18:36+08:00 ] 127.0.0.1 /Public/Uploads/users/1121/1.jpg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=765,`clicktime`=1453310316 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.015625s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '9') OR (`keyword` LIKE '%,9') OR (`keyword` LIKE '9,%') OR (`keyword` LIKE '%,9,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '9') OR (`keyword` LIKE '%,9') OR (`keyword` LIKE '9,%') OR (`keyword` LIKE '%,9,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( uid=97 and status='1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( uid=97 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`tid`,`content`,`replay` FROM `bbs_question` WHERE ( uid='97' and remind='1' and status='1' ) ORDER BY rtime desc  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1032 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:37+08:00 ] 127.0.0.1 /Public/Uploads/users/dong20/1.jpg
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.046875s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=766,`clicktime`=1453310317 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '27') OR (`keyword` LIKE '%,27') OR (`keyword` LIKE '27,%') OR (`keyword` LIKE '%,27,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '27') OR (`keyword` LIKE '%,27') OR (`keyword` LIKE '27,%') OR (`keyword` LIKE '%,27,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '15') OR (`keyword` LIKE '%,15') OR (`keyword` LIKE '15,%') OR (`keyword` LIKE '%,15,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( uid=97 and status='1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( uid=97 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`tid`,`content`,`replay` FROM `bbs_question` WHERE ( uid='97' and remind='1' and status='1' ) ORDER BY rtime desc  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1032 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:20:39+08:00 ] 127.0.0.1 /
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=767,`clicktime`=1453310439 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '28') OR (`keyword` LIKE '%,28') OR (`keyword` LIKE '28,%') OR (`keyword` LIKE '%,28,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '9') OR (`keyword` LIKE '%,9') OR (`keyword` LIKE '9,%') OR (`keyword` LIKE '%,9,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '9') OR (`keyword` LIKE '%,9') OR (`keyword` LIKE '9,%') OR (`keyword` LIKE '%,9,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '13') OR (`keyword` LIKE '%,13') OR (`keyword` LIKE '13,%') OR (`keyword` LIKE '%,13,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '13') OR (`keyword` LIKE '%,13') OR (`keyword` LIKE '13,%') OR (`keyword` LIKE '%,13,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '12') OR (`keyword` LIKE '%,12') OR (`keyword` LIKE '12,%') OR (`keyword` LIKE '%,12,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '12') OR (`keyword` LIKE '%,12') OR (`keyword` LIKE '12,%') OR (`keyword` LIKE '%,12,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( uid=97 and status='1' )  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( uid=97 )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`tid`,`content`,`replay` FROM `bbs_question` WHERE ( uid='97' and remind='1' and status='1' ) ORDER BY rtime desc  [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1032 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:00+08:00 ] 127.0.0.1 /index.php/Users/myedu
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+SQL: SHOW COLUMNS FROM `edu_uservisit` [ RunTime:0.125000s ]
+SQL: SELECT * FROM `edu_uservisit` WHERE ( vid='97' and uid!='97' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_uservisit` WHERE ( uid='97' and vid!='97' ) ORDER BY visittime desc LIMIT 4   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( uid='97' ) LIMIT 1   [ RunTime:0.093750s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_friend` WHERE ( uid='97' ) LIMIT 5   [ RunTime:0.031250s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid='97' ) LIMIT 1   [ RunTime:0.046875s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( fid='97' ) LIMIT 1   [ RunTime:0.015625s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 49 行.
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( uid=97 AND status=2 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( uid=97 ) LIMIT 5   [ RunTime:0.015625s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( uid=97 ) LIMIT 5  
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid=97 ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_note` WHERE ( uid=97 ) LIMIT 1  
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( uid=97 AND status=2 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_collect` [ RunTime:0.125000s ]
+SQL: SELECT `vid` FROM `edu_collect` WHERE ( uid=97 )  [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid=97 and vid<>0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 75 行.
+SQL: SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_video` WHERE ( `id` IN () ) LIMIT 5  
+SQL: SELECT `nid` FROM `edu_collect` WHERE ( uid=97 )  [ RunTime:0.046875s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid=97 and nid<>0 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 87 行.
+SQL: SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` IN () ) LIMIT 5  
+SQL: SELECT `lid` FROM `edu_collect` WHERE ( uid=97 )  [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_collect` WHERE ( uid=97 and lid<>0 ) LIMIT 1   [ RunTime:0.046875s ]
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 99 行.
+SQL: SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5   [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near ') ) LIMIT 5' at line 1
+ [ SQL语句 ] : SELECT * FROM `edu_library` WHERE ( `id` IN () ) LIMIT 5  
+SQL: SHOW COLUMNS FROM `edu_usermessage` [ RunTime:0.125000s ]
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='97' and vid!='97' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.031250s ]
+NOTIC: [2] array_reverse() expects parameter 1 to be array, null given D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 110 行.
+SQL: SELECT * FROM `edu_usermessage` WHERE ( myid='97' and vid='97' ) ORDER BY addtime desc LIMIT 1   [ RunTime:0.031250s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Home/Runtime/Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Home/Runtime/Cache\eef337a6b4e511001900212604be9aa2a53d7554.file.myedu.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Home/Runtime/Cache\e63de43682969d5f1e6336df7ce8afdb9627546b.file.head2.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Home/Runtime/Cache\e63de43682969d5f1e6336df7ce8afdb9627546b.file.head2.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Home/Runtime/Cache\2fa6688be8f7ddd7535663d89e600a4caf5b04c0.file.foot2.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Home/Runtime/Cache\2fa6688be8f7ddd7535663d89e600a4caf5b04c0.file.foot2.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.437500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.437500s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:05+08:00 ] 127.0.0.1 /index.php/Users/loginout
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+
+[ 2016-01-21T01:21:06+08:00 ] 127.0.0.1 /index.php/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=768,`clicktime`=1453310466 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '13') OR (`keyword` LIKE '%,13') OR (`keyword` LIKE '13,%') OR (`keyword` LIKE '%,13,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '13') OR (`keyword` LIKE '%,13') OR (`keyword` LIKE '13,%') OR (`keyword` LIKE '%,13,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '29') OR (`keyword` LIKE '%,29') OR (`keyword` LIKE '29,%') OR (`keyword` LIKE '%,29,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '29') OR (`keyword` LIKE '%,29') OR (`keyword` LIKE '29,%') OR (`keyword` LIKE '%,29,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '25') OR (`keyword` LIKE '%,25') OR (`keyword` LIKE '25,%') OR (`keyword` LIKE '%,25,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '19') OR (`keyword` LIKE '%,19') OR (`keyword` LIKE '19,%') OR (`keyword` LIKE '%,19,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.015625s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:08+08:00 ] 127.0.0.1 /index.php/Users/login
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Home/Runtime/Cache\5eb86b5f52faad6893408a91f10736e2d8252303.file.login.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Home/Runtime/Cache\5eb86b5f52faad6893408a91f10736e2d8252303.file.login.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.203125s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.203125s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.015625s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:08+08:00 ] 127.0.0.1 /index.php/Users/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+ERR: 非法操作:Public
+
+[ 2016-01-21T01:21:12+08:00 ] 127.0.0.1 /index.php/Users/checkname
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+SQL: SELECT * FROM `edu_users` WHERE ( username = '' or email='' ) LIMIT 1   [ RunTime:0.062500s ]
+
+[ 2016-01-21T01:21:13+08:00 ] 127.0.0.1 /index.php/Users/checkpass
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+SQL: SELECT * FROM `edu_users` WHERE ( username = '' or email='' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:16+08:00 ] 127.0.0.1 /index.php/Users/checkname
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+SQL: SELECT * FROM `edu_users` WHERE ( username = '' or email='' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:17+08:00 ] 127.0.0.1 /index.php/Users/checkpass
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+SQL: SELECT * FROM `edu_users` WHERE ( username = '' or email='' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:18+08:00 ] 127.0.0.1 /index.php/Users/login/qq
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:18+08:00 ] 127.0.0.1 /index.php/Users/login/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:20+08:00 ] 127.0.0.1 /index.php/Users/login/qq
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-01-21T01:21:20+08:00 ] 127.0.0.1 /index.php/Users/login/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:21+08:00 ] 127.0.0.1 /index.php/Users/login/sina
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:21+08:00 ] 127.0.0.1 /index.php/Users/login/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:23+08:00 ] 127.0.0.1 /index.php/Users/login/qq
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:23+08:00 ] 127.0.0.1 /index.php/Users/login/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:26+08:00 ] 127.0.0.1 /index.php/Users/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:26+08:00 ] 127.0.0.1 /index.php/Users/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+ERR: 非法操作:Public
+
+[ 2016-01-21T01:21:28+08:00 ] 127.0.0.1 /index.php/Users/index/qq
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.015625s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:28+08:00 ] 127.0.0.1 /index.php/Users/index/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 9 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:32+08:00 ] 127.0.0.1 /index.php/Index/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: UPDATE `edu_clicknum` SET `clicknum`=769,`clicktime`=1453310492 WHERE ( `id` = 1 ) [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_notice` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_notice` ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_library` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_library` ORDER BY dwloadnum desc LIMIT 10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '95' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '68' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '63' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_library group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_friend` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=95 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=67 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = 68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_friend` WHERE ( uid=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY favonum desc LIMIT 8   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY clicknum desc LIMIT 10   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_video` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: select nid,count(*) num from edu_zan where nid<>0 group by nid order by num desc limit 3 [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '23' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '39' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` WHERE ( `id` = '35' ) LIMIT 1  
+SQL: SELECT `username` FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `videoname` FROM `edu_video` LIMIT 1   [ RunTime:0.000000s ]
+SQL: select uid,count(*) num from edu_note group by uid order by num desc limit 8 [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : select uid,count(*) num from edu_note group by uid order by num desc limit 8
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\IndexAction.class.php 第 79 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '26') OR (`keyword` LIKE '%,26') OR (`keyword` LIKE '26,%') OR (`keyword` LIKE '%,26,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '24') OR (`keyword` LIKE '%,24') OR (`keyword` LIKE '24,%') OR (`keyword` LIKE '%,24,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '10') OR (`keyword` LIKE '%,10') OR (`keyword` LIKE '10,%') OR (`keyword` LIKE '%,10,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '27') OR (`keyword` LIKE '%,27') OR (`keyword` LIKE '27,%') OR (`keyword` LIKE '%,27,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '27') OR (`keyword` LIKE '%,27') OR (`keyword` LIKE '27,%') OR (`keyword` LIKE '%,27,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '14') OR (`keyword` LIKE '%,14') OR (`keyword` LIKE '14,%') OR (`keyword` LIKE '%,14,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `id`,`title` FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) ORDER BY addtime desc LIMIT 3   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( (`keyword` LIKE '23') OR (`keyword` LIKE '%,23') OR (`keyword` LIKE '23,%') OR (`keyword` LIKE '%,23,%') ) AND ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`uid`,`content` FROM `bbs_question` WHERE ( `status` = '1' ) AND ( `isbest` = '1' ) AND ( `replay` <> '' ) ORDER BY addtime desc LIMIT 6   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 65 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 74 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( `id` = 69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_flink` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_flink` WHERE ( status=2 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:21:45+08:00 ] 127.0.0.1 /index.php/Message/show/id/24
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( `id` = 24 ) LIMIT 1   [ RunTime:0.046875s ]
+SQL: UPDATE `bbs_message` SET `scan`=93 WHERE ( id=24 ) [ RunTime:0.515625s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( `id` = 24 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_cat` WHERE ( `id` = 27 ) LIMIT 1   [ RunTime:0.015625s ]
+NOTIC: [8] Undefined variable: ll D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 868 行.
+SQL: SELECT * FROM `edu_cat` WHERE ( `id` = 28 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_like` [ RunTime:0.093750s ]
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 870 行.
+SQL: SELECT * FROM `edu_like` WHERE ( mid=24 and uid='' )  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=24 and pid='0' ) LIMIT 1   [ RunTime:0.031250s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( mid=24 and pid='0' ) ORDER BY addtime asc LIMIT 0,5   [ RunTime:0.015625s ]
+SQL: SELECT `username`,`name`,`picture` FROM `edu_users` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( pid=823 ) ORDER BY addtime asc  [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name`,`picture` FROM `edu_users` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( pid=824 ) ORDER BY addtime asc  [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name`,`picture` FROM `edu_users` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( pid=825 ) ORDER BY addtime asc  [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name`,`picture` FROM `edu_users` WHERE ( id=62 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_comm` WHERE ( pid=826 ) ORDER BY addtime asc  [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_comm where addtime>'1453051305' group by uid order by num desc [ RunTime:0.031250s ]
+SQL: select uid,count('uid') num from bbs_message where addtime>'1453051305' group by uid order by num desc [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_question where addtime>'1453051305' group by uid order by num desc [ RunTime:0.046875s ]
+NOTIC: [2] arsort() expects parameter 1 to be array, null given D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1113 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1116 行.
+NOTIC: [8] Undefined variable: ll D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1123 行.
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: title D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 38 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 38 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 100 行.
+NOTIC: [8] Undefined index: p D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 152 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Undefined index: p D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 152 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Undefined index: p D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 152 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Undefined index: p D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 152 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 155 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 218 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 305 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 311 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 315 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\08e64c763461a8e7150b92f597acc87080c0efc1.file.show.html.php 第 316 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-01-21T01:21:56+08:00 ] 127.0.0.1 /index.php/Question/show/id/10
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.015625s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of QuestionAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 325 行.
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: r D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 242 行.
+SQL: SELECT * FROM `bbs_question` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: scan D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 246 行.
+NOTIC: [8] Undefined variable: set D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Db.class.php 第 293 行.
+NOTIC: [2] implode() [<a href='function.implode'>function.implode</a>]: Invalid arguments passed D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Db.class.php 第 293 行.
+SQL: UPDATE `bbs_question` SET  WHERE ( id=10 ) [ RunTime:0.000000s ]
+ERR: 1064:You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near 'WHERE ( id=10 )' at line 1
+ [ SQL语句 ] : UPDATE `bbs_question` SET  WHERE ( id=10 )
+SQL: SELECT * FROM `bbs_question` WHERE ( `id` = 10 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=76 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=75 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_cat` WHERE ( `id` = 23 ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: ll D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 267 行.
+SQL: SHOW COLUMNS FROM `edu_like` [ RunTime:0.000000s ]
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 269 行.
+SQL: SELECT * FROM `edu_like` WHERE ( qid=10 and uid='' )  [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_comm where addtime>'1453051316' group by uid order by num desc [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_message where addtime>'1453051316' group by uid order by num desc [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_question where addtime>'1453051316' group by uid order by num desc [ RunTime:0.000000s ]
+NOTIC: [2] arsort() expects parameter 1 to be array, null given D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1113 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1116 行.
+NOTIC: [8] Undefined variable: ll D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1123 行.
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Home/Runtime/Cache\1f4d1f7371f2914bdf5020be3ba579bcc6de2a4b.file.show.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Home/Runtime/Cache\1f4d1f7371f2914bdf5020be3ba579bcc6de2a4b.file.show.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: title D:\Site\demo8\wwwroot\Home\Runtime\Cache\1f4d1f7371f2914bdf5020be3ba579bcc6de2a4b.file.show.html.php 第 35 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Home\Runtime\Cache\1f4d1f7371f2914bdf5020be3ba579bcc6de2a4b.file.show.html.php 第 35 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\1f4d1f7371f2914bdf5020be3ba579bcc6de2a4b.file.show.html.php 第 92 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Runtime\Cache\1f4d1f7371f2914bdf5020be3ba579bcc6de2a4b.file.show.html.php 第 128 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.125000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.125000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.015625s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:22:02+08:00 ] 127.0.0.1 /index.php/Question/add
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+NOTIC: [2048] Declaration of QuestionAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 325 行.
+NOTIC: [8] Uninitialized string offset: 0 D:\Site\demo8\wwwroot\Home\Lib\Action\QuestionAction.class.php 第 107 行.
+
+[ 2016-01-21T01:22:03+08:00 ] 127.0.0.1 /index.php/Users/login.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:22:03+08:00 ] 127.0.0.1 /index.php/Users/Public/css/simple.css
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+ERR: 非法操作:Public
+
+[ 2016-01-21T01:22:05+08:00 ] 127.0.0.1 /index.php/Users/checkname
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] A session had already been started - ignoring session_start() D:\Site\demo8\wwwroot\Home\Lib\Action\UsersAction.class.php 第 2 行.
+SQL: SELECT * FROM `edu_users` WHERE ( username = '' or email='' ) LIMIT 1   [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:22:07+08:00 ] 127.0.0.1 /index.php/Message/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [2048] Declaration of MessageAction::show() should be compatible with that of Action::show() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1136 行.
+SQL: SHOW COLUMNS FROM `bbs_message` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_message` WHERE ( `status` = '1' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( isbest=1 ) ORDER BY addtime desc LIMIT 5   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=68 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_comm` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=19 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=65 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=12 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=64 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=9 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=62 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=7 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=61 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `bbs_comm` WHERE ( mid=5 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `bbs_message` WHERE ( `status` = '1' ) ORDER BY addtime desc LIMIT 0,10   [ RunTime:0.046875s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=38 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=31 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=30 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=63 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=29 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=75 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=28 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=93 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=27 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=70 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=26 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=24 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=71 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=23 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT `username`,`name` FROM `edu_users` WHERE ( id=69 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(mid) AS tp_count FROM `bbs_comm` WHERE ( mid=22 and pid='0' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `bbs_question` [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_comm where addtime>'1453051327' group by uid order by num desc [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_message where addtime>'1453051327' group by uid order by num desc [ RunTime:0.000000s ]
+SQL: select uid,count('uid') num from bbs_question where addtime>'1453051327' group by uid order by num desc [ RunTime:0.015625s ]
+NOTIC: [2] arsort() expects parameter 1 to be array, null given D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1113 行.
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1116 行.
+NOTIC: [8] Undefined variable: ll D:\Site\demo8\wwwroot\Home\Lib\Action\MessageAction.class.php 第 1123 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name` FROM `edu_cat` WHERE ( pid!=0 )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.046875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:22:12+08:00 ] 127.0.0.1 /index.php/Library/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: q D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 60 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( `status` = '2' ) AND ( `title` LIKE '%%' ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_library` WHERE ( `status` = '2' ) AND ( `title` LIKE '%%' ) ORDER BY clicknum desc LIMIT 0,5   [ RunTime:0.031250s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = '67' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.015625s ]
+NOTIC: [2048] Only variables should be passed by reference D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = '70' ) LIMIT 1   [ RunTime:0.015625s ]
+NOTIC: [2048] Only variables should be passed by reference D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = '64' ) LIMIT 1   [ RunTime:0.000000s ]
+NOTIC: [2048] Only variables should be passed by reference D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 76 行.
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT `username`,`picture` FROM `edu_users` WHERE ( `id` = '61' ) LIMIT 1   [ RunTime:0.015625s ]
+NOTIC: [2048] Only variables should be passed by reference D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 76 行.
+SQL: SELECT * FROM `edu_library` WHERE ( status=2 ) ORDER BY addtime desc LIMIT 16   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_cat` WHERE ( pid=0 ) LIMIT 6   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: r D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 101 行.
+NOTIC: [8] Undefined index: q D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 102 行.
+NOTIC: [8] Undefined index: pid D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 106 行.
+NOTIC: [8] Undefined index: q D:\Site\demo8\wwwroot\Home\Lib\Action\LibraryAction.class.php 第 106 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: title D:\Site\demo8\wwwroot\Home\Runtime\Cache\1047c039db239818cd39e9b24ff213b65eb3cdba.file.index.html.php 第 130 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Home\Runtime\Cache\1047c039db239818cd39e9b24ff213b65eb3cdba.file.index.html.php 第 130 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.031250s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.031250s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:22:14+08:00 ] 127.0.0.1 /index.php/Note/index
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_note` [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SHOW COLUMNS FROM `edu_note`
+NOTIC: [8] Undefined variable: where D:\Site\demo8\wwwroot\Home\Lib\Action\NoteAction.class.php 第 48 行.
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_note` LIMIT 1   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT COUNT(*) AS tp_count FROM `edu_note` LIMIT 1  
+NOTIC: [8] Undefined variable: where D:\Site\demo8\wwwroot\Home\Lib\Action\NoteAction.class.php 第 52 行.
+SQL: SELECT * FROM `edu_note` ORDER BY addtime desc LIMIT 0,5   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` ORDER BY addtime desc LIMIT 0,5  
+NOTIC: [2] Invalid argument supplied for foreach() D:\Site\demo8\wwwroot\Home\Lib\Action\NoteAction.class.php 第 54 行.
+SQL: SELECT * FROM `edu_note` ORDER BY addtime desc LIMIT 16   [ RunTime:0.000000s ]
+ERR: 1146:Table 'demo8.edu_note' doesn't exist
+ [ SQL语句 ] : SELECT * FROM `edu_note` ORDER BY addtime desc LIMIT 16  
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: title D:\Site\demo8\wwwroot\Home\Runtime\Cache\f877718030ef7fc1581c208d48fd8c0f9d22c284.file.index.html.php 第 123 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Home\Runtime\Cache\f877718030ef7fc1581c208d48fd8c0f9d22c284.file.index.html.php 第 123 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+

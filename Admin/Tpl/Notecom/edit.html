@@ -1,0 +1,16 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listment/callbackType/closeCurrent" class="pageForm required-validate" 
+        onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <input type="hidden" name="id" value="<{$vo.id}>">
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>评论内容：</dt>
+                <dd><textarea name="content" cols="50" rows="4" readonly><{$vo.content}></textarea></dd>
+            </dl>
+		</div>
+		
+	
+	</form>
+</div>
+

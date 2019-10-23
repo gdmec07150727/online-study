@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>试题详情页</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/zDialog.js.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/zDrag.js.js"></script>
+    </head>
+    <body>
+    <div id="browser"></div>
+        <{include file="../Public/head.html"}>
+        
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">试题详情</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li><a href="__URL__/index">试题列表</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+        <script type="text/javascript" charset="utf-8">
+            
+            $(function(){
+                $(".quest").css("display","none");
+
+                var min=$("#min").html();
+                var sec=$("#sec").html();
+                var mytime=null;
+                min = parseInt(min);
+                sec = parseInt(sec);
+                
+                $("#bigin").click(function(){
+                    $(".quest").css("display","block");
+                    $(this).css("display","none");
+                    mytime = setInterval(fun,1000);
+                });
+                function fun(){
+                    sec--;
+                    if(sec<0){
+                        min--;
+                        sec=59;
+                        if(min<0){
+                            alert("答题时间到,系统自动提交!");
+                            clearInterval(mytime);
+                            mytime=null;
+                            $("#form").submit();
+                            return;
+                        };
+                    };
+                    //min=(min<10?"0"+min:min);
+                    sec=(sec<10) ? "0"+sec : sec;
+                    $("#min").html(min);
+                    $("#sec").html(sec);
+            
+                }
+            
+            });
+        </script>
+        <style type="text/css">
+            #dada{
+                width:943px;height:70px;background-color:#EDE6ED;text-align:center;
+            }
+            #title{
+                color:#1cd1a0;font-size:30px;font-family:微软雅黑;
+            }
+            #time{
+                width:943px;height:70px;background-color:#EDE6ED;text-align:center; 
+            }
+            font.time1{
+                color:#aaa;font-size:20px;
+                
+            }
+            font.time2{
+                color:red;font-size:30px;font-family:微软雅黑;
+            }
+            #content{
+                background-color:#EDE6ED;
+            }
+            h4.quest{
+                font-size:20px;font-family:微软雅黑;color:#5D5D5D;margin:10px;
+            }
+            #cont{
+                font-size:17px;font-family:微软雅黑; color:#5D5D5D;line-height:20px;
+            }
+            #radio{
+                color:#838383;font-size:15px;font-family:微软雅黑;
+            }
+        </style>
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                    <div class="m_r_list g_t_list mt5">
+                        <div id="dada" style="width:100%">
+                            <span><font id="title">☻__<{$title}>__☻</font></span>
+                        </div>
+                         <div id="time" style="width:100%">
+                             <span>
+                                 <font class="time1">本次测试时间剩余</font>
+                                 <font class="time2"><b id="min"> 20 </b></font>
+                                 <font class="time1">分钟 </font>
+                                 <font class="time2"><b id="sec"> 00 </b></font>
+                                 <font class="time1">秒,30分钟后自动提交</font>
+                             </span>
+                         </div>
+                         <div id="content">
+                            <h4 class="quest">单选题:本套题共二十题,每题五分,总分100分</h4>
+                            <form id="form" method="post" action="__APP__/Test/score">
+                            <input type="hidden" name="tid" value="<{$tid}>">
+                            <input type="hidden" name="uid" value="<{$smarty.session.user.id}>">
+                            <ul class="quest">
+                            <{foreach $list as $vo}>
+                                <li id="cont"><{$vo@iteration}>.<{$vo.content}></br></br>
+                                <p id="radio">
+                                    <input type="radio" name="test[<{$vo.id}>]" value="A"> A.<{$vo.aA}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="test[<{$vo.id}>]" value="B"> B.<{$vo.aB}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="test[<{$vo.id}>]" value="C"> C.<{$vo.aC}>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                                    <input type="radio" name="test[<{$vo.id}>]" value="D"> D.<{$vo.aD}>
+                                </p>
+                                </li>
+                            <{/foreach}>
+                        </ul>
+                        </div>
+                            <ul>
+                                <li>
+                                    <div id="bigin"  class="btn btn-primary btn-lg btn-block">点我开始答题哦^_^!</div>
+                                </li>
+                            </ul>
+                            <div class="mb30 m_cats">
+                                <ul class="quest">  
+                                    <li><button type="submit" class="btn btn-primary btn-lg btn-block">答题完毕,提交试题</button></li>
+                                </ul>
+                            </div>
+                            </form>
+                        </div>
+                </div>
+        </div>
+    </div>
+</div>
+
+    <{include file="../Public/foot.html"}>
+
+  </body></html>

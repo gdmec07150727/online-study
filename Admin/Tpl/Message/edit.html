@@ -1,0 +1,32 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listmessage/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="id" value="<{$vo.id}>"/>
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>是否精品：</dt>
+				<dd><input type="radio" name="isbest" value="1" <{if $vo.isbest=='1'}>checked<{/if}>/>YES
+					<input type="radio" name="isbest" value="0" <{if $vo.isbest=='0'}>checked<{/if}>/>NO</dd>
+			
+			<dl>
+				<dt>是否热门：</dt>
+				<dd><input type="radio" name="ishot" value="1" <{if $vo.ishot=='1'}>checked<{/if}>/>YES
+					<input type="radio" name="ishot" value="0" <{if $vo.ishot=='0'}>checked<{/if}>/>NO</dd>
+			</dl>
+			<dl>
+				<dt>状态：</dt>
+				<dd><input type="radio" name="status" value="1" <{if $vo.status=='1'}>checked<{/if}>/>显示
+					<input type="radio" name="status" value="0" <{if $vo.status=='0'}>checked<{/if}>/>不显示</dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

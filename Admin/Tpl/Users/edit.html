@@ -1,0 +1,63 @@
+
+<div class="pageContent">
+	<form method="post" action="__APP__/Users/update/navTabId/listusers/callbackType/closeCurrent" enctype="multipart/form-data" class="pageForm required-validate"
+        onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <input type="hidden" value="<{$vo.id}>" name='id'>
+
+
+        <div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>用户名:</dt>
+                <dd><{$vo.username}></dd>
+            </dl>
+           
+            <dl>
+				<dt>姓名:</dt>
+				<dd><input type="text"  style="width:100%" name="name" value="<{$vo.name}>"/></dd>
+            </dl>
+            <dl>
+				<dt>邮箱:</dt>
+				<dd><input type="text" class="required eamil" style="width:100%" name="email" value="<{$vo.email}>"/></dd>
+            </dl>
+            <dl>
+                <dt>性别:</dt>
+                <{if $vo.sex=='1'}><dd>男<input type="radio" name="sex" value='1' checked/>
+                    女<input type="radio" name="sex" value='2'/></dd>
+                <{elseif $vo.sex==2}><dd>男<input type="radio" name="sex" value='1'/>
+                    女<input type="radio" name="sex" value='2' checked/></dd>
+                <{else}><dd>男<input type="radio" name="sex" value='1'/>
+                    女<input type="radio" name="sex" value='2'/></dd>
+                <{/if}>
+                
+            </dl>
+            <dl>
+				<dt>年龄:</dt>
+				<dd><input type="text" class="digits" min="1" max='100' style="width:100%" name="age" value="<{$vo.age}>"/></dd>
+            </dl>
+            
+            <dl>
+				<dt>分组:</dt>
+				<dd><input type="text"  style="width:100%" name="class" value="<{$vo.class}>"/></dd>
+            </dl>
+			<dl>
+				<dt>介绍:</dt>
+				<dd><input type="text"  style="width:100%" name="introduce" value="<{$vo.introduce}>"/></dd>
+            </dl>
+            <dl>
+				<dt>积分:</dt>
+				<dd><input type="text" class="digits" style="width:100%" name="point" value="<{$vo.point}>"/></dd>
+            </dl>
+            <dl>
+				<dt>等级:</dt>
+				<dd><input type="text" class="digits" min="1" max='100' style="width:100%" name="level" value="<{$vo.level}>"/></dd>
+            </dl>
+           
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

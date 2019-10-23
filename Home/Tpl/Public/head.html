@@ -1,0 +1,78 @@
+        <div id="header" style="font-family:'Microsoft Yahei';">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="__APP__/Index/index">E-Sch</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                        <ul class="nav navbar-nav g_nav">
+                            <li><a href="__APP__/Video/index">教学视频</a></li>
+                            <li><a href="__APP__/Users/myclass">个人中心</a></li>
+                            <li><a href="__APP__/Note/index">班级课程</a></li>
+                            <li><a href="__APP__/Library/index">教学课件</a></li>
+                            <!--<li><a href="__APP__/Message/index">贴吧</a></li>-->
+                            <{if $smarty.session.user}>
+                            <li><a href="__APP__/Test/index">考试</a></li>
+                            <{else}>
+                            <li><a href="javascript:alert('请先登录！')">考试</a></li>
+                            <{/if}>
+                        </ul>
+
+                        <form class="navbar-form navbar-right" role="search" action="__APP__/Cat/show" method="GET" autocompelte="off">
+                            <div class="form-group">
+                                <input type="text" name="q" class="form-control" placeholder="搜索">
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
+                        </form>
+
+                        <ul class="nav navbar-nav navbar-right" id="userinfo">
+
+                            <{if $smarty.session.user}>
+                            <li><a href="__APP__/Message/mynews">提醒(<{if $smarty.session.user.hfnum}><{$smarty.session.user.hfnum}><{else}>0<{/if}>)</a></li>
+                            <li class="navbar-nav-user">
+                                <a class="user-avatar" href="__APP__/Users/myedu">
+                                    <img alt="<{$smarty.session.user.username}>" title="<{$smarty.session.user.username}>" <{if $smarty.session.user.picture=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/0.jpg"<{else}>src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/s_<{$smarty.session.user.picture}>"<{/if}> class="avatar_sm">　<{$smarty.session.user.username}></a>
+                                </a>
+                                <div class="dropdown">
+                                    <a href="__APP__/Users/settings"><i class="icon-wrench"></i> 设置</a>
+                                    <a href="__APP__/Users/loginout"><i class="icon-signout"></i> 退出</a>
+                                </div>
+                            </li>
+                            <{else}>
+                            <li><a href="__APP__/Index/index">首页</a></li>
+                            <li><a href="__APP__/Users/login">登录</a></li>
+                            <li><a href="__APP__/Users/index">注册</a></li>
+                            <{/if}>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+         <script type="text/javascript">
+            $(function(){
+                // 导航搜索框
+                $('#header .navbar-form input').focus(function(){
+                    $(this).attr('placeholder', '视频、资源、手记、帖子')
+                    //$(this).parents('.navbar-form').eq(0).addClass('search_opend')
+                    $(this).animate({width: '+250px'}, "fast");
+                    $("#userinfo").fadeOut("fast");
+                }).blur(function(){
+                    $(this).attr('placeholder', '搜索')
+                    //$(this).parents('.navbar-form').eq(0).removeClass('search_opend')
+                    $(this).animate({width: '70px'}, "fast");
+                    $("#userinfo").show(1000);
+                })       
+                //设置头部的图片滚动
+                
+            })
+        </script>

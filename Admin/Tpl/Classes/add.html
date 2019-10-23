@@ -1,0 +1,34 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listflink/callbackType/closeCurrent"  class="pageForm required-validate"
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <div class="pageFormContent" layoutH="60">
+			<{foreach $list as $vo}>
+            <dl>
+                <dt>班级名称</dt>
+                <dd><input type="text" class="required" style="width:100%" name="class_name"/></dd>
+            </dl>
+			<dl>
+				<dt>创建者ID</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="class_cre" value="<{$vo.id}>"/></dd>
+			</dl>
+			<dl>
+				<dt>创建者名字</dt>
+				<dd><input type="text" class="required"  style="width:100%" name="class_cre" value="<{$vo.name}>"/></dd>
+            </dl>
+			<dl>
+				<dt>选择头像:</dt>
+				<dd><input type='file' size="10" name="picture"></dd>
+			</dl>
+			<{/foreach}>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+
+

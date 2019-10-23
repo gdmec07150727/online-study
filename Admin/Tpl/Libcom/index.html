@@ -1,0 +1,73 @@
+<{include file="Public/pagerForm.html"}>
+
+<div class="pageHeader">
+    <form rel="pagerForm" onsubmit="return navTabSearch(this);" method="post">
+    
+	<div class="searchBar">
+		<table class="searchContent">
+            <tr>
+                 <td>搜索：</td>
+				<td>
+                    评论用户：<input type="text" name="username" size="8" value="<{$smarty.post.username}>"/>
+                </td>
+                <td>
+                    资源名：<input type="text" name="title" size="8" value="<{$smarty.post.title}>"/>
+                </td>
+                <td>
+                    <div class="buttonActive"><div class="buttonContent"><button type="submit">检索</button></div></div>
+                </td>
+			</tr>
+		</table>
+	</div>
+	</form>
+</div>
+<div class="pageContent">
+	<div class="panelBar">
+		<ul class="toolBar">
+			<li><a class="delete" href="__URL__/delete/id/{sid_user}/navTabId/listlibcom" target="ajaxTodo" title="确定要删除吗?"><span>删除</span></a></li>
+			<li><a class="edit" href="__URL__/edit/id/{sid_user}/navTabId/listlibcom" target="dialog"><span>查看内容</span></a></li>
+            <li class="line">line</li>
+            <li><a class="icon" href="javascript:navTabPageBreak()"><span>刷新</span></a></li>
+            <!--<li><a class="icon" href="demo/common/dwz-team.xls" target="dwzExport" targetType="navTab" title="实要导出这些记录吗?"><span>导出EXCEL</span></a></li>-->
+		</ul>
+	</div>
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+			<tr>
+				<th align="center" width="40" orderField="id" <{if $smarty.request._order='id'}>class=<{$smarty.request._sort}><{/if}>>ID号</th>
+                <th align="center" width="40">评论用户</th>
+                <th align="center" width="40">评论资源</th>
+                
+                <th align="center" width="40" orderField="addtime" <{if $smarty.request._order='addtime'}>class=<{$smarty.request._sort}><{/if}>>评论时间</th>
+			</tr>
+		</thead>
+        <tbody>
+            <{foreach $list as $vo}>
+            <tr target="sid_user" rel="<{$vo.id}>">
+                <td><{$vo.id}></td>
+                <td><{$vo.username}></td>
+                <td><{$vo.title}></td>
+                <td><{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+                <!--<td><{if $vo.status == 1}>未审核<{else}>已审核<{/if}></td>-->
+            </tr>
+            <{/foreach}>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                <option value="10" <{if $numPerPage == 10}>selected<{/if}>>10</option>
+                <option value="15" <{if $numPerPage == 15}>selected<{/if}>>15</option>
+                <option value="20" <{if $numPerPage == 20}>selected<{/if}>>20</option>
+                <option value="25" <{if $numPerPage == 25}>selected<{/if}>>25</option>
+                <option value="30" <{if $numPerPage == 30}>selected<{/if}>>30</option>
+			</select>
+            <span>条，共<{$totalCount}>条</span>
+		</div>
+		
+        <div class="pagination" targetType="navTab" totalCount="<{$totalCount}>" numPerPage="<{$numPerPage}>" pageNumShown="10" currentPage="<{$currentPage}>"></div>
+
+	</div>
+</div>

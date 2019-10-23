@@ -1,0 +1,158 @@
+<{include file='../Public/head2.html'}>
+
+
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">个人中心</a></h1>
+        </div>
+        <div class="col-md-6" style="width:80%;">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Users/myheart">心情</a></li>
+                <li><a href="__APP__/Users/myedu">我的收藏</a></li>
+                <li class="active"><a href="__APP__/Users/myclass">我的班级</a></li>
+
+                <li><a href="__APP__/Test/myscore">我的考试</a></li>
+                <li><a href="__APP__/Users/settings">修改资料</a></li>
+                <!--<li><a href="__APP__/Users/photoalbum">我的相册</a></li>
+                <li><a href="__APP__/Users/stranger">查看陌生人</a></li><li><a href="__APP__/Homework/index">我的作业</a></li>-->
+
+            </ul>
+        </div>
+    </div>
+</div>
+<style type="text/css">
+    .m_r_list h4{cursor:pointer;height:30px}
+</style>
+<script type="text/javascript" charset="utf-8">
+    //设置用户收藏的资源动态效果
+    $(function(){
+        $("div.m_r_list h4").click(
+                function(){
+                    switch($(this).attr("class")) {
+                        case 'video':
+                            $("ul.videolist").slideToggle("slow");
+                            break;
+                        case 'note':
+                            $("ul.notelist").slideToggle("slow");
+                            break;
+                        case 'library':
+                            $("ul.liblist").slideToggle("slow");
+                            break;
+                        case 'mynote':
+                            $("ul.mynotelist").slideToggle("slow");
+                            break;
+                    }
+                }
+        );
+    });
+</script>
+
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+
+                <div class="col-md-8">
+
+                    <!--秀波的-->
+
+                    <div class="m_r_list g_t_list mt5">
+                        <div class="tt"><h3><{$title|default:"我加入的课程"}></h3></div>
+                        <div class="m_n_item_info f12 c999">
+                            <span class="g_reply_n">课程名称</span>
+                            <span class="g_topic_t ml10">课程列表</span>
+                        </div>
+                        <ul class="list_pb20">
+                            <{if $classes}>
+                            <{foreach $classes as $vo}>
+                            <li>
+                                <div class="g_reply_n pull-left">
+                                    <span title="">
+                                        <em><img height='50' width='50' src="__PUBLIC__/Uploads/users/0/1.jpg"></em>
+                                    </span>
+                                </div>
+                                <div class="t_ml_120">
+                                    <h4><a href="__APP__/Homework/index/id/<{$vo.id}>"><{$vo.class_name}></a></h4>
+
+                                    <p>
+                                        班级老师：<{$vo.class_cre}>
+                                    </p>
+                                    <p>
+                                        <a href="__URL__/delete/id/<{$vo.id}>/navTabId/listlib" style="color: #9A0000">退出当前班级</a>
+                                    </p>
+                                </div>
+                            </li>
+                            <{/foreach}>
+                            <{else}>
+                            <div class="null">资源列表暂空~</div>
+                            <{/if}>
+                        </ul>
+
+                        <div class="tc">
+                            <ul class="pagination">
+                                <{$showPage}>
+                            </ul>
+                        </div>
+
+                    </div>
+
+                </div>
+
+
+                <div class="col-md-4">
+
+
+                    <div class="u_card">
+                        <div class="u_card_name"><{$smarty.session.user.username}></div>
+                        <div class="u_card_info">
+                            <img src="<{if $smarty.session.user.picture=='1.jpg'}>__PUBLIC__/uploads/users/0/1.jpg<{else}>__PUBLIC__/uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}><{/if}>" class="avatar_bg">
+
+                        </div>
+                        <div class="u_card_intro">
+
+                            <p class="c666"><{$smarty.session.user.introduce}></p>
+                            <p><span><{$smarty.session.user.addtime|date_format:"%Y-%m-%d"}>加入</span></p>
+                        </div>
+                        <div class="u_card_data">
+                            <ul class="list_ib">
+                                <li>
+                                    <a href="__APP__/Video/index/uid/<{$smarty.session.user.id}>">视频<span><{$videonum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Note/index/uid/<{$smarty.session.user.id}>">班级<span><{$classnum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Library/index/uid/<{$smarty.session.user.id}>">课件<span><{$libnum}></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10">今日心情</h4>
+
+                        </div>
+
+                        <{if $mymes1}>
+                        <{foreach $mymes1 as $vo}>
+                        <div class="null" style="color:green;">
+                            <{$vo.content}>
+                        </div>
+                        <{/foreach}>
+                        <{else}>
+                        <div class="null">
+                            还没有今日心情，去 <a href="__APP__/Users/myheart">发布</a> 吧
+                        </div>
+                        <{/if}>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<{include file='../Public/foot2.html'}>

@@ -1,0 +1,50 @@
+<{include file="Public/pagerForm.html"}>
+<div class="pageContent">
+	<table class="table" width="100%" layoutH="138">
+		<thead>
+			<tr>
+				<th align="center" width="50" orderField="id" <{if $smarty.request._order='id'}>class=<{$smarty.request._sort}><{/if}>>ID号</th>
+                <th width="230">试题内容</th>
+                <th width="70">试题分数</th>
+                <th width="90">答案A</th>
+                <th width="90">答案B</th>
+                <th width="90">答案C</th>
+                <th width="90">答案D</th>
+				<th width="90">正确答案</th>
+				<th width="150">添加时间</th>
+			</tr>
+		</thead>
+        <tbody>
+            <{foreach $list as $vo}>
+            <tr target="sid_user" rel="<{$vo.id}>">
+                <td><{$vo.id}></td>
+                <td><{$vo.content}></td>
+                <td><{$vo.quescore}></td>
+                <td><{$vo.aA}></td>
+                <td><{$vo.aB}></td>
+                <td><{$vo.aC}></td>
+                <td><{$vo.aD}></td>
+                <td><{$vo.answer}></td> 
+                <td><{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></td>
+            </tr>
+            <{/foreach}>
+			
+		</tbody>
+	</table>
+	<div class="panelBar">
+		<div class="pages">
+			<span>显示</span>
+			<select class="combox" name="numPerPage" onchange="navTabPageBreak({numPerPage:this.value})">
+                <option value="10" <{if $numPerPage == 10}>selected<{/if}>>10</option>
+                <option value="15" <{if $numPerPage == 15}>selected<{/if}>>15</option>
+                <option value="20" <{if $numPerPage == 20}>selected<{/if}>>20</option>
+                <option value="25" <{if $numPerPage == 25}>selected<{/if}>>25</option>
+                <option value="30" <{if $numPerPage == 30}>selected<{/if}>>30</option>
+			</select>
+            <span>条，共<{$totalCount}>条</span>
+		</div>
+		
+        <div class="pagination" targetType="navTab" totalCount="<{$totalCount}>" numPerPage="<{$numPerPage}>" pageNumShown="10" currentPage="<{$currentPage}>"></div>
+
+	</div>
+</div>

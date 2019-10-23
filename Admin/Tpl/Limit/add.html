@@ -1,0 +1,23 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/insert/navTabId/listusers/callbackType/closeCurrent" enctype="multipart/form-data" class="pageForm required-validate"
+		onsubmit="return iframeCallback(this);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <div class="pageFormContent" layoutH="60">
+			
+            <dl>
+				<dt>性别:</dt>
+                <dd>男<input type="radio" name="sex" value='1'/>
+                    女<input type="radio" name="sex" value='2'/></dd>
+                
+            </dl>
+            
+           
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">提交</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

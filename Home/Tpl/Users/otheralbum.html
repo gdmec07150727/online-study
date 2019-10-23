@@ -1,0 +1,246 @@
+<{include file='../Public/head2.html'}>
+                       
+        
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">E-Sch</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Users/otheredu/uid/<{$smarty.get.uid}>">Ta的E-Sch</a></li>
+                <li class="active"><a href="__APP__/Users/otheralbum/uid/<{$smarty.get.uid}>">Ta的相册</a></li>
+
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+ 
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8">
+					<div class="text_left_Deng" style="height:100px;">
+						<{if $countphoto==0}>
+							<p><br><a href="" class="mid_menu">您还没有相册，创建相册</a></p>
+
+						<{else}>
+							<p><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="mid_menu">现在有<{$countphoto}>个相册</a></p>
+		
+						<{/if}>
+					</div>
+					
+					
+					<div id="create" style="display:none;">
+						 <table>
+							 <form action="__APP__/Users/addalbum/id/<{$smarty.session.user.id}>" method="post" enctype="multipart/form-data">
+								 <input type="hidden" name="id" value="<{$smarty.session.user.id}>">
+								 <tr><td>相&nbsp;册&nbsp;名：</td><td><input type="text" class="form-control input-lg" name="albumname" size="20"></td></tr>
+								 <tr><td colspan="2" align="center"><input type="radio" name="state" checked value="1">可见&nbsp;&nbsp;&nbsp;<input type="radio" name="state" value="2">不可见</td></tr>
+								 <tr><td valign="top" align="right">描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述：</td><td><textarea class="form-control charsFrom" cols="20" rows="3" name="desc"></textarea></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+								 <tr><td colspan="2" align="center"><input type="submit" class="btn btn-default" style="color:green;" value="提交">&nbsp;&nbsp;&nbsp;<input type="reset" class="btn btn-default" style="color:red;" value="重置"></td></tr>
+							 </form>
+						</table>
+					</div>
+
+					
+
+					<div id="album" style="display:block;" class="mid_text_Deng">
+           
+			             <center>
+							<{foreach $list as $vo}>
+								<div class="photoalbum" style="display:block;border:3px solid #fff;width:100px;height:130px;float:left">
+									<a href="__APP__/Users/otherphotos/pid/<{$vo.id}>/uid/<{$smarty.session.otheruser.id}>/desc/<{$vo.desc}>">
+									
+										<{if $vo.cover=='photo.jpg'}><img src="__PUBLIC__/Uploads/users/<{$vo.cover}>" border="none" style="width:100px;height:100px;">
+										<{else}><img src="__PUBLIC__/Uploads/users/<{$smarty.session.otheruser.username}>/<{$vo.id}>/<{$vo.cover}>" border="none" style="width:100px;height:100px;">
+										<{/if}>
+									</a>	
+									
+									 <span style="font-size:10px;color:#444;font-weight:bold">相册名：<{$vo.albumname}></span><br>
+								</div>&nbsp;&nbsp;&nbsp;&nbsp;
+							 <{/foreach}>
+						 </center>
+						 
+					</div>
+
+                    
+                     
+
+                
+            </div>
+			
+			
+			<div class="col-md-4">
+                    <div class="u_card">
+                        <div class="u_card_name"><{$smarty.session.otheruser.username}></div>
+                        <div class="u_card_info">
+                            <img src="__PUBLIC__/Uploads/users/<{$smarty.session.otheruser.username}>/<{$smarty.session.otheruser.picture}>" class="avatar_bg">
+                            
+                             <div class="btn-group mt10 btn-block">
+                                <button id='ll' class="btn btn-lg btn-block btn-follow dropdown-toggle" type="button" data-toggle="dropdown">
+                                    <{if $smarty.session.otheruser.like=='y'}> 已关注 <{else}> 未关注 <{/if}>
+                                </button>
+                                <ul class="dropdown-menu">
+                                    <li><a class='like' vv="<{$smarty.session.otheruser.like}>" href="javascript:void(0)"><{if $smarty.session.otheruser.like=='y'}>取消关注<{else}>+关注<{/if}></a></li>
+                                </ul>
+                            </div>
+
+                        </div>
+<script type="text/javascript" charset="utf-8">
+    $(function(){
+        //关注
+        $(".like").click(function(){
+            var vv=$(this).attr('vv');
+            if(vv=='y'){
+                $.ajax({
+                    url:"__APP__/Message/friend",     //请求地址
+                    type:"post",                    //发送方式
+                    data:{vv:vv,fid:'<{$smarty.session.otheruser.id}>'},        //发送的数据
+                    dataType:"json",                //响应数据的方式
+                    async:true,
+                    success:function(data){
+                        $(".like").text('+关注');
+                        $("#ll").text(' 未关注 ');
+                        $(".like").attr("vv",'n');
+                    },
+                    error:function(){
+                        alert("亲，请登录！");
+                    }
+                })
+            }else{
+                $.ajax({
+                    url:"__APP__/Message/friend",     //请求地址
+                    type:"post",                    //发送方式
+                    data:{vv:vv,fid:'<{$smarty.session.otheruser.id}>'},        //发送的数据
+                    dataType:"json",                //响应数据的方式
+                    async:true,
+                    success:function(data){
+                        $(".like").text('取消关注');
+                        $("#ll").text(' 已关注 ');
+                        $(".like").attr("vv",'y');
+                    },
+                    error:function(){
+                        alert("亲，请登录！");
+                    }
+                })
+            }
+            
+        });
+    });
+</script>
+                        <div class="u_card_intro">
+                            
+                            <p class="c666"><{$smarty.session.otheruser.introduce}></p>
+                            <p><span><{$smarty.session.otheruser.addtime|date_format:"%Y-%m-%d"}>加入</span></p>
+                        </div>
+                        <div class="u_card_data">
+                            <ul class="list_ib">
+                                <li>
+                                    <a href="__APP__/Video/index/uid/<{$smarty.session.otheruser.id}>">视频<span><{$videonum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Note/index/uid/<{$smarty.session.otheruser.id}>">手记<span><{$notenum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Library/index/uid/<{$smarty.session.otheruser.id}>">军火<span><{$libnum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Message/mine/uid/<{$smarty.session.otheruser.id}>">帖子<span><{$messnum}></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10">今日心情</h4>
+                            
+                        </div>
+
+                        <{if $mymes1}>
+                        <{foreach $mymes1 as $vo}>
+							<div class="null" style="color:green;">
+                                <{$vo.content}>
+                            </div>
+                        <{/foreach}>
+                        <{else}>
+                            <div class="null">
+                                还没有今日心情，去发布吧
+                            </div>
+						 <{/if}>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4>Ta关注的人(<{$myfrinum}>)</h4> 
+                        </div>
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                            <{if $myfrinum==0}>
+                                还没有关注任何人
+                            <{else}>
+                                <{foreach $myfri as $vo}>
+                                    <div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+                                        <a href="__APP__/Users/otheredu/uid/<{$vo.fid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{$vo.username}>/<{$vo.picture}>"><br/><{$vo.username}></a>
+                                    </div>
+                                <{/foreach}>
+                            <{/if}>
+                            </div>
+                        </div>
+                        <{$myfsnum}>人正在关注它
+                    </div>
+
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> 谁看过Ta</h4>
+                        </div>
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                                <{if $number1==0}>还没有哦，看来它太低调了哦
+								<{else}>
+									<{foreach $visitor1 as $vo}>
+										<div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+											<a href="__APP__/Users/otheredu/uid/<{$vo.vid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{$vo.visitor}>/<{$vo.vpicname}>"></a><br/>
+											<a href="__APP__/Users/otheredu/uid/<{$vo.vid}>"><{$vo.visitor}></a>
+										</div>
+									<{/foreach}>
+								<{/if}>
+							</div>
+                        </div>
+                    </div>
+					
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> Ta看过谁</h4>
+                            
+                        </div>
+                        
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                                <{if $number==0}>还没有哦，赶快去看看你的小伙伴吧
+								<{else}>
+									<{foreach $visitor as $vo}>
+										<div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+											<a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{$vo.uname}>/<{$vo.upicname}>"></a><br/>
+											<a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><{$vo.uname}></a>
+										</div>
+									<{/foreach}>
+								<{/if}>
+							</div>
+                        </div>
+                    </div>
+                </div>
+			
+        </div>
+    </div>
+</div>
+
+<{include file='../Public/foot2.html'}>

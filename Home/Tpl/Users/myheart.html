@@ -1,0 +1,168 @@
+<{include file='../Public/head2.html'}>
+                       
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">E-Sch</a></h1>
+        </div>
+        <div class="col-md-6" style="width:80%;">
+            <ul class="navbar-left">
+                <li class="active"><a href="__APP__/Users/myheart">心情</a></li>
+                <li><a href="__APP__/Users/myedu">我的收藏</a></li>
+                <li><a href="__APP__/Users/myclass">我的班级</a></li>
+                <li><a href="__APP__/Test/myscore">我的考试</a></li>
+                <li><a href="__APP__/Users/settings">修改资料</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8">
+
+
+                    
+                    
+                    <div class="mt30">
+                        <div class="board clearfix">
+                            <div class="tt tt_normal">
+                                <h4><{$smarty.session.user.username}>的心情</h4>
+                                
+                                
+                            </div>
+                            
+                                <div class="form-item">
+                                    <textarea id="message" class="form-control" rows="3" name="content" datatype="*1-500" nullmsg="还没写留言呢" errormsg="不能超过500个字"></textarea>
+                                    <span class="Validform_checktip"></span>
+                                </div>
+                                
+                            <div class="form-item tr">
+                                    <button id="sub" class="btn btn-default">发布心情</button>
+                            </div>
+							
+							<ul class="list_pb20 mt30 f12" id="liuyan">
+							
+							<{foreach $mymes as $um}>
+								<li>
+                                    <div class="clearfix">
+                                        <div class="pull-left">
+											<a href="__APP__/Users/otheredu/uid/<{$um.vid}>"><img class= "avatar_sm" src="__PUBLIC__/Uploads/users/<{$um.visitor}>/<{$um.upic}>"></a><br/>
+                                        </div>
+                                        <div class="t_ml_40">
+                                            <a href="__APP__/Users/otheredu/uid/<{$um.vid}>"><{$um.myname}></a> : 
+                                            <{$um.content}>
+                                            <span class="c999 f12"><{$um.addtime|date_format:"%Y-%m-%d"}></span>
+                                        </div>
+                                    </div>
+                                </li>
+							<{/foreach}>
+                            </ul>
+							
+														
+							
+							
+							
+							
+							
+							
+							<script>
+								$(function(){
+									$("#sub").click(function(){
+										var mes=$("#message").val();
+										var myid=<{$smarty.session.user.id}>;
+										var vid=<{$smarty.session.user.id}>;
+										var myname="<{$smarty.session.user.username}>";
+										var vname="<{$smarty.session.user.username}>";
+										$.ajax({
+											data:{'message':mes,'myid':myid,'vid':vid,'myname':myname,'visitor':vname},
+											url:'__APP__/Usermessage/addusermessage',
+											dataType:'text',
+											type:'post',
+											success:function(res){
+												if(res=='ok'){
+													$("<li><div class='clearfix'><div class='pull-left'><a href='__APP__/Users/myedu'><img class='avatar_sm' src='__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}>'></a><br/></div><div class='t_ml_40'><a href='__APP__/Users/myedu'><{$smarty.session.user.username}></a> :" +mes+"<span class='c999 f12'> 刚刚</span></div></div></li>").appendTo('#liuyan');
+													$("#message").val('');
+												}
+											},
+										});
+									});
+								});
+							
+							
+							</script>
+
+                            
+                            
+                        </div>
+                    </div>
+
+                </div>
+
+                
+                <div class="col-md-4">
+                    
+                    
+                    <div class="u_card">
+                        <div class="u_card_name"><{$smarty.session.user.username}></div>
+                        <div class="u_card_info">
+                            <img src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}>" class="avatar_bg">
+
+                            
+
+                        </div>
+                        <div class="u_card_intro">
+                            
+                            <p class="c666"><{$smarty.session.user.introduce}></p>
+                            <p><span><{$smarty.session.user.addtime|date_format:"%Y-%m-%d"}>加入</span></p>
+                        </div>
+                        <div class="u_card_data">
+                            <ul class="list_ib">
+                                <li>
+                                    <a href="__APP__/Video/index/uid/<{$smarty.session.user.id}>">视频<span><{$videonum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Note/index/uid/<{$smarty.session.user.id}>">班级<span><{$classnum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Library/index/uid/<{$smarty.session.user.id}>">课件<span><{$libnum}></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10">今日心情</h4>
+                            
+                        </div>
+
+                        <{if $mymes1}>
+                        <{foreach $mymes1 as $vo}>
+							<div class="null" style="color:green;">
+                                <{$vo.content}>
+                            </div>
+                        <{/foreach}>
+                        <{else}>
+                            <div class="null">
+                                还没有今日心情，去 <a href="__APP__/Users/myheart">发布</a> 吧
+                            </div>
+						 <{/if}>
+                    </div>
+
+                    
+                    
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<{include file='../Public/foot2.html'}>

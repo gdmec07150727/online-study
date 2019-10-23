@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        
+        <title>在线教学网</title>
+       
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/biquu.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/kandytabs.css">
+        
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <style type="text/css">
+        /*ipad fix*/
+        @media (min-width:992px){
+            .home_module .m_cover_list li:nth-last-child(-n+2) {
+                display: none;
+            }
+        }
+        @media (min-width:1200px){
+            .home_module .m_cover_list li:nth-last-child(-n+2) {
+                *display: inline;
+                display: inline-block;
+                zoom:1;
+            }
+        }
+        .content_load{
+            display: none;
+            text-align: center;
+        }
+        .ml10{
+            margin-left:100px;
+        }
+    </style>
+    <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+    
+    </head>
+
+    <body style="" class="loaded">
+    
+    <div id="wrapper">
+        
+        <div class="header-navigation navbar-dynamic navbar navbar-default navbar-fixed-top loaded navbar-transparent" role="navigation">
+            <div class="container">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                        <span class="sr-only">切换导航</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                        <a class="navbar-brand animated" href="" style="background:url('__PUBLIC__/images/logo-bq.png') no-repeat center"><span class="animated">E-Sch</span></a>
+                </div>
+
+                <div class="collapse navbar-collapse navbar-ex1-collapse">
+                    <ul class="nav navbar-nav g_nav">
+                        <li><a href="__APP__/Video/index" class="btn btn-primary btn-signup animated">教学视频</a></li>
+                        <li><a href="__APP__/Users/myclass" class="btn btn-primary btn-signup animated">个人中心</a></li>
+                        <li><a href="__APP__/Library/index" class="btn btn-primary btn-signup animated">教学课件</a></li>
+                        <li><a href="__APP__/Message/index" class="btn btn-primary btn-signup animated">贴吧</a></li>
+                        <{if $smarty.session.user}>
+                            <li><a href="__APP__/Test/index" class="btn btn-primary btn-signup animated">考试</a></li>
+                            <{else}>
+                            <li><a href="javascript:alert('请先登录！')" class="btn btn-primary btn-signup animated">考试</a></li>
+                            <{/if}>
+                    </ul>
+
+                    <form class="navbar-form navbar-right" role="search" action="__APP__/Cat/show" method="GET">
+                        <div class="form-group">
+                            <input type="text" name="q" class="form-control" placeholder="视频、资源、手记、帖子">
+                        </div>
+                        <button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
+                    </form>
+
+                    
+                    <{if $smarty.session.user}>
+                        <ul class="nav navbar-nav navbar-right">
+                            <li class="navbar-nav-user animated">
+                                <a class="user-avatar" href="__APP__/Users/myedu" style="height:60px">
+                                    <img alt="<{$smarty.session.user.username}>" title="<{$smarty.session.user.username}>" <{if $smarty.session.user.picture=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/0.jpg"<{else}>src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/s_<{$smarty.session.user.picture}>"<{/if}> class="avatar_sm">　<{$smarty.session.user.username}></a>
+                            </li>
+                            <li><a href="__APP__/Users/loginout" class="user-avatar animated">注销</a></li>
+                        </ul>
+
+                    <{else}>
+
+                        <ul class="nav navbar-nav navbar-right">
+                            <li><a href="__APP__/Users/index" class="btn btn-primary btn-signup animated">注 册</a></li>
+                            <li><a href="__APP__/Users/login" class="btn btn-primary btn-signup animated">登录</a></li>
+                        </ul>
+                    
+                    <{/if}>
+                    
+                </div>
+            </div>
+        </div>
+
+        

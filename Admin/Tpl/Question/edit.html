@@ -1,0 +1,36 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listquestion/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="id" value="<{$vo.id}>"/>
+		<input type="hidden" name="rtime" value="1"/>
+		<div class="pageFormContent" layoutH="60">
+			<dl style='height:130px'>
+				<dt>问题：</dt>
+                <dd><textarea class='editor' rows='5' cols='50' name="content" tools='simple' upImgUrl='__URL__/doupload' upImgExt='jpg,jpeg,gif,png'><{$vo.content}></textarea></dd>
+            </dl>
+			<dl style='height:130px'>
+				<dt>回复：</dt>
+				<dd><textarea class='editor' rows='5' cols='50' name="replay" tools='simple' upImgUrl='__URL__/doupload' upImgExt='jpg,jpeg,gif,png'><{$vo.replay}></textarea></dd>
+            </dl>
+            <dl>
+				<dt>是否推荐：</dt>
+				<dd><input type="radio" name="isbest" value="1" <{if $vo.isbest=='1'}>checked<{/if}>/>YES
+					<input type="radio" name="isbest" value="0" <{if $vo.isbest=='0'}>checked<{/if}>/>NO</dd>
+            </dl>
+			<dl>
+				<dt>状态：</dt>
+				<dd><input type="radio" name="status" value="1" <{if $vo.status=='1'}>checked<{/if}>/>显示
+					<input type="radio" name="status" value="0" <{if $vo.status=='0'}>checked<{/if}>/>不显示</dd>
+			</dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

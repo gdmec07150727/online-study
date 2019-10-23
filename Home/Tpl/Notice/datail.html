@@ -1,0 +1,106 @@
+ <!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>公告详情浏览</title>
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+        <STYLE>
+			h3.title{
+				color:#AA71B2;
+			}
+		</STYLE>
+    </head>
+    <body>
+    <div id="browser"></div>
+    <{include file="../Public/head.html"}>
+        
+<div id="sub-header" class="group_h">
+    <div class="container">
+        <div class="navbar-header col-sm-offset-1">
+            <h1><a href="">公告展示</a></h1>
+        </div>
+        <div class="col-md-6">
+            <ul class="navbar-left">
+                <li class="active"><a href="">公告浏览</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+<div id="main">
+    <div class="container">
+        <div class="home_module m_movie row">
+            <div class="container">
+                <!-- 左侧 -->
+                <div class="col-md-8">
+                    <!-- 公告内容 -->
+                    <div class="tt">
+                        <h2 class="title">☞<{$list.title}></h2>
+                    </div>
+                    <div class="review_content">
+                        <div class="c999 m_n_item_info">
+                            添加者:<{$list.author}>&nbsp;&nbsp;&nbsp;&nbsp;添加时间:<{$list.addtime|date_format:"%Y-%m-%d %H:%M"}>
+                        </div>
+                        <div class="c999 m_n_item_info">
+                            公告内容:
+                        </div>
+                        <div class="review_content_p" style="border:5px #eee solid">
+                           <p><{$list.content}></p>  
+                        </div>
+                        
+                    </div>
+                </div>
+                <!-- 右侧 -->
+                <div class="col-md-4" style="height:330px">
+                     <div class="m_pay_list" style="height:330px;width:300px">
+                        <div class="tt">
+                            <h3 class="title">最新公告</h3>
+                        </div>
+                        <div id="scrollDiv" style="height:300px;overflow:hidden">
+                            <ol id="did">
+                                <{foreach $notice as $vo}>
+                                <li class="cc"><span>新</span><a href="__APP__/Notice/datail/id/<{$vo.id}>"><{$vo.title}></a></li>
+                                <li><{$vo.addtime|date_format:"%Y-%m-%d %H:%M"}></li>
+                                <{/foreach}>
+                             </ol>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="__PUBLIC__/js/scroll.js"></script> 
+<!--页脚开始-->
+<script type="text/javascript" charset="utf-8">
+            $(function(){
+                /*  
+                var mytime=setInterval(function(){
+                    $("li.cc:last").hide().prependTo("#did").slideDown(1000);   
+                    },1400);
+                $(".m_pay_list").mouseover(function(){
+                    clearInterval(mytime);
+                    mytime=null;
+                    });
+                 $(".m_pay_list").mouseleave(function(){
+                    mytime=setInterval(function(){
+                    $("#did li:last").hide().prependTo("#did").slideDown(1000);   
+                    },800);
+                  
+                    });*/
+                    
+                //设置最新公告滚动
+                $("#scrollDiv").Scroll({line:5,speed:1000,timer:2000});
+
+             });
+</script> 
+    <{include file="../Public/foot.html"}>
+        
+</body></html>

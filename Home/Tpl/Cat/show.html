@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>分类搜索结果</title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+       
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script> 
+        <style type="text/css">
+            
+            
+        </style>
+    </head>
+    <body>
+    <div id="browser"></div>
+
+    <{include file="../Public/head.html"}>
+
+        
+<div id="main" style='background:url()'>
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                <div class="col-md-8" style='width:100%'>
+                    <{if $smarty.get.pid}>
+                    <div class="mb30 m_cats" style='float:left'>
+                        <ul>
+                            <li><a href='__APP__/Cat/index' style="font-size:20px">类别总览</a>
+                            <a href='__APP__/Cat/index/id/1' style='color:red'>红色为一级分类</a>
+                            <a href='__APP__/Cat/index/id/2' style='color:blue'>蓝色为二级分类</a></li>
+                        </ul>
+                    </div>
+                    <{/if}>
+                    <div class="tt" style='width:100%'>
+                        <h3 style="color:#666;">搜索——<{if $cname}><{$cname}><{else}><{$smarty.get.q}><{/if}></h3>
+                    </div>
+                    <div class="mb30 m_cats" style='float:left;width:100%;float:left;font:bold 16px "宋体";color:#aaa'>
+                        <ul>
+                            <li><a id='video' style='background:#2C6248' href='javascript:void(0)'>视频</a>　
+                            <a id='library' style='background:#7BCAA5' href='javascript:void(0)'>文库</a>　
+                            <a id='message' style='background:#7BCAA5' href='javascript:void(0)'>帖子</a></li>
+                        </ul>
+                    </div>
+                    <ul class="content_list" id='vv' style="margin-left:6%;display:block">
+                        <{if $list1}>
+                        <div style='width:100%'><a style='color:#AF17AD' href='__APP__/Video/index/pid/<{if $smarty.get.pid}><{$smarty.get.pid}><{else}>0<{/if}>/q/<{$smarty.get.q}>'>查看更多>></a></div>
+                        <{foreach $list1 as $vo}>
+                        <li style="border:0px solid red;float:left;width:150px;margin:5px">
+                            <div class="item_cover" style="width:150px">
+                                <img alt="<{$vo.videoname}>" title="<{$vo.videoname}>" style="width:150px;height:140px" src="__PUBLIC__/Uploads/videopic/<{$vo.picname}>">
+                                <a class="m_cover_item_info" href="__APP__/Video/play/id/<{$vo.id}>" title="点击播放" style="width:150px">
+                                    <span class="play-item"><i class="icon-play"></i></span>
+                                    <em>点击率 <{$vo.clicknum}></em>
+                                </a>
+                            </div>
+                            <span class="title" style="float:left;font-size:12px;width:150px;text-align:center"><a href="__APP__/Video/detail/id/<{$vo.id}>/tid/<{$vo.tid}>"><{$vo.videoname}></a></span>
+                            <a style="margin-left:40px" href="__APP__/Video/detail/id/<{$vo.id}>/tid/<{$vo.tid}>" class="btn btn-primary btn-sm">查看详情</a>
+                        </li>
+                        <{/foreach}>
+                        <{else}>
+                        <div style="border:0px solid red;float:left;width:100%">暂无该分类视频</div>
+                        <{/if}>
+                    </ul>
+                    <ul id='ll' class="list_pb20" style="margin-left:6%;display:none">
+                        <{if $list2}>
+                        <div style='width:100%'><a style='color:#AF17AD' href='__APP__/Library/index/pid/<{if $smarty.get.pid}><{$smarty.get.pid}><{else}>0<{/if}>/q/<{$smarty.get.q}>'>查看更多>></a></div>
+                        <{foreach $list2 as $vo}>
+                            <li style="border:0px solid red;float:left;width:60%;margin-left:1px">
+                                <div class="g_reply_n pull-left">
+                                    <span title="">
+                                        <i class="icon-eye-open icon-color-red"></i>
+                                        <em><{$vo.clicknum}></em>
+                                    </span>
+                                    <span title="">
+                                        <i class="icon-eye-open icon-color-red"></i>
+                                        <em><{$vo.favonum}></em>
+                                    </span>
+                                </div>
+                                <div class="t_ml_120">
+                                    <h4><a href="__APP__/Library/detail/id/<{$vo.id}>"><{$vo.title}></a></h4>
+                                    <p>
+                                    <a href=""><img alt="<{$vo.username}>" title="<{$vo.username}>" src="__PUBLIC__/Uploads/users/<{$vo.username}>/s_<{$vo.picture}>" class="avatar_md"></a>
+                                    上传者 <a href=""><{$vo.username}></a> <i style="float:right;"><{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}></i>    
+                                    </p>
+                                </div>
+                            </li>
+                            <{/foreach}>
+                            <{else}>
+                            <div style="border:0px solid red;float:left;width:100%;">暂无该分类资源</div>
+                        <{/if}>
+                    </ul>
+                    <ul id='mm' class="list_pb20" style="margin-left:6%;display:none">
+                        <{if $list3}>
+                        <div style='width:100%'><a style='color:#AF17AD;' href='__APP__/Message/index2/pid/<{if $smarty.get.pid}><{$smarty.get.pid}><{else}>0<{/if}>/q/<{$smarty.get.q}>'>查看更多>></a></div>
+                        <{foreach $list3 as $vo}>
+                        <li class='m_newlist' style="height:30px;border-bottom:1px dotted #ccc;float:left;width:70%;"> 
+                            <div class="t_ml_120" style='margin-left:0px;float:left;width:42%;'>
+                                <a href="__APP__/Message/show/id/<{$vo.id}>"><{$vo.title|truncate:13:'...':true}></a>
+                                <{if $vo.img=='y'}><img style='margin-top:-2px' src='__PUBLIC__/images/img.png'><{/if}>
+                                <{if $vo.isbest=='1'}><img style='margin-top:-2px' src='__PUBLIC__/images/best.png'><{/if}>
+                                <{if $vo.ishot=='1'}><img style='margin-top:-2px' src='__PUBLIC__/images/hot.png'><{/if}>
+                            </div>
+                            <span style='margin-left:0px;float:left;width:90px;'>
+                                <a href='__APP__/Message/mine/uid/<{$vo.uid}>'><{$vo.username}></a>
+                            </span>
+                            <span style='margin:5px 0px 0px 0px;float:left;width:150px;font:normal 14px "宋体"'>
+                                <{$vo.addtime|date_format:"%Y-%m-%d %H:%M:%S"}>
+                            </span>
+                            <span style='margin-top:5px;float:left;width:100px;font:bold 13px "宋体"'>
+                                <div style='width:48px;float:left;text-align:right;color:#670A67'><{$vo.scan}></div>
+                                <div style='margin:0px 5px;width:5px;float:left;color:black'>/</div>
+                                <div style='width:35px;float:left;color:#F51231'><{$vo.plnum}></div>
+                            </span>
+                        </li>
+                        <{/foreach}>
+                        <{else}>
+                        <div style="border:0px solid red;float:left;width:100%;margin-left:70px">暂无该分类帖子</div>
+                    </ul>
+                    <{/if}>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+    <{include file="../Public/foot.html"}>
+    
+</body></html>
+<script type="text/javascript" charset="utf-8">
+    $(function(){
+        $('#video').click(function(){
+            $('#vv').show();
+            $('#video').css("background","#2C6248");
+            $('#ll').hide();
+            $('#library').css("background","#7BCAA5");
+            $('#mm').hide();
+            $('#message').css("background","#7BCAA5");
+        });
+        $('#library').click(function(){
+            $('#ll').show();
+            $('#library').css("background","#2C6248");
+            $('#vv').hide();
+            $('#video').css("background","#7BCAA5");
+            $('#mm').hide();
+            $('#message').css("background","#7BCAA5");
+        });
+        $('#message').click(function(){
+            $('#mm').show();
+            $('#message').css("background","#2C6248");
+            $('#ll').hide();
+            $('#library').css("background","#7BCAA5");
+            $('#vv').hide();
+            $('#video').css("background","#7BCAA5");
+        })
+    })
+</script>

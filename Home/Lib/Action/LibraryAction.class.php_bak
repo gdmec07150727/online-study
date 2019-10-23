@@ -1,0 +1,261 @@
+<?php
+
+//自定义文库模块Action类
+
+class LibraryAction extends Action{
+
+    //加载资源浏览页
+    public function index(){
+        
+        //实例化表对象
+        $model = M("Library");
+
+        import("ORG.Util.Page");//导入分页类
+        //设置搜索分页信息
+        //封装搜索条件
+        if (!empty($_GET['q'])) {
+            $where['title'] = array("like","%{$_GET['q']}%");
+        }
+        $where['status'] = array("eq","2");
+        //设置分页条件
+        $total = $model->where($where)->count();//获取总数据条数
+        $page = new Page($total,3);//实例化一个分页对象
+        
+        //调用查询语句
+        $result = $model->where($where)->order("addtime desc")->limit($page->firstRow.",".$page->listRows)->select();
+        
+        //查询上传用户名
+        //遍历上面查询出的资源信息结果 对结果集进行所需信息的追加
+        foreach ($result as &$vo) {
+            $ob = D("Users")->field("username")->find($vo['uid']);
+            $vo['username'] = $ob['username'];
+            //组装列表中的资源名
+            $ext = array_pop(explode("/",$vo['type']));
+            $vo['libname'] = $vo['title'].".".$ext;
+        }
+        
+        //向模板中输出查询信息和分页信息
+        //$this->assign("page",$);
+        $this->assign("list",$result);
+        $this->assign("showPage",$page->show());
+
+        //输出模板
+        $this->display();
+    }
+
+    //定义准备添加页面的方法
+    public function add(){
+        $this->display();
+    }
+
+    public function upload(){
+        //导入图片上传类
+        import("ORG.Net.UploadFile");
+        $upload = new UploadFile();
+        $upload->maxSize = "20000000";//设置附件上传大小
+        $upload->allowExts = array("pdf");//设置附件上传类型
+        $upload->savePath = "./Public/Uploads/library/";//设置上传目录
+        if (!$upload->upload()) {
+            $error = $upload->getErrorMsg();
+            echo $error;
+            //$this->error($upload->getErrorMsg());
+        }else{
+            $info = $upload->getUploadFileInfo();
+            $file['picname'] = $info[0]['savename'];
+            $file['size'] = $_FILES['Filedata']['size'];//取得文件的大小
+            $file['type'] = $_FILES['Filedata']['type'];//取得文件的类型
+            echo json_encode($file);
+        }
+    }
+    //定义数据添加的方法
+    public function insert(){
+        
+        //实例化对象
+        $model = D("Library");
+        $data= $model->create();
+        //把要添加的数据通过create()方法保存到一个数组变量中
+        if(!$data){
+            $this->error($model->getError());
+        }
+        $model->uid = rand(1,10);//上传者的id号先随机 后期还得做处理 ============
+        //执行数据添加
+        $list = $model->add();
+        if ($list != false) {
+            
+            //==============================执行资源格式的转换==========================================
+            //执行上传资源的类型转换 pdf转为swf格式
+            //首先获取上传资源所在目录的绝对路径
+            $dir = explode("\\",rtrim(THINK_PATH,"/"));//删除路径最后的"/"
+            array_pop($dir);
+            $dir = implode("\\",$dir);//当前项目所在的目录
+            $reslibdir = $dir."\\Public\\Uploads\\library\\";//拼装上传资源所在的目录
+            $dstlibdir = $dir."\\Public\\Uploads\\library_swf\\";//拼装上传资源转成的swf文件存放的目录
+
+            $resFile = $reslibdir.$data['name'];//上传资源路径+文件名
+            $randname = substr($data['name'],0,strpos($data['name'],"."));//获取资源名的随机数字
+            $dstFile = $dstlibdir.$randname.".swf";//转换成swf格式后的资源路径+文件名
+            
+            //调用函数exec()调用dos命令 将pdf格式的文件转swf格式
+            //$arr返回执行的结果数组 $status为请求结果 0表示成功 1表示失败 
+            exec("{$dir}\\Public\\SWFTools\\pdf2swf.exe -t {$resFile} -s flashversion=9 -o {$dstFile}");
+            
+            //==============================执行资源格式的转换==========================================
+
+            $this->display("Library/succ");//调用添加成功页面的方法
+        }else{
+            $this->error("数据添加失败！");
+        }
+        
+    }
+
+    //显示信息添加成功的页面
+    public function succ(){
+        $this->display();
+    }
+
+    //定义给定uid查询用户本身上传的资源的方法
+    public function select(){
+        //实例化表对象
+        $model = D("Library");
+
+        import("ORG.Util.Page");//导入分页类
+        //设置搜索分页信息
+        //封装搜索条件
+        $where['uid'] = array("eq",$_GET['uid']);
+        //设置分页条件
+        $total = $model->where($where)->count();//获取总数据条数
+        $page = new Page($total,3);//实例化一个分页对象
+        
+        //调用查询语句
+        $result = $model->where($where)->limit($page->firstRow.",".$page->listRows)->select();
+
+        
+        //向模板中输出查询信息和分页信息
+        //$this->assign("page",$);
+        $this->assign("list",$result);
+        $this->assign("showPage",$page->show());
+
+        //输出模板
+        $this->display("index");
+        
+    }
+
+    //定义资源信息查询方法 详情页
+    public function detail(){
+        //实例化
+        $model = D("Library");
+        $vo = $model->find($_GET['id']);
+        
+        $model->clicknum += 1;;//执行资源的浏览量加一的操作
+        $model->save();
+        //查询资源表中uid对应的用户名追加到资源结果集中
+        $user = D("Users")->find($vo['uid']);
+        $vo['username'] = $user['username'];
+
+        //组装资源swf格式的文件名
+        $randname = substr($vo['name'],0,strpos($vo['name'],"."));
+        $vo['swfname'] = $randname.".swf";//将文件名追加进结果数组
+
+        $this->assign("vo",$vo);
+        $type = array_pop(explode("/",$vo['type']));
+        $this->assign("type",$type);
+
+
+        //调用CommentActin类中的显示评论show()方法 通过R方法
+        R("Comment/show",array($_GET['id']));
+        
+        $this->display();
+    }
+    
+    
+    //定义资源点赞的方法 ajax请求
+    public function favo(){
+        
+        $model = D("Library");
+        $model->find($_POST['id']);
+        
+        if ($_POST['num'] == 1) {
+            $model->favonum += 1;//赞数加一
+            $this->num++;
+            
+        }else{
+            $model->favonum -= 1;
+            $this->num--;
+        }
+        
+        
+        if ($model->save()) {
+            echo "yes";
+        }else{
+            echo "no";
+        }
+
+    }
+
+    //资源下载的方法
+    public function dwload(){
+        $model = M("Library");
+        $res = $model->find($_GET['id']);
+        //dump($res);exit;
+        //echo $res['name'];exit;
+        //资源下载量加一
+        $res['dwloadnum']+=1;
+        $model->save($res);
+        //获取资源的类型
+        $type = $res['type'];
+        //echo $type;exit;
+        
+        //执行资源下载
+        header("Content-Type:{$type}");
+        header("Content-Disposition:attachment;filename={$res['name']}");
+        header("Content-Length:{$res['size']}");
+
+        readfile("./Public/Uploads/library/{$res['name']}");
+    }
+
+
+    //定义数据删除的方法
+    public function del($id){
+        if (!empty($id)) {
+            $model = M("Library");
+            $res = $model->delete($id);
+            if ($res != false) {
+                $this->success("删除成功！",U("Library/index"),3);
+            }else{
+                $this->error("删除失败！");
+            }
+        }else{
+            $this->error("ID错误！");
+        }
+    }
+
+    //定义准备编辑页面的方法
+    public function edit($id){
+        if (!empty($id)) {
+            $model = M("Library");
+            $vo = $model->find($id);
+            if ($vo) {
+                $this->assign("vo",$vo);
+                $this->display();
+            }else{
+                $this->error("数据不存在！");
+            }
+        }else{
+             $this->error("ID错误！");
+        }
+    }
+    //定义更新数据的方法
+    public function update(){
+        $model = M("Library");
+        if ($vo = $model->create()) {
+            $res = $model->save();
+            if ($res != false) {
+                $this->success("修改成功！",U("Library/index"),3);
+            }else{
+                $this->error("没有更新任何数据！");
+            }
+        }else{
+            $this->error($model->getError());
+        }
+    }
+}

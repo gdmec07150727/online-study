@@ -1,0 +1,21 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/savenode/navTabId/listrole/callbackType/closeCurrent"  class="pageForm required-validate" 
+		onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+		<input type="hidden" name="rid" value="<{$role.id}>"/>
+		<div class="pageFormContent" layoutH="60">
+			<h3>当前角色:【<{$role.roletype}>】的操作节点信息</h3>
+			<{foreach $list as $vo}>
+				<div style="width:140px;float:left;margin:5px;">
+					<input type="checkbox" name="nid[]" <{if in_array($vo.id,$mynode)}>checked<{/if}> value="<{$vo.id}>"/><{$vo.name}>
+				</div>
+			<{/foreach}>
+		</div>
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>

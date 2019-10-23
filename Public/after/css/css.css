@@ -1,0 +1,22 @@
+*{ margin:0; padding:0;}
+body{ font-size:12px; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体'; line-height:150%; margin-left:auto; margin-right:auto; width:100%; color:#656565;}
+img{ border:none;}
+ul,li{ list-style:none; list-style-type:none;}
+.twelve{ font-size:12px;}
+.fourth{ font-size:14px;}
+.pdd_top10{ padding-top:10px;}
+.pdd_right10{ padding-right:10px;}
+.pdd_bottom10{ padding-bottom:10px;}
+.pdd_left10{ padding-left:10px;}
+.songti{ font-family:"Microsoft YaHei","Tahoma","Arial",'宋体';}
+.yinwen{ font-family:Arial, Helvetica, sans-serif}
+.se1{ width:160px; color:#bb1414}
+.inp{ border:1px solid #d2cf89; text-align:left; width:160px; padding:5px 4px 0px 4px; height:24px; color:#bb1414; background:#656565}
+.inp2{ border:1px solid #d2cf89; text-align:left; width:300px; padding:5px 4px 0px 4px; height:24px; color:#bb1414; background:#656565}
+.cor1{ color:#bb1414}
+.btn1{ FONT-SIZE: 12px; FILTER: progid:DXImageTransform.Microsoft.Gradient(GradientType=0, StartColorStr=#ffffff, EndColorStr=#9a6701); CURSOR: hand; COLOR:#bb1414; padding:4px 4px 1px 4px; border:1px solid #9a6701;}
+a:link,a:visited{ font-size:12px; color:#656565; font-weight:normal; text-decoration:none; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体';}
+a:hover,a:active{ font-size:12px; color:#548fc9; font-weight:normal; text-decoration:none; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体';}
+a.black:link,a.black:visited{ font-size:12px; color:#000000; font-weight:bold; text-decoration:none; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体';}
+a.black:hover,a.black:active{ font-size:12px; color:#548fc9; font-weight:bold;  text-decoration:none; font-family:"Microsoft YaHei","Tahoma","Arial",'宋体';}
+

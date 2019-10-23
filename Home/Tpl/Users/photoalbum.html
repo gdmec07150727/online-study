@@ -1,0 +1,236 @@
+<{include file='../Public/head2.html'}>
+                       
+        
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">E-Sch</a></h1>
+        </div>
+        <div class="col-md-6" style="width:80%;">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Users/myheart">心情</a></li>
+                <li><a href="__APP__/Users/myedu">我的E-Sch</a></li>
+                <li><a href="__APP__/Users/settings">修改资料</a></li>
+                <li class="active"><a href="__APP__/Users/photoalbum">我的相册</a></li>
+                <li><a href="__APP__/Users/stranger">查看陌生人</a></li>
+                <li><a href="__APP__/Test/myscore">我的考试</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8" style="margin-top:15px;">
+					<span id="myalbum" class="btn btn-default" style="font-size:18px;color:green;border:0px;">&nbsp;&nbsp;我的相册</span>
+					<span id="createalbum" class="btn btn-default" style="font-size:18px;color:blue;border:0px;">&nbsp;&nbsp;创建相册</span>
+					<script>
+						$(function (){
+							$("#createalbum").click(function (){
+								$("#album").css("display","none");
+								$("#create").css("display","block");
+							});
+							$("#myalbum").click(function (){
+								$("#album").css("display","block");
+								$("#create").css("display","none");
+							});
+						});
+					</script>
+					<div class="text_left_Deng" style="height:100px;">
+						<{if $countphoto==0}>
+							<p><br><a href="" class="mid_menu">您还没有相册，创建相册</a></p>
+
+						<{else}>
+							<p><br>&nbsp;&nbsp;&nbsp;&nbsp;<a href="javascript:void(0);" class="mid_menu">现在有<{$countphoto}>个相册</a></p>
+		
+						<{/if}>
+					</div>
+					
+					
+					<div id="create" style="display:none;">
+						 <table>
+							 <form action="__APP__/Users/addalbum/id/<{$smarty.session.user.id}>" method="post" enctype="multipart/form-data">
+								 <input type="hidden" name="id" value="<{$smarty.session.user.id}>">
+								 <tr><td>相&nbsp;册&nbsp;名：</td><td><input type="text" class="form-control input-lg" name="albumname" size="20"></td></tr>
+								 <tr><td colspan="2" align="center"><input type="radio" name="state" checked value="1">可见&nbsp;&nbsp;&nbsp;<input type="radio" name="state" value="2">不可见</td></tr>
+								 <tr><td valign="top" align="right">描&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;述：</td><td><textarea class="form-control charsFrom" cols="20" rows="3" name="desc"></textarea></td></tr><tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+								 <tr><td colspan="2" align="center"><input type="submit" class="btn btn-default" style="color:green;" value="提交">&nbsp;&nbsp;&nbsp;<input type="reset" class="btn btn-default" style="color:red;" value="重置"></td></tr>
+							 </form>
+						</table>
+					</div>
+
+					
+
+					<div id="album" style="display:block;" class="mid_text_Deng">
+           
+			             <center>
+							<{foreach $list as $vo}>
+								<div class="photoalbum" style="display:block;border:3px solid #fff;width:100px;height:130px;float:left">
+									<a href="__APP__/Users/photos/pid/<{$vo.id}>/uid/<{$smarty.session.user.id}>/desc/<{$vo.desc}>">
+									
+										<{if $vo.cover=='photo.jpg'}><img src="__PUBLIC__/Uploads/users/<{$vo.cover}>" border="none" style="width:100px;height:100px;">
+										<{else}><img src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$vo.id}>/<{$vo.cover}>" border="none" style="width:100px;height:100px;">
+										<{/if}>
+									</a>	
+									
+									 <span style="font-size:10px;color:#444;font-weight:bold">相册名：<{$vo.albumname}></span><br>
+									 <span class="delalbum" style="height:10px;" id=<{$vo.id}> username=<{$smarty.session.user.username}>><a class="shanchu" href="javascript:void(0)" style="font-size:13px;color:#444;">删除</a></span>
+								</div>&nbsp;&nbsp;&nbsp;&nbsp;
+							 <{/foreach}>
+						 </center>
+						 
+					</div>
+					<script>
+						$(function (){
+							$(".delalbum").click(function (){
+								var id=$(this).attr("id");
+								var username=$(this).attr("username");
+								var obj=$(this);
+								//alert("sss");
+								$.ajax({
+									data:{'id':id,'username':username},
+									dataType:'text',
+									url:'__APP__/Users/delalbum',
+									type:'post',
+									success:function(res){
+										if(res=='ok'){
+											obj.parent(".photoalbum").css("display","none");
+											alert("删除相册成功！");
+										}
+									},
+								});
+							});
+						});
+					</script>
+                </div>
+
+                
+                <div class="col-md-4">
+                    
+                    
+                    <div class="u_card">
+                        <div class="u_card_name"><{$smarty.session.user.username}></div>
+                        <div class="u_card_info">
+                            <img src="<{if $smarty.session.user.picture=='1.jpg'}>__PUBLIC__/uploads/users/0/1.jpg<{else}>__PUBLIC__/uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}><{/if}>" class="avatar_bg">
+
+                            
+
+                        </div>
+                        <div class="u_card_intro">
+                            
+                            <p class="c666"><{$smarty.session.user.introduce}></p>
+                            <p><span><{$smarty.session.user.addtime|date_format:"%Y-%m-%d"}>加入</span></p>
+                        </div>
+                        <div class="u_card_data">
+                            <ul class="list_ib">
+                                <li>
+                                    <a href="__APP__/Video/index/uid/<{$smarty.session.user.id}>">视频<span><{$videonum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Note/index/uid/<{$smarty.session.user.id}>">手记<span><{$notenum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Library/index/uid/<{$smarty.session.user.id}>">军火<span><{$libnum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Message/mine">帖子<span><{$messnum}></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10">今日心情</h4>
+                            
+                        </div>
+
+                        <{if $mymes1}>
+                        <{foreach $mymes1 as $vo}>
+							<div class="null" style="color:green;">
+                                <{$vo.content}>
+                            </div>
+                        <{/foreach}>
+                        <{else}>
+                            <div class="null">
+                                还没有今日心情，去 <a href="__APP__/Users/myheart">发步</a> 吧
+                            </div>
+						 <{/if}>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4>我关注的人<a class="f14" href="__APP__/Message/myfri">(<{$myfrinum}>)</a></h4> 
+                        </div>
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                            <{if $myfrinum==0}>
+                                还没有关注任何人<a href="">浏览发现</a> 看看
+                            <{else}>
+                                <{foreach $myfri as $vo}>
+                                    <div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+                                        <a href="__APP__/Users/otheredu/uid/<{$vo.fid}>"><img width="50" height="50" src="__PUBLIC__/uploads/users/<{if $vo.picture=='1.jpg'}>0/0.jpg<{else}><{$vo.username}>/<{$vo.picture}><{/if}>"><br/><{$vo.username}></a>
+                                    </div>
+                                <{/foreach}>
+                            <{/if}>
+                            </div>
+                        </div>
+                        <{$myfsnum}>人正在关注我
+                    </div>
+
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> 谁看过我</h4>
+                        </div>
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                                <{if $number1==0}>还没有哦，看来你太低调了哦
+								<{else}>
+									<{foreach $visitor1 as $vo}>
+										<div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+											<a href="__APP__/Users/otheredu/uid/<{$vo.vid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{if $vo.vpicname=='1.jpg'}>0/0.jpg<{else}><{$vo.visitor}>/<{$vo.vpicname}><{/if}>"></a><br/>
+											<a href="__APP__/Users/otheredu/uid/<{$vo.vid}>"><{$vo.visitor}></a>
+										</div>
+									<{/foreach}>
+								<{/if}>
+							</div>
+                        </div>
+                    </div>
+					
+					
+					
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> 我看过谁</h4>
+                            
+                        </div>
+                        
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                                <{if $number==0}>还没有哦，赶快去看看你的小伙伴吧
+								<{else}>
+									<{foreach $visitor as $vo}>
+										<div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+											<a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{if $vo.vpicname=='1.jpg'}>0/0.jpg<{else}><{$vo.uname}>/<{$vo.upicname}><{/if}>"></a><br/>
+											<a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><{$vo.uname}></a>
+										</div>
+									<{/foreach}>
+								<{/if}>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<{include file='../Public/foot2.html'}>

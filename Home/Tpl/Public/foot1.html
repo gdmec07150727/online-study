@@ -1,0 +1,82 @@
+     
+        <div id="footer">
+            <div class="container">
+                <div class="col-md-2">
+                   <a href="__APP__/Index/index"><img alt="教学网" title="教学网" src="__PUBLIC__/images/logo-bq.png"></a>
+                </div>
+
+                <div class="col-md-7" style="line-height:25px;">
+                    <a href="">关于我们</a>
+                    <a href="">联系我们</a>
+                    <a href="">免责声明</a>
+                    <a href="">作品授权</a>
+                    <a href="">意见反馈</a>
+                    <br>
+                    <a href="javascript:void(0)">友情链接:</a>
+                    <{foreach $flink as $vo}>
+                    <a target="_blank" href="<{$vo.url}>"><{$vo.webname}></a>
+                    <{/foreach}>
+                </div>
+
+                <div class="col-md-3">
+                    <p class="pb10">© 2014 .com. all rights reserved </p>
+                    <p>公网安备11010802012355号</p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    
+
+    <script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/index.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/application.js"></script>
+    <script type="text/javascript" src="__PUBLIC__/js/retina.js"></script>
+    
+    
+    <script type="text/javascript">
+    $(function(){
+        $("#postshow").KandyTabs({
+            type:"slide",
+            classes:"kandyLoop",
+            action:"slifade",
+            auto:true,
+            nav:true,
+            ctrl:false,
+            trigger:"click",
+            direct:"left",
+            loop:true, // true or false
+            resize:false,
+            custom:function(b,c,i){
+                $(".postshow-intro-wrap",c).animate({
+                    opacity:0
+                });
+                c.eq(i).find(".postshow-intro-wrap").animate({
+                    opacity:1
+                });
+            },
+            done:function(b,c,t){
+                // $(".postshow-intro-wrap",c).fadeTo(500,.7).hide();
+                // c.first().find(".postshow-intro-wrap").slideDown();
+            },
+            lang:{
+                prev:["点一下就显示前一张图片","&lsaquo;"],
+                next:["点一下就显示下一张图片","&rsaquo;"],
+                first:["已是首个","&lsaquo;"],
+                last:["已是末个","&rsaquo;"]
+            }
+        });
+        $("#postshow").hover(function(){
+            $(this).addClass('active')
+            $(this).find('.tabcont').addClass('active')
+        },function(){
+            $(this).removeClass('active')
+            $(this).find('.tabcont').removeClass('active')
+        })
+    })
+    </script>
+    
+    
+</body></html>
+

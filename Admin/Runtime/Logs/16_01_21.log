@@ -1,0 +1,506 @@
+[ 2016-01-21T01:14:24+08:00 ] 127.0.0.1 /admin.php/Public/logout
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.031250s ]
+INFO: [ route_check ] --END-- [ RunTime:0.031250s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:1.640625s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.109375s ]
+SQL: UPDATE `edu_users` SET `username`='admin',`userpass`='21232f297a57a5a743894a0e4a801fc3',`name`='管理\员',`sex`=1,`age`=22,`email`='admin@admin.com',`class`='74',`picture`='530e9f9d3b45b.jpg',`level`=10,`point`=999,`addtime`=1393430863,`introduce`='\无',`logintime`=1453208448,`logouttime`=1453310061,`loginnum`=32 WHERE ( `id` = 55 ) [ RunTime:2.562500s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: errorinfo D:\Site\demo8\wwwroot\Admin\Runtime\Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php 第 74 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\754afcf016435756ef11c645ae70896ba2ab8d15.file.login.html.php 第 74 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.671875s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.671875s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.015625s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.015625s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.046875s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:14:34+08:00 ] 127.0.0.1 /admin.php/Public/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:17:11+08:00 ] 127.0.0.1 /admin.php/Public/checkLogin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.109375s ]
+SQL: SELECT * FROM `edu_users` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.171875s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.015625s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:17:14+08:00 ] 127.0.0.1 /admin.php/Public/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:17:24+08:00 ] 127.0.0.1 /admin.php/Public/checkLogin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.125000s ]
+SQL: SELECT * FROM `edu_users` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.015625s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:17:24+08:00 ] 127.0.0.1 /admin.php/Public/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:17+08:00 ] 127.0.0.1 /admin.php/Public/checkLogin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.015625s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:17+08:00 ] 127.0.0.1 /admin.php/Public/verify/
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:22+08:00 ] 127.0.0.1 /admin.php/Public/verify/1453310302893
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:25+08:00 ] 127.0.0.1 /admin.php/Public/checkLogin
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.140625s ]
+SQL: SELECT * FROM `edu_users` WHERE ( username = 'admin' ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: UPDATE `edu_users` SET `username`='admin',`userpass`='21232f297a57a5a743894a0e4a801fc3',`name`='管理\员',`sex`=1,`age`=22,`email`='admin@admin.com',`class`='74',`picture`='530e9f9d3b45b.jpg',`level`=10,`point`=999,`addtime`=1393430863,`introduce`='\无',`logintime`=1453208448,`logouttime`=1453310061,`loginnum`=33 WHERE ( `id` = 55 ) [ RunTime:0.000000s ]
+SQL: select n.mname,n.aname from edu_userrole ur,edu_role_node rn,edu_node n where ur.rid=rn.rid and rn.nid=n.id and ur.uid=55 [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_userrole` [ RunTime:0.078125s ]
+SQL: SELECT * FROM `edu_userrole` WHERE ( uid='55' )  [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:26+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.031250s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` WHERE (  (`addtime` BETWEEN '1453310061' AND '1453310305' ) ) LIMIT 1   [ RunTime:0.125000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.093750s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.015625s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.140625s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.062500s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.109375s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.109375s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:34+08:00 ] 127.0.0.1 /admin.php/Limit/index?_=1453310313426
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_limit` [ RunTime:0.218750s ]
+SQL: SHOW COLUMNS FROM `edu_userrole` [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_roles` [ RunTime:0.109375s ]
+SQL: SELECT * FROM `edu_users`  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_userrole`  [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_roles`  [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_users` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: search D:\Site\demo8\wwwroot\Admin\Lib\Action\CommonAction.class.php 第 310 行.
+NOTIC: [8] Undefined index: values D:\Site\demo8\wwwroot\Admin\Lib\Action\CommonAction.class.php 第 311 行.
+NOTIC: [8] Undefined index: id D:\Site\demo8\wwwroot\Admin\Lib\Action\CatAction.class.php 第 179 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.140625s ]
+SQL: SELECT `id`,`name`,`path` FROM `edu_cat` ORDER BY concat(path,id)  [ RunTime:0.000000s ]
+NOTIC: [8] Use of undefined constant index - assumed 'index' D:\Site\demo8\wwwroot\Admin\Lib\Action\LimitAction.class.php 第 34 行.
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: _order D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: username D:\Site\demo8\wwwroot\Admin\Runtime\Cache\0267d81316bb86ff66855ce78b47fe1ceba78c35.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\0267d81316bb86ff66855ce78b47fe1ceba78c35.file.index.html.php 第 69 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:42+08:00 ] 127.0.0.1 /admin.php/Users/index?_=1453310321976
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_users` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: search D:\Site\demo8\wwwroot\Admin\Lib\Action\CommonAction.class.php 第 310 行.
+NOTIC: [8] Undefined index: values D:\Site\demo8\wwwroot\Admin\Lib\Action\CommonAction.class.php 第 311 行.
+NOTIC: [8] Undefined index: id D:\Site\demo8\wwwroot\Admin\Lib\Action\CatAction.class.php 第 179 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.031250s ]
+SQL: SELECT `id`,`name`,`path` FROM `edu_cat` ORDER BY concat(path,id)  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: _order D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: username D:\Site\demo8\wwwroot\Admin\Runtime\Cache\837fee60bdf7e913281f29dca31b23be38bc311f.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\837fee60bdf7e913281f29dca31b23be38bc311f.file.index.html.php 第 72 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.062500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.062500s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:18:50+08:00 ] 127.0.0.1 /admin.php/Public/password?_=1453310329698
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:password
+
+[ 2016-01-21T01:19:06+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.046875s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` WHERE (  (`addtime` BETWEEN '1453310061' AND '1453310305' ) ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:19:08+08:00 ] 127.0.0.1 /admin.php/Public/password?_=1453310348575
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:password
+
+[ 2016-01-21T01:19:19+08:00 ] 127.0.0.1 /admin.php/Users/index?_=1453310359128
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_users` ORDER BY id desc LIMIT 0,10   [ RunTime:0.000000s ]
+NOTIC: [8] Undefined variable: search D:\Site\demo8\wwwroot\Admin\Lib\Action\CommonAction.class.php 第 310 行.
+NOTIC: [8] Undefined index: values D:\Site\demo8\wwwroot\Admin\Lib\Action\CommonAction.class.php 第 311 行.
+NOTIC: [8] Undefined index: id D:\Site\demo8\wwwroot\Admin\Lib\Action\CatAction.class.php 第 179 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name`,`path` FROM `edu_cat` ORDER BY concat(path,id)  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [8] Undefined index: _order D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: username D:\Site\demo8\wwwroot\Admin\Runtime\Cache\837fee60bdf7e913281f29dca31b23be38bc311f.file.index.html.php 第 45 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\837fee60bdf7e913281f29dca31b23be38bc311f.file.index.html.php 第 72 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:19:20+08:00 ] 127.0.0.1 /admin.php/Users/add?_=1453310360029
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: id D:\Site\demo8\wwwroot\Admin\Lib\Action\CatAction.class.php 第 179 行.
+SQL: SHOW COLUMNS FROM `edu_cat` [ RunTime:0.000000s ]
+SQL: SELECT `id`,`name`,`path` FROM `edu_cat` ORDER BY concat(path,id)  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-01-21T01:19:24+08:00 ] 127.0.0.1 /admin.php/Users/edit/id/97/navTabId/listusers?_=1453310364263
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = '97' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\813286553215f7acb05ba233f7b65fc0b58978cf.file.edit.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\813286553215f7acb05ba233f7b65fc0b58978cf.file.edit.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.140625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.140625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-01-21T01:19:35+08:00 ] 127.0.0.1 /admin.php/Users/detail/id/97/navTabId/listusers?_=1453310375584
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.015625s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.015625s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = '97' )  [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+NOTIC: [2] filemtime() [<a href='function.filemtime'>function.filemtime</a>]: stat failed for ./Admin/Runtime/Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_resource.php 第 683 行.
+NOTIC: [2] unlink(./Admin/Runtime/Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php) [<a href='function.unlink'>function.unlink</a>]: No such file or directory D:\Site\demo8\wwwroot\ThinkPHP\Extend\Vendor\Smarty\sysplugins\smarty_internal_write_file.php 第 49 行.
+NOTIC: [8] Undefined index: currentPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 28 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 28 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 30 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 30 行.
+NOTIC: [8] Undefined index: _order D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 32 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\9b58476071dcf322d7a032b16e5bfba3e2c4a166.file.pagerForm.html.php 第 34 行.
+NOTIC: [8] Undefined index: _sort D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 40 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 102 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 102 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 103 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 103 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 104 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 104 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 105 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 105 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 106 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 106 行.
+NOTIC: [8] Undefined index: totalCount D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 108 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 108 行.
+NOTIC: [8] Undefined index: totalCount D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 112 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 112 行.
+NOTIC: [8] Undefined index: numPerPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 113 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 113 行.
+NOTIC: [8] Undefined index: currentPage D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 114 行.
+NOTIC: [8] Trying to get property of non-object D:\Site\demo8\wwwroot\Admin\Runtime\Cache\eba25a1e1ba5a8d08ca39ee0215b8b6849c8530f.file.detail.html.php 第 114 行.
+INFO: ParseTemplate Behavior ::run [ RunTime:0.187500s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.187500s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.015625s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:19:41+08:00 ] 127.0.0.1 /admin.php/Users/edit/id/97/navTabId/listusers?_=1453310380933
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+NOTIC: [8] Undefined index: _type D:\Site\demo8\wwwroot\ThinkPHP\Lib\Core\Model.class.php 第 583 行.
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = '97' ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_end ] --END-- [ RunTime:0.015625s ]
+
+[ 2016-01-21T01:19:56+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` WHERE (  (`addtime` BETWEEN '1453310061' AND '1453310305' ) ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+
+[ 2016-01-21T01:22:58+08:00 ] 127.0.0.1 /admin.php/Public/password?_=1453310578753
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.015625s ]
+INFO: [ route_check ] --END-- [ RunTime:0.015625s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+ERR: 非法操作:password
+
+[ 2016-01-21T01:23:12+08:00 ] 127.0.0.1 /admin.php/Index/index.html
+INFO: [ route_check ] --START--
+INFO: CheckRoute Behavior ::run [ RunTime:0.000000s ]
+INFO: [ route_check ] --END-- [ RunTime:0.000000s ]
+INFO: [ app_begin ] --START--
+INFO: ReadHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: [ app_begin ] --END-- [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_users` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_users` WHERE ( `id` = 55 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_users` WHERE (  (`addtime` BETWEEN '1453310061' AND '1453310305' ) ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_video` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_video` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_library` [ RunTime:0.000000s ]
+SQL: SELECT COUNT(*) AS tp_count FROM `edu_library` WHERE ( status=1 ) LIMIT 1   [ RunTime:0.000000s ]
+SQL: SHOW COLUMNS FROM `edu_clicknum` [ RunTime:0.000000s ]
+SQL: SELECT * FROM `edu_clicknum` WHERE ( `id` = 1 ) LIMIT 1   [ RunTime:0.000000s ]
+INFO: [ view_parse ] --START--
+INFO: ParseTemplate Behavior ::run [ RunTime:0.015625s ]
+INFO: [ view_parse ] --END-- [ RunTime:0.015625s ]
+INFO: [ view_filter ] --START--
+INFO: ContentReplace Behavior ::run [ RunTime:0.000000s ]
+INFO: TokenBuild Behavior ::run [ RunTime:0.000000s ]
+INFO: WriteHtmlCache Behavior ::run [ RunTime:0.000000s ]
+INFO: ShowRuntime Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_filter ] --END-- [ RunTime:0.000000s ]
+INFO: [ view_end ] --START--
+INFO: ShowPageTrace Behavior ::run [ RunTime:0.000000s ]
+INFO: [ view_end ] --END-- [ RunTime:0.000000s ]
+

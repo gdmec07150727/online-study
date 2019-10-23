@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title><{$title}></title>
+        
+        <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ 
+        <!--
+        <meta name="keywords" content="微电影小组,微电影话题,微品牌,微剧本,微创意,微创作,微资讯,电影节">
+        <meta name="description" content="必趣最热闹的微电影圈子">
+        <meta name="msapplication-tooltip" content="小组话题_必趣网_最有影响力的微电影网">
+        <meta name="application-name" content="小组话题_必趣网_最有影响力的微电影网">
+        -->
+
+        <link rel="stylesheet" href="__PUBLIC__/jcrop_zh/css/common.css" type="text/css" />
+		<link rel="stylesheet" href="__PUBLIC__/jcrop_zh/css/jquery.Jcrop.css" type="text/css" />
+		<script type="text/javascript" src="__PUBLIC__/jcrop_zh/js/jquery-1.3.2-min.js"></script>
+		<script type="text/javascript" src="__PUBLIC__/jcrop_zh/js/jquery.Jcrop.js"></script>
+
+
+        <link rel="icon" type="image/x-icon" href="__PUBLIC__/images/favicon.png">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/font-awesome.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/bootstrap.min.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/typo.css">
+        <link rel="stylesheet" type="text/css" href="__PUBLIC__/css/simple.css">
+        <style type="text/css">
+        /*ipad fix*/
+        @media (min-width:992px){
+            .home_module .m_cover_list li:nth-last-child(-n+3) {
+                display: none;
+            }
+            .col-md-4{
+                /*display: none;*/
+            }
+        }
+        @media (min-width:1200px){
+            .home_module .m_cover_list li:nth-last-child(-n+3) {
+                *display: inline;
+                display: inline-block;
+                zoom:1;
+            }
+        }
+
+        .content_list{
+            overflow: hidden;
+        }
+        .content_list li img{
+            height: 140px;
+            width: 100px;
+        }
+        .content_list li{
+            float: left;
+            width: 100px;
+            text-align: center;
+            margin-right: 19px;
+            margin-bottom: 20px;
+        }
+        .c_rating i{
+            font-style: normal;
+            font-size: 12px;
+            vertical-align: top;
+            line-height: 18px;
+            /*padding-left: 10px;*/
+            color: #d7b120;
+        }
+        .content_load{
+            display: none;
+            text-align: center;
+        }
+        .ml10{
+            margin-left:100px;
+        }
+        </style>
+        
+        
+        <script type="text/javascript" async="" charset="utf-8" src="__PUBLIC__/php/core.php"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/count_flow.js"></script>
+
+        <script type="text/javascript" src="__PUBLIC__/js/bootstrap.min.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/application.js"></script>
+        <script type="text/javascript" src="__PUBLIC__/js/retina.js"></script>
+        
+        
+    </head>
+    <body>
+    <div id="browser"></div>
+ 
+        <div id="header">
+            <div class="navbar navbar-default" role="navigation">
+                <div class="container">
+                    
+                    <div class="navbar-header">
+                        <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                            <span class="sr-only">切换导航</span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                            <span class="icon-bar"></span>
+                        </button>
+                        <a class="navbar-brand" href="__APP__/Index/index">E-Sch</a>
+                    </div>
+
+                    <div class="collapse navbar-collapse navbar-ex1-collapse">
+
+                        <ul class="nav navbar-nav g_nav">
+
+                            <li><a href="__APP__/Video/index" class="animated">视频库</a></li>
+                            <li><a href="__APP__/Note/index" class="animated">手记</a></li>
+                            <li><a href="__APP__/Library/index" class="animated">军火库</a></li>
+                            <li><a href="__APP__/Message/index" class="animated">贴吧</a></li>
+                            <{if $smarty.session.user}>
+                            <li><a href="__APP__/Test/index" class="animated">考试</a></li>
+                            <{else}>
+                            <li><a href="javascript:alert('请先登录！')" class="animated">考试</a></li>
+                            <{/if}>
+                        </ul>
+
+                        <form class="navbar-form navbar-right" role="search" action="" method="GET" autocompelte="off">
+                            <div class="form-group">
+                                <input type="text" name="q" class="form-control" placeholder="搜索">
+                            </div>
+                            <button type="submit" class="btn btn-default"><i class="icon-search"></i></button>
+                        </form>
+
+                         <ul class="nav navbar-nav navbar-right">
+                            
+
+                            <li><a href="__APP__/Users/remind">提醒(0)</a></li>
+                            <li class="navbar-nav-user">
+                                <a class="user-avatar" href="__APP__/Users/myedu">
+                                    <img alt="<{$smarty.session.user.username}>" title="<{$smarty.session.user.username}>" <{if $smarty.session.user.picture=='1.jpg'}>src="__PUBLIC__/Uploads/users/0/0.jpg"<{else}>src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/s_<{$smarty.session.user.picture}>"<{/if}> class="avatar_sm">　<{$smarty.session.user.username}></a>
+                                    <span><{$smarty.session.user.username}></span>
+                                </a>
+                                <div class="dropdown">
+                                    <a href="__APP__/Test/index"><i class="icon-user"></i> 考试</a>
+                                    <a href="__APP__/Users/settings"><i class="icon-wrench"></i> 设置</a>
+                                    <a href="__APP__/Users/loginout"><i class="icon-signout"></i> 退出</a>
+                                </div>
+                            </li>
+
+                            
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>

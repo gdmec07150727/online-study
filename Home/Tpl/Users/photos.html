@@ -1,0 +1,263 @@
+<{include file='../Public/head2.html'}>
+                       
+        
+<div id="sub-header" class="bq_h">
+    <div class="container">
+        <div class="navbar-header ">
+            <h1><a href="__APP__/Index/index">E-Sch</a></h1>
+        </div>
+        <div class="col-md-6" style="width:80%;">
+            <ul class="navbar-left">
+                <li><a href="__APP__/Users/myheart">心情</a></li>
+                <li><a href="__APP__/Users/myedu">我的E-Sch</a></li>
+                <li><a href="__APP__/Users/settings">修改资料</a></li>
+                <li class="active"><a href="__APP__/Users/photoalbum">我的相册</a></li>
+                <li><a href="__APP__/Users/stranger">查看陌生人</a></li>
+                <li><a href="__APP__/Test/myscore">我的考试</a></li>
+            </ul>
+        </div>
+    </div>
+</div>
+
+ 
+
+        
+<div id="main">
+    <div class="container">
+        <div class="home_module row">
+            <div class="container">
+                
+                <div class="col-md-8">
+					
+					
+					<span id="look" class="btn btn-default" style="font-size:18px;color:green;border:0px;">&nbsp;&nbsp;浏览照片</span>
+					<span id="upload" class="btn btn-default" style="font-size:18px;color:green;border:0px;">&nbsp;&nbsp;上传照片</span>
+					<br/>
+			<div class="mid_text_Deng" id="uploadphoto" style="display:none;"><br/>
+			    <form  action="__URL__/uploadphoto/uid/<{$smarty.session.user.id}>/pid/<{$smarty.get.pid}>/desc/<{$smarty.get.desc}>" method="post" enctype="multipart/form-data">
+					<div id="picnames">
+						<div><td>选择照片：</td><td><input style="float:right;margin-right:280px;" type='file' name='name[]' size='29'></td></div>
+						<div style="float:right;margin-right:430px;margin-top:12px;"><input class="btn btn-default" type="submit" value="提交"></div>
+					</div>
+			    </form>
+		       <button class="btn btn-default" style="margin-top:12px;">再上传一张</button>
+			</div><br/>
+			
+			
+		<div id="lookphoto" style="display:block;">
+		<div class="h2" style="font-size:16px;margin-left:12px;">&nbsp;&nbsp;相册描述:&nbsp;&nbsp;&nbsp;<{$smarty.get.desc}></div><br/>      
+		<div class="mid_text_Deng" style="margin-left:20px;">
+			<{if $countphoto!=0}>
+			<center>
+				<{foreach $list as $vo}>
+					<div class="dddd" style="display:block;border:3px solid #fff;width:100px;height:150px;float:left">
+						<a href="__URL__/showpic/uid/<{$vo.uid}>/pid/<{$vo.pid}>/id/<{$vo.id}>/desc/<{$desc}>">
+							<img src="__PUBLIC__/Uploads/users/<{$smarty.session.user.username}>/<{$vo.pid}>/s_<{$vo.picname}>" border="none" style="width:100px;height:100px;">
+						</a>
+						<span class="delphoto" style="height:10px;" id=<{$vo.id}>><a href='javascript:void(0)'>删除</a></span><br>
+						<div class="covers" pid="<{$vo.pid}>" picname="<{$vo.picname}>" style="font-size:13px;color:#444;">
+							<a href='javascript:void(0)'>设置为封面</a>
+						</div>&nbsp;&nbsp;&nbsp;&nbsp;
+					</div>
+				<{/foreach}>
+			</center>
+			
+			
+			
+			
+			
+			<{else}>您还没有上传照片！
+			<{/if}>
+        </div></div>
+					
+					<script type='text/javascript' charset="utf-8">
+				$(function (){
+					$("#look").click(function (){
+						$("#uploadphoto").hide();
+						$("#lookphoto").show();
+					});
+                    $("#upload").click(function (){
+						$("#uploadphoto").show();
+						$("#lookphoto").hide();
+					});
+				});
+			$(function(){
+				$(".delphoto").click(function (){
+				
+					var id=$(this).attr('id');
+					$(this).css("display","none");
+					var obj=$(this);
+					$.ajax({
+						url:'__APP__/Users/deluserphoto',
+						data:{'id':id},
+						dataType:'text',
+						type:'post',
+						success:function(res){
+							if(res=='ok'){
+								//alert("1111");
+								obj.parent(".dddd").css("display","none");
+							}
+						},
+					});
+				});
+			});
+			</script>
+					
+					
+					
+					
+					
+                </div>
+
+               <div class="col-md-4">
+                    
+                    
+                    <div class="u_card">
+                        <div class="u_card_name"><{$smarty.session.user.username}></div>
+                        <div class="u_card_info">
+                            <img src="<{if $smarty.session.user.picture=='1.jpg'}>__PUBLIC__/uploads/users/0/1.jpg<{else}>__PUBLIC__/uploads/users/<{$smarty.session.user.username}>/<{$smarty.session.user.picture}><{/if}>" class="avatar_bg">
+
+                            
+
+                        </div>
+                        <div class="u_card_intro">
+                            
+                            <p class="c666"><{$smarty.session.user.introduce}></p>
+                            <p><span><{$smarty.session.user.addtime|date_format:"%Y-%m-%d"}>加入</span></p>
+                        </div>
+                        <div class="u_card_data">
+                            <ul class="list_ib">
+                                <li>
+                                    <a href="__APP__/Video/index/uid/<{$smarty.session.user.id}>">视频<span><{$videonum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Note/index/uid/<{$smarty.session.user.id}>">手记<span><{$notenum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Library/index/uid/<{$smarty.session.user.id}>">军火<span><{$libnum}></span></a>
+                                </li>
+                                <li>
+                                    <a href="__APP__/Message/mine">帖子<span><{$messnum}></span></a>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4 class="pb10">今日心情</h4>
+                            
+                        </div>
+
+                        <{if $mymes1}>
+                        <{foreach $mymes1 as $vo}>
+							<div class="null" style="color:green;">
+                                <{$vo.content}>
+                            </div>
+                        <{/foreach}>
+                        <{else}>
+                            <div class="null">
+                                还没有今日心情，去 <a href="__APP__/Users/myheart">发步</a> 吧
+                            </div>
+						 <{/if}>
+                    </div>
+
+                    
+                    <div class="mt30">
+                        <div class="tt tt_normal">
+                            <h4>我关注的人<a class="f14" href="__APP__/Message/myfri">(<{$myfrinum}>)</a></h4> 
+                        </div>
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                            <{if $myfrinum==0}>
+                                还没有关注任何人<a href="">浏览发现</a> 看看
+                            <{else}>
+                                <{foreach $myfri as $vo}>
+                                    <div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+                                        <a href="__APP__/Users/otheredu/uid/<{$vo.fid}>"><img width="50" height="50" src="__PUBLIC__/uploads/users/<{if $vo.picture=='1.jpg'}>0/0.jpg<{else}><{$vo.username}>/<{$vo.picture}><{/if}>"><br/><{$vo.username}></a>
+                                    </div>
+                                <{/foreach}>
+                            <{/if}>
+                            </div>
+                        </div>
+                        <{$myfsnum}>人正在关注我
+                    </div>
+
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> 谁看过我</h4>
+                        </div>
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                                <{if $number1==0}>还没有哦，看来你太低调了哦
+								<{else}>
+									<{foreach $visitor1 as $vo}>
+										<div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+											<a href="__APP__/Users/otheredu/uid/<{$vo.vid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{if $vo.vpicname=='1.jpg'}>0/0.jpg<{else}><{$vo.visitor}>/<{$vo.vpicname}><{/if}>"></a><br/>
+											<a href="__APP__/Users/otheredu/uid/<{$vo.vid}>"><{$vo.visitor}></a>
+										</div>
+									<{/foreach}>
+								<{/if}>
+							</div>
+                        </div>
+                    </div>
+					
+					
+					
+                    <div class="m_r_list mt30"> 
+                        <div class="tt tt_normal">
+                            <h4> 我看过谁</h4>
+                            
+                        </div>
+                        
+                        <div class="null f12 mb10" style="height:87px;">
+                            <div style="margin-left:-13px;">
+                                <{if $number==0}>还没有哦，赶快去看看你的小伙伴吧
+								<{else}>
+									<{foreach $visitor as $vo}>
+										<div  style="float:left;border:solid 0px blue;margin-left:5px;margin-top:-20px;">
+											<a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><img width="50" height="50" src="__PUBLIC__/Uploads/users/<{if $vo.vpicname=='1.jpg'}>0/0.jpg<{else}><{$vo.uname}>/<{$vo.upicname}><{/if}>"></a><br/>
+											<a href="__APP__/Users/otheredu/uid/<{$vo.uid}>"><{$vo.uname}></a>
+										</div>
+									<{/foreach}>
+								<{/if}>
+							</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<{include file='../Public/foot2.html'}>
+<script type="text/javascript" src="__PUBLIC__/js/jquery-1.10.2.min.js"></script>
+
+<script type="text/javascript">
+			$(function(){
+				$("button").click(function(){
+					$("#picnames").prepend("<div><td>选择照片:</td><td><input style='float:right;margin-right:280px;' type='file' name='name[]' size='29'></td></div>");
+				});
+			});
+		
+		$(function(){
+			$(".covers").click(function(){
+				var pid=$(this).attr('pid');
+				var picname=$(this).attr('picname');
+				$.ajax({
+					url:"__URL__/updatecover",
+					type:"post",
+					dataType:'text',
+					data:{'cover':picname,'id':pid},
+					async:true,
+					success:function(res){
+						if(res=='ok'){
+							alert("封面设置成功");
+						}
+					},
+				});
+				
+			});
+		});
+</script>

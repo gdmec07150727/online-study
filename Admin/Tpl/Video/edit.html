@@ -1,0 +1,31 @@
+
+<div class="pageContent">
+	<form method="post" action="__URL__/update/navTabId/listvideo/callbackType/closeCurrent" class="pageForm required-validate" 
+        onsubmit="return validateCallback(this,dialogAjaxDone);"><?php  //窗体组件采用这个 iframeCallback(this, navTabAjaxDone); ?>
+        <input type="hidden" name="id" value="<{$vo.id}>">
+		<div class="pageFormContent" layoutH="60">
+			<dl>
+				<dt>视频名：</dt>
+                <dd><input type="text" class="required"  style="width:100%" name="videoname" value="<{$vo.videoname}>"/></dd>
+            </dl>
+            <dl>
+				<dt>视频状态：</dt>
+                <dd>
+                    <select name="status" class="combox">
+                        <option value="1" <{if $vo.status == 1}>selected<{/if}>>新添加</option>
+                        <option value="2" <{if $vo.status == 2}>selected<{/if}>>在线</option>
+                        <option value="3" <{if $vo.status == 3}>selected<{/if}>>下线</option>
+                    </select>
+                </dd>
+            </dl>
+		</div>
+		
+		<div class="formBar">
+			<ul>
+				<li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+				<li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+			</ul>
+		</div>
+	</form>
+</div>
+

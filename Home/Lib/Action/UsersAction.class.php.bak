@@ -1,0 +1,439 @@
+<?php
+session_start();
+//自定义用户操作模块Action类
+
+class UsersAction extends Action{
+
+    //加载资源浏览页
+    public function index(){
+        $this->display('index');
+    }
+
+
+
+    public function myedu(){
+        $this->display('myedu');
+    }
+
+
+    public function settings(){
+        $this->display('settings');
+    }
+
+
+    public function avatar(){
+        $this->display('avatar');
+    }
+    //定义数据添加的方法
+    public function insert(){
+        //实例化对象
+        $model = D("Users");
+
+        //把要添加的数据通过create()方法保存到一个数组变量中
+        if(!$model->create()){
+            $this->error($model->getError());
+        }
+        //执行数据添加
+        //$model->addtime=time();
+        $list = $model->add();
+        //echo $model->getLastSql();
+        if ($list != false) {
+            $this->display("Users/succ");//调用添加成功页面的方法
+        }else{
+            $this->error("数据添加失败！");
+        }
+        
+    }
+
+    //显示信息添加成功的页面
+    public function succ(){
+        $this->display();
+    }
+   
+
+    //用户登陆
+    //登陆验证
+    public function dologin(){
+        $model=D('Users');
+        $where['username']=$_POST['email'];
+        $where['email']=$_POST['email'];
+        $where['_logic']="OR";
+        $list=$model->where($where)->find();
+        if($list){
+
+            if($list['userpass']==md5($_POST['password'])){
+                //登陆成功 将当前用户信息存储到session中
+                $_SESSION[C("USER_AUTH_KEY")] = $list;
+                
+                //$_SESSION['USER_AUTH_KEY']=$list;
+                //跳转到首页
+                //dump($_SESSION);
+                $this->redirect("Index/index");
+                //$this->success("登陆成功！",U("Index/index"),3);
+            }else{
+                $this->error("密码错误！");
+            }
+        }else{
+            $this->error("用户不存在！");
+        }
+    }
+
+
+    public function loginout(){
+        //消除用户SESSION信息
+        unset($_SESSION[C("USER_AUTH_KEY")]);
+        $this->redirect("Index/index");
+        //$_SESSION['USER_AUTH_KEY']='';
+        //$this->success("注销成功！",U("Index/index"));
+    }
+    //加载登陆页面
+    public function login(){
+
+        $this->display('login');
+    }
+
+
+    //个人中心
+
+
+
+
+    //定义更新数据的方法
+    public function update(){
+        $model = D("Users");
+        if ($vo = $model->create()) {
+            $res = $model->save();
+            if ($res != false) {
+                $this->success("修改成功！",U("Users/settings"));
+            }else{
+                $this->error("没有更新任何数据！");
+            }
+        }else{
+            $this->error($model->getError());
+        }
+    }
+
+//图片上传显示裁剪
+public function uploadpic(){
+    import("ORG.Net.UploadFile");
+    $picfile=$_POST['picfile'];
+            $upload=new UploadFile();
+            $upload->maxSize  = 3145728 ;// 设置附件上传大小
+		    $upload->allowExts  = array('jpg', 'gif','bmp' ,'png', 'jpeg');// 设置附件上传类型
+		    $upload->savePath =  "./Public/Uploads/users/$picfile/";// 设置附件上传目录
+            if(!$upload->upload()){
+                die("上传文件失败".$upload->getErrorMsg());
+            }else{
+                $info=$upload->getUploadFileInfo();
+            }
+			$picsrc=$info[0]['savename'];
+			$path="./Public/Uploads/users/$picfile/";
+			//调用图片缩放
+			$this->updateImage($picsrc,$path,"",140,'');
+			$_SESSION['USER_AUTH_KEY']['picture']=$info[0]['savename'];
+            die("<script>window.parent.showpic('{$info[0]['savename']}');</script>");
+           //echo "<script>showpic();</script>";
+
+}
+
+        public function doJcrop(){
+            $picname=$_POST['pic'];
+            $sx=$_POST['x'];
+            $sy=$_POST['y'];
+            $sw=$_POST['w'];
+            $sh=$_POST['h'];
+            $path="./Public/Uploads/users/{$_SESSION['USER_AUTH_KEY']['username']}/";
+            cropImage($picname,$path,$sx,$sy,$sw,$sh,$prix="");
+            die('ok');
+        }
+
+
+
+//图片缩放
+public function updateImage($picname,$path,$prix="s_",$maxwidth=104,$maxheight=104){
+	//1. 定义获取基本信息
+	$path = rtrim($path,"/"); //去除后面多余的"/"
+	$info = getimagesize($path."/".$picname);  //获取图片文件的属性信息
+	dump($info);
+	dump($path);
+	dump($picname);
+
+	$width = $info[0]; //原图片的宽度
+	$height = $info[1]; //原图片的高度
+
+	//2. 计算压缩后的尺寸
+	//if(($maxwidth/$width)<($maxheight/$height)){
+		$w=$maxwidth;//新图片的宽度
+		$h=($maxwidth/$width)*$height;//新图片的高度
+	//}else{
+		//$h=$maxheight;//新图片的宽度
+		//$w=($maxheight/$height)*$width;//新图片的高度
+	//}
+
+
+	//3. 创建图像源
+	$newim =imagecreateTrueColor($w,$h); //新图片源
+	//根据原图片类型来创建图片源
+	switch($info[2]){
+		case 1: //gif格式
+			$srcim = imageCreateFromgif($path."/".$picname);
+			break;
+		case 2: //jpeg格式
+			$srcim = imageCreateFromjpeg($path."/".$picname);
+			break;
+		case 3: //png格式
+			$srcim = imageCreateFrompng($path."/".$picname);
+			break;
+		case 6: //bmp格式
+			$srcim = imageCreateFrompng($path."/".$picname);
+			break;
+		default:
+			exit("无效的图片格式!");
+			break;
+	}
+
+	//4. 执行缩放处理
+	imagecopyresampled($newim,$srcim,0,0,0,0,$w,$h,$width,$height);
+
+
+	//5. 输出保存绘画
+	//header("Content-Type:".$info['mime']); //设置响应类型为图片格式
+	//根据原图片类型来保存新图片
+	switch($info[2]){
+		case 1: //gif格式
+			imagegif($newim,$path."/".$prix.$picname); //保存
+			//imagegif($newim);//输出
+			break;
+		case 2: //jpeg格式
+			imagejpeg($newim,$path."/".$prix.$picname);
+			//imagejpeg($newim);
+			break;
+		case 3: //png格式
+			imagepng($newim,$path."/".$prix.$picname);
+			//imagepng($newim);
+			break;
+		case 6: //bmp格式
+			imagebmp($newim,$path."/".$prix.$picname);
+			break;
+	}
+
+	//6. 销毁资源
+	imageDestroy($newim);
+	imageDestroy($srcim);
+}
+
+
+public function updateImage1($picname,$path,$prix="s_",$maxwidth=104,$maxheight=104){
+	//1. 定义获取基本信息
+	$path = rtrim($path,"/"); //去除后面多余的"/"
+	$info = getimagesize($path."/".$picname);  //获取图片文件的属性信息
+	dump($info);
+	dump($path);
+	dump($picname);
+
+	$width = $info[0]; //原图片的宽度
+	$height = $info[1]; //原图片的高度
+
+	//2. 计算压缩后的尺寸
+	if(($maxwidth/$width)<($maxheight/$height)){
+		$w=$maxwidth;//新图片的宽度
+		$h=($maxwidth/$width)*$height;//新图片的高度
+	}else{
+		$h=$maxheight;//新图片的宽度
+		$w=($maxheight/$height)*$width;//新图片的高度
+	}
+
+
+	//3. 创建图像源
+	$newim =imagecreateTrueColor($w,$h); //新图片源
+	//根据原图片类型来创建图片源
+	switch($info[2]){
+		case 1: //gif格式
+			$srcim = imageCreateFromgif($path."/".$picname);
+			break;
+		case 2: //jpeg格式
+			$srcim = imageCreateFromjpeg($path."/".$picname);
+			break;
+		case 3: //png格式
+			$srcim = imageCreateFrompng($path."/".$picname);
+			break;
+		case 6: //bmp格式
+			$srcim = imageCreateFrompng($path."/".$picname);
+			break;
+		default:
+			exit("无效的图片格式!");
+			break;
+	}
+
+	//4. 执行缩放处理
+	imagecopyresampled($newim,$srcim,0,0,0,0,$w,$h,$width,$height);
+
+
+	//5. 输出保存绘画
+	//header("Content-Type:".$info['mime']); //设置响应类型为图片格式
+	//根据原图片类型来保存新图片
+	switch($info[2]){
+		case 1: //gif格式
+			imagegif($newim,$path."/".$prix.$picname); //保存
+			//imagegif($newim);//输出
+			break;
+		case 2: //jpeg格式
+			imagejpeg($newim,$path."/".$prix.$picname);
+			//imagejpeg($newim);
+			break;
+		case 3: //png格式
+			imagepng($newim,$path."/".$prix.$picname);
+			//imagepng($newim);
+			break;
+		case 6: //bmp格式
+			imagebmp($newim,$path."/".$prix.$picname);
+			break;
+	}
+
+	//6. 销毁资源
+	imageDestroy($newim);
+	imageDestroy($srcim);
+}
+
+
+
+
+ public function showpic(){
+	      $pid = $_GET['pid'];    		//把相册的id带入页面
+		  $uid = $_GET['uid'];          //把相册的uid带入照片页面
+		  //查询照片 
+		  $photo = D("Userphotos");
+		  //$album =D("Users_photoalbum");
+		  $res = $photo->where("uid='{$uid}' and pid='{$pid}'")->select();
+          //echo $photo->getLastSql();
+		  $this->assign("list",$res);
+          $this->assign("pid",$pid);
+          $this->assign("title","我的相册");
+		  $this->assign("uid",$uid);
+	      $this->display("showpic");
+	  }
+
+public function photoalbum(){
+	$uid=$_SESSION['USER_AUTH_KEY']['id'];
+	$album=D("Users_photoalbum");
+	$res=$album->where("uid='{$uid}'")->select();
+	$count=count($res);
+	if($res){
+		$this->assign("countphoto",$count);
+		$this->assign("list",$res);
+	}else{
+		$this->assign("countphoto",'0');
+	}
+	$this->display("photoalbum");
+}
+
+public function addalbum(){
+	$uid=$_SESSION['USER_AUTH_KEY']['id'];
+	$model=D("Users_photoalbum");
+	if(!$model->create()){
+            $this->error($model->getError());
+        }
+        //执行数据添加
+        $model->uid=$uid;
+        
+        $list = $model->add();
+        echo $model->getLastSql();
+        if ($list != false) {
+            $this->display("Users/photoalbum");//调用添加成功页面的方法
+        }else{
+		//echo $modle->getLastSql();
+            $this->error("数据添加失败！");
+        }
+}
+public function photos(){
+	$uid=$_SESSION['USER_AUTH_KEY']['id'];
+	$pid=$_GET['pid'];
+	$model=D("Userphotos");
+	$res=$model->where("uid='$uid' and pid='$pid'")->select();
+	$count=count($res);
+	if($res){
+		$this->assign("countphoto",$count);
+		$this->assign("list",$res);
+		$this->assign('desc',$_GET['desc']);
+		
+	}else{
+		$this->assign("countphoto",'0');
+	}
+	$this->display("photos");
+}
+//照片多文件上传
+public function uploadphoto(){
+
+		import('ORG.Net.UploadFile');
+		$upload = new UploadFile();// 实例化上传类
+		$upload->maxSize= 31457288 ;// 设置附件上传大小
+		$upload->allowExts= array('jpg','gif','png','jpeg');// 设置附件上传类型
+		$upload->savePath="./Public/Uploads/users/{$_SESSION['USER_AUTH_KEY']['username']}/{$_GET['pid']}/";// 设置附件上传目录			
+	    if(!$upload->upload()) {// 上传错误提示错误信息
+			$this->error($upload->getErrorMsg());
+			}else{      // 上传成功 获取上传文件信息
+			$info =  $upload->getUploadFileInfo();
+            //$this->assign("list",$info);
+            }
+			//die("1111");
+	     //把照片上传到数据库
+
+		 for($i=0;$i<=count($info);$i++){
+			$picsrc=$info["$i"]['savename'];
+			$path="./Public/Uploads/users/{$_SESSION['USER_AUTH_KEY']['username']}/{$_GET['pid']}/";
+			$this->updateImage1($picsrc,$path,"s_",100,80);
+			$this->updateImage1($picsrc,$path,"m_",500,500);
+
+		    $_POST['picname']=$info[$i]['savename'];//原图片的名字
+			$_POST['oldname']=$info[$i]['name'];//缩略图的图片名
+            $_POST['addtime']=time();		      //时间
+		    $_POST['uid']=$_GET['uid'];           //用户的ID
+		    $_POST['pid']=$_GET['pid'];           //相册的ID
+			$m = D("Userphotos");
+		    $m->create();
+			$m->add();
+
+            }
+         
+		 echo "<script>alert('添加成功');</script>";
+		 $this->photos();
+	  }
+
+public function updatecover(){
+	$model=D("Users_photoalbum");
+	$model->create();
+	echo $modle->getLastSql();
+
+	$model->save();
+	echo $modle->getLastSql();
+	die("ok");
+}
+//用户密码修改
+//用户密码修改
+public function updatepassword(){
+		if($_SESSION['USER_AUTH_KEY']['userpass']==md5($_POST['password'])){
+			$model=D("Users");
+			$date['userpass']=md5($_POST['new_password']);
+			$date['id']=$_SESSION['USER_AUTH_KEY']['id'];
+			$model->create($date);
+			$res = $model->save();
+            if ($res != false) {
+                $this->success("修改成功！",U("Users/settings"),1);
+            }else{
+                $this->error("没有更新任何数据！");
+            }
+		}else{
+			$this->error("原密码输入错误！");
+		}
+	}
+
+
+
+
+
+
+
+
+
+
+}
